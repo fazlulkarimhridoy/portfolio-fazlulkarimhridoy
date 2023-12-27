@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "../Css/NavBar.css"
 import { FaBars } from "react-icons/fa";
+import NameLogo from "../assets/Logos/image.png"
 
 const NavBar = () => {
     const links = <>
@@ -22,7 +23,8 @@ const NavBar = () => {
                         {links}
                     </ul>
                 </div>
-                <h1 className="text-xl font-bold text-sky-500">Fazlul Karim</h1>
+                <img className="w-32" src={NameLogo}/>
+                {/* <h1 className="text-xl font-bold text-sky-500">Fazlul Karim</h1> */}
             </div>
             <div className="navbar-end hidden lg:flex">
                 <ul id="link2" className="flex flex-row items-center px-2 gap-6 text-white font-semibold">

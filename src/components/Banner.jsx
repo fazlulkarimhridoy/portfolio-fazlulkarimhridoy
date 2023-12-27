@@ -1,7 +1,7 @@
-
+import AuthorImage from "../assets/AuthorPictures/hridoy.jpg"
 const Banner = () => {
     return (
-        <section className="bg-gray-900 text-white z-10">
+        <section className="text-white z-10">
             <div className="mx-auto sm:px-40 py-20 lg:py-28 lg:flex lg:justify-between lg:h-[800px] lg:items-center">
                 <div className="text-center mx-auto">
                     <h1 className="bg-gradient-to-r from-green-300 via-sky-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
@@ -25,7 +25,8 @@ const Banner = () => {
                     </div>
                 </div>
                 <div className="flex items-center justify-center mt-5">
-                    <img className="border-[20px] rounded-full w-[375px] border-gray-700" src="https://i.ibb.co/s5VNxMy/hridoy.jpg" />
+                    <img className="border-[20px] rounded-full w-[375px] border-gray-700" 
+                    src={AuthorImage} />
                 </div>
             </div>
         </section>
