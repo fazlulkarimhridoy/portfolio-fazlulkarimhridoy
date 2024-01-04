@@ -78,7 +78,7 @@ const Projects = () => {
         ]
     )
     return (
-        <section className="py-10 px-2 text-gray-800 bg-base-100">
+        <section className="py-10 px-6 text-gray-800">
             <div className="container p-4 mx-auto text-center">
                 <h4 className="text-base font-medium text-black">
                     All Projects
@@ -88,11 +88,11 @@ const Projects = () => {
                 </h2>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mx-auto justify-center text-gray-600 mt-5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center mx-auto justify-center text-gray-600 mt-5">
 
                 {/* project-1 */}
-                <div className="p-4 shadow-md rounded-md bg-gray-50 text-gray-800">
-                    <div className="space-y-4">
+                <div className="p-8 shadow-md rounded-md bg-gray-50 text-gray-800">
+                    <div className="space-y-4"> 
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">
                             <div className="keen-slider__slide number-slide1">
@@ -123,11 +123,11 @@ const Projects = () => {
 
                         {/* description */}
                         <div className="space-y-2">
-                            <a rel="noopener noreferrer" href="#" className="block">
+                            <div rel="noopener noreferrer"className="block">
                                 <h3 className="text-xl font-semibold text-emerald-600">
                                     Daily Pulse - A online newspaper portal
                                 </h3>
-                            </a>
+                            </div>
                             <p className="font-medium text-gray-600">
                                 Online news portal that shows publishers regular and premium news and admin can manage all the works in admin section.
                             </p>
@@ -173,7 +173,7 @@ const Projects = () => {
                 </div>
 
                 {/* project-2 */}
-                <div className="p-4 shadow-md rounded-md bg-gray-50 text-gray-800">
+                <div className="p-8 shadow-md rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">
@@ -254,10 +254,10 @@ const Projects = () => {
                 </div>
 
                 {/* project-3 */}
-                <div className=" p-4 shadow-md rounded-md bg-gray-50 text-gray-800">
+                <div className=" p-8 shadow-md rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
                         {/* images */}
-                        <div ref={sliderRef} className="keen-slider space-y-2">
+                        <div ref={sliderRef} className="keen-slider space-y-2  border-2">
                             <div className="keen-slider__slide number-slide1">
                                 <img src={TourImage1} alt="" className="block object-cover object-center w-full rounded-md   bg-gray-500" />
                             </div>
@@ -335,7 +335,7 @@ const Projects = () => {
                 </div>
 
                 {/* project-4 */}
-                <div className=" p-4 shadow-md rounded-md bg-gray-50 text-gray-800">
+                <div className=" p-8 shadow-md rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">

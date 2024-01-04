@@ -13,7 +13,7 @@ const NavBar = () => {
         <li><NavLink to="/contact">Contact</NavLink></li>
     </>
     return (
-        <div className="navbar container bg-black sm:px-10">
+        <div className="fixed scroll-smooth shadow-2xl z-20 bg-black navbar container sm:px-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-white">
