@@ -91,7 +91,7 @@ const Projects = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center mx-auto justify-center text-gray-600 mt-5">
 
                 {/* project-1 */}
-                <div className="p-8 shadow-md rounded-md bg-gray-50 text-gray-800">
+                <div className="p-8 shadow-2xl rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4"> 
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">
@@ -173,7 +173,7 @@ const Projects = () => {
                 </div>
 
                 {/* project-2 */}
-                <div className="p-8 shadow-md rounded-md bg-gray-50 text-gray-800">
+                <div className="p-8 shadow-2xl rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">
@@ -254,7 +254,7 @@ const Projects = () => {
                 </div>
 
                 {/* project-3 */}
-                <div className=" p-8 shadow-md rounded-md bg-gray-50 text-gray-800">
+                <div className=" p-8 shadow-2xl rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2  border-2">
@@ -335,7 +335,7 @@ const Projects = () => {
                 </div>
 
                 {/* project-4 */}
-                <div className=" p-8 shadow-md rounded-md bg-gray-50 text-gray-800">
+                <div className=" p-8 shadow-2xl rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">

@@ -5,7 +5,7 @@ import Skills from "./Skills";
 
 const Home = () => {
     return (
-        <div className="bg-gray-300">
+        <div className="bg-base-100">
             <Banner></Banner>
             <Skills></Skills>
             <Projects></Projects>

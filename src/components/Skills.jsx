@@ -26,7 +26,7 @@ const Skills = () => {
             </div>
             <div className="flex flex-col lg:flex-row p-6 gap-3">
                 {/* frontend skill section */}
-                <div className="sm:w-1/2 bg-base-100 p-3 border rounded-md">
+                <div className="sm:w-1/2 bg-base-100 p-3 border rounded-md shadow-2xl">
                     <div>
                         <h2 className="text-xl font-medium text-center text-gray-500">Frontend Skills</h2>
                     </div>
@@ -132,7 +132,7 @@ const Skills = () => {
                 </div>
 
                 {/* backend skill section */}
-                <div className="sm:w-1/2 bg-base-100 p-3 border rounded-md">
+                <div className="sm:w-1/2 bg-base-100 p-3 border rounded-md shadow-2xl">
                     <div>
                         <h2 className="text-xl font-medium text-center text-gray-500">Backend Skills</h2>
                     </div>
@@ -238,7 +238,7 @@ const Skills = () => {
                 </div>
 
                 {/* tools section */}
-                <div className="sm:w-1/2 bg-base-100 p-3 border rounded-md">
+                <div className="sm:w-1/2 bg-base-100 p-3 border rounded-md shadow-2xl">
                     <div>
                         <h2 className="text-xl font-medium text-center text-gray-500">Tools</h2>
                     </div>
