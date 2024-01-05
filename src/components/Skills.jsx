@@ -32,7 +32,7 @@ const Skills = () => {
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-5">
                         {/* react */}
-                        <div className="flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
+                        <div className="bg-gray-100 flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
                             <img
                                 src={ReactIcon}
                                 alt="react-icon"
@@ -48,7 +48,7 @@ const Skills = () => {
                             </div>
                         </div>
                         {/* javascript */}
-                        <div className="flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
+                        <div className="bg-gray-100 flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
                             <img
                                 src={JsIcon}
                                 alt="js-icon"
@@ -64,7 +64,7 @@ const Skills = () => {
                             </div>
                         </div>
                         {/* tailwind */}
-                        <div className="flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
+                        <div className="bg-gray-100 flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
                             <img
                                 src={TailwindIcon}
                                 alt="tailwind-icon"
@@ -80,7 +80,7 @@ const Skills = () => {
                             </div>
                         </div>
                         {/* bootstrap */}
-                        <div className="flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
+                        <div className="bg-gray-100 flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
                             <img
                                 src={BootstrapIcon}
                                 alt="bootstrap-icon"
@@ -96,7 +96,7 @@ const Skills = () => {
                             </div>
                         </div>
                         {/* html */}
-                        <div className="flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
+                        <div className="bg-gray-100 flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
                             <img
                                 src={HtmlIcon}
                                 alt="html-icon"
@@ -112,7 +112,7 @@ const Skills = () => {
                             </div>
                         </div>
                         {/* css */}
-                        <div className="flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
+                        <div className="bg-gray-100 flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
                             <img
                                 src={CssIcon}
                                 alt="css-icon"
@@ -138,7 +138,7 @@ const Skills = () => {
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-5">
                         {/* nodejs */}
-                        <div className="flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
+                        <div className="bg-gray-100 flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
                             <img
                                 src={NodeJsIcon}
                                 alt="nodejs-icon"
@@ -154,7 +154,7 @@ const Skills = () => {
                             </div>
                         </div>
                         {/* expressjs */}
-                        <div className="flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
+                        <div className="bg-gray-100 flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
                             <img
                                 src={ExpressJsIcon}
                                 alt="expressjs-icon"
@@ -170,7 +170,7 @@ const Skills = () => {
                             </div>
                         </div>
                         {/* mongodb */}
-                        <div className="flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
+                        <div className="bg-gray-100 flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
                             <img
                                 src={MongoDBIcon}
                                 alt="tailwind-icon"
@@ -186,7 +186,7 @@ const Skills = () => {
                             </div>
                         </div>
                         {/* jwt */}
-                        <div className="flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
+                        <div className="bg-gray-100 flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
                             <img
                                 src={JwtIcon}
                                 alt="jwt-icon"
@@ -202,7 +202,7 @@ const Skills = () => {
                             </div>
                         </div>
                         {/* firebase */}
-                        <div className="flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
+                        <div className="bg-gray-100 flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
                             <img
                                 src={FirebaseIcon}
                                 alt="firebase-icon"
@@ -218,7 +218,7 @@ const Skills = () => {
                             </div>
                         </div>
                         {/* django */}
-                        <div className="flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
+                        <div className="bg-gray-100 flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
                             <img
                                 src={DjangoIcon}
                                 alt="django-icon"
@@ -244,7 +244,7 @@ const Skills = () => {
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-5">
                         {/* git */}
-                        <div className="flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
+                        <div className="bg-gray-100 flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
                             <img
                                 src={GitIcon}
                                 alt="git-icon"
@@ -260,7 +260,7 @@ const Skills = () => {
                             </div>
                         </div>
                         {/* github */}
-                        <div className="flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
+                        <div className="bg-gray-100 flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
                             <img
                                 src={GithubIcon}
                                 alt="github-icon"
@@ -276,7 +276,7 @@ const Skills = () => {
                             </div>
                         </div>
                         {/* vscode */}
-                        <div className="flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
+                        <div className="bg-gray-100 flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
                             <img
                                 src={VsCodeIcon}
                                 alt="vscode-icon"
@@ -292,7 +292,7 @@ const Skills = () => {
                             </div>
                         </div>
                         {/* npm */}
-                        <div className="flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
+                        <div className="bg-gray-100 flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
                             <img
                                 src={NpmIcon}
                                 alt="npm-icon"
@@ -308,7 +308,7 @@ const Skills = () => {
                             </div>
                         </div>
                         {/* vercel */}
-                        <div className="flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
+                        <div className="bg-gray-100 flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
                             <img
                                 src={VercelIcon}
                                 alt="html-icon"
@@ -324,7 +324,7 @@ const Skills = () => {
                             </div>
                         </div>
                         {/* netlify */}
-                        <div className="flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
+                        <div className="bg-gray-100 flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
                             <img
                                 src={NetlifyIcon}
                                 alt="netlify-icon"

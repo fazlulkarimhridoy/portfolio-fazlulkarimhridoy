@@ -1,16 +1,16 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../Css/NavBar.css"
 import { FaBars } from "react-icons/fa";
 import NameLogo from "../assets/Logos/image.png"
 
 const NavBar = () => {
     const links = <>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/skills">Skills</NavLink></li>
-        <li><NavLink to="/projects">Projects</NavLink></li>
-        <li><NavLink to="/education">Education</NavLink></li>
-        <li><NavLink to="/contact">Contact</NavLink></li>
+        <li><Link >Home</Link></li>
+        <li><Link >About</Link></li>
+        <li><Link >Skills</Link></li>
+        <li><Link >Projects</Link></li>
+        <li><Link >Education</Link></li>
+        <li><Link >Contact</Link></li>
     </>
     return (
         <div className="fixed scroll-smooth shadow-2xl z-20 bg-black navbar container sm:px-10">
