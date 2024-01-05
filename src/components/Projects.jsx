@@ -158,13 +158,13 @@ const Projects = () => {
                                 </span>
                             </p>
                             <p className="flex flex-col lg:flex-row items-center gap-3 pt-3">
-                                <a href="https://newspaper-client.vercel.app" className="inline-block rounded border border-current px-4 py-2 text-sm font-medium text-green-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-green-500">
+                                <a href="https://newspaper-client.vercel.app" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-green-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-green-500">
                                     Live Demo
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/daily-pulse-newspaper-client" className="inline-block rounded border border-current px-4 py-2 text-sm font-medium text-green-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-green-500">
+                                <a href="https://github.com/fazlulkarimhridoy/daily-pulse-newspaper-client" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-green-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-green-500">
                                     Client Code
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/newspaper-project-server" className="inline-block rounded border border-current px-4 py-2 text-sm font-medium text-green-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-green-500">
+                                <a href="https://github.com/fazlulkarimhridoy/newspaper-project-server" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-green-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-green-500">
                                     Server Code
                                 </a>
                             </p>
@@ -239,13 +239,13 @@ const Projects = () => {
                                 </span>
                             </p>
                             <p className="flex flex-col lg:flex-row items-center gap-3 pt-3">
-                                <a href="https://task-management-ruby-psi.vercel.app" className="inline-block rounded border border-current px-4 py-2 text-sm font-medium text-sky-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-sky-500">
+                                <a href="https://task-management-ruby-psi.vercel.app" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-sky-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-sky-500">
                                     Live Demo
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/task-management" className="inline-block rounded border border-current px-4 py-2 text-sm font-medium text-sky-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-sky-500">
+                                <a href="https://github.com/fazlulkarimhridoy/task-management" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-sky-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-sky-500">
                                     Client Code
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/task-management" className="inline-block rounded border border-current px-4 py-2 text-sm font-medium text-sky-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-sky-500">
+                                <a href="https://github.com/fazlulkarimhridoy/task-management" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-sky-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-sky-500">
                                     Server Code
                                 </a>
                             </p>
@@ -320,13 +320,13 @@ const Projects = () => {
                                 </span>
                             </p>
                             <p className="flex flex-col lg:flex-row items-center gap-3 pt-3">
-                                <a href="https://local-tour-client.vercel.app" className="inline-block rounded border border-current px-4 py-2 text-sm font-medium text-cyan-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-cyan-500">
+                                <a href="https://local-tour-client.vercel.app" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-cyan-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-cyan-500">
                                     Live Demo
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/local-tour-guide-client" className="inline-block rounded border border-current px-4 py-2 text-sm font-medium text-cyan-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-cyan-500">
+                                <a href="https://github.com/fazlulkarimhridoy/local-tour-guide-client" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-cyan-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-cyan-500">
                                     Client Code
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/local-tour-project-server" className="inline-block rounded border border-current px-4 py-2 text-sm font-medium text-cyan-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-cyan-500">
+                                <a href="https://github.com/fazlulkarimhridoy/local-tour-project-server" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-cyan-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-cyan-500">
                                     Server Code
                                 </a>
                             </p>
@@ -398,13 +398,13 @@ const Projects = () => {
                                 </span>
                             </p>
                             <p className="flex flex-col lg:flex-row items-center gap-3 pt-3">
-                                <a href="https://brand-shop-assignment.vercel.app" className="inline-block rounded border border-current px-4 py-2 text-sm font-medium text-pink-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-pink-500">
+                                <a href="https://brand-shop-assignment.vercel.app" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-pink-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-pink-500">
                                     Live Demo
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/menverse-brand-shop-client" className="inline-block rounded border border-current px-4 py-2 text-sm font-medium text-pink-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-pink-500">
+                                <a href="https://github.com/fazlulkarimhridoy/menverse-brand-shop-client" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-pink-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-pink-500">
                                     Client Code
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/menverse-brandshop-project-server" className="inline-block rounded border border-current px-4 py-2 text-sm font-medium text-pink-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-pink-500">
+                                <a href="https://github.com/fazlulkarimhridoy/menverse-brandshop-project-server" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-pink-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-pink-500">
                                     Server Code
                                 </a>
                             </p>

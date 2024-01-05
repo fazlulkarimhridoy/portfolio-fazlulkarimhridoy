@@ -15,12 +15,12 @@ const Banner = () => {
                     </p>
 
                     <div className="mt-8 flex flex-wra justify-center px-4 gap-4">
-                        <a href="../assets/Resume/Fazlul_Karim_Front_End_Developer_Resume.pdf" download="../assets/Resume/Fazlul_Karim_Front_End_Developer_Resume.pdf" className="block w-1/2 rounded border border-sky-600 bg-sky-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto">
+                        <a href="../assets/Resume/Fazlul_Karim_Front_End_Developer_Resume.pdf" download="../assets/Resume/Fazlul_Karim_Front_End_Developer_Resume.pdf" className="block w-1/2 rounded border border-sky-600 bg-sky-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 hover:scale-110 hover:transition-all hover:duration-300 hover:cursor-pointer sm:w-auto">
                             
                             Resume
                         </a>
 
-                        <a className="block w-1/2 rounded border border-sky-600 px-12 py-3 text-sm font-medium text-white hover:bg-sky-600 focus:outline-none focus:ring active:bg-sky-500 sm:w-auto"                        >
+                        <a className="block w-1/2 rounded border border-sky-600 px-12 py-3 text-sm font-medium text-white hover:bg-sky-600 focus:outline-none focus:ring active:bg-sky-500 hover:scale-110 hover:transition-all hover:duration-300 hover:cursor-pointer sm:w-auto"                        >
                             Contact
                         </a>
                     </div>

@@ -5,7 +5,7 @@ import NameLogo from "../assets/Logos/image.png"
 
 const NavBar = () => {
     const links = <>
-        <li><Link >Home</Link></li>
+        <li className="text-sky-500 text-2xl"><Link >Home</Link></li>
         <li><Link >About</Link></li>
         <li><Link >Skills</Link></li>
         <li><Link >Projects</Link></li>
