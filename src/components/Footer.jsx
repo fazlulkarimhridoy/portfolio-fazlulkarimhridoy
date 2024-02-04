@@ -3,13 +3,13 @@ const Footer = () => {
     return (
         <footer className="bg-black">
             <div className="mx-auto px- py-2 sm:px-6 lg:px-10">
-                <div className="sm:flex sm:items-center sm:justify-between">
+                <div className="flex flex-col md:flex-row items-center md:justify-between">
                     <div className="flex justify-center text-teal-600 sm:justify-start">
-                        <img className="w-32" src={NameLogo}/>
+                        <img className="w-32" src={NameLogo} />
                     </div>
 
-                    <p className="mt-4 text-center text-sm text-white lg:mt-0 lg:text-right">
-                        Copyright &copy; 2023. All rights reserved to Fazlul Karim (Frontend-Developer).
+                    <p className="mt-4 text-center text-sm text-white md:mt-0 lg:text-right">
+                        Copyright &copy; 2023. All rights reserved to <span className="block sm:inline-block">Fazlul Karim (React-Developer).</span>
                     </p>
                 </div>
             </div>

@@ -24,13 +24,13 @@ const Skills = () => {
                 <h4 className="text-base font-medium">All Skills</h4>
                 <h2 className="text-4xl font-bold">Skill Stacks</h2>
             </div>
-            <div className="flex flex-col lg:flex-row p-6 gap-3">
+            <div className="flex flex-col md:flex-row p-2 md:p-6 gap-3">
                 {/* frontend skill section */}
-                <div className="sm:w-1/2 bg-base-100 p-3 border rounded-md shadow-2xl">
+                <div className="w-full bg-base-100 p-3 border rounded-md shadow-lg">
                     <div>
                         <h2 className="text-xl font-medium text-center text-gray-500">Frontend Skills</h2>
                     </div>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-5">
+                    <div className="grid grid-cols-1 xl:grid-cols-2 gap-3 mt-5">
                         {/* react */}
                         <div className="bg-gray-100 flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
                             <img
@@ -132,11 +132,11 @@ const Skills = () => {
                 </div>
 
                 {/* backend skill section */}
-                <div className="sm:w-1/2 bg-base-100 p-3 border rounded-md shadow-2xl">
+                <div className="w-full bg-base-100 p-3 border rounded-md shadow-lg">
                     <div>
                         <h2 className="text-xl font-medium text-center text-gray-500">Backend Skills</h2>
                     </div>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-5">
+                    <div className="grid grid-cols-1 xl:grid-cols-2 gap-3 mt-5">
                         {/* nodejs */}
                         <div className="bg-gray-100 flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
                             <img
@@ -238,11 +238,11 @@ const Skills = () => {
                 </div>
 
                 {/* tools section */}
-                <div className="sm:w-1/2 bg-base-100 p-3 border rounded-md shadow-2xl">
+                <div className="w-full bg-base-100 p-3 border rounded-md shadow-lg">
                     <div>
                         <h2 className="text-xl font-medium text-center text-gray-500">Tools</h2>
                     </div>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-5">
+                    <div className="grid grid-cols-1 xl:grid-cols-2 gap-3 mt-5">
                         {/* git */}
                         <div className="bg-gray-100 flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
                             <img

@@ -78,7 +78,7 @@ const Projects = () => {
         ]
     )
     return (
-        <section className="py-10 px-6 text-gray-800">
+        <section className="py-10 px-2 md:px-6 text-gray-800">
             <div className="container p-4 mx-auto text-center">
                 <h4 className="text-base font-medium text-black">
                     All Projects
@@ -88,10 +88,10 @@ const Projects = () => {
                 </h2>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center mx-auto justify-center text-gray-600 mt-5">
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 items-center mx-auto justify-center text-gray-600 mt-5">
 
                 {/* project-1 */}
-                <div className="p-8 shadow-2xl rounded-md bg-gray-50 text-gray-800">
+                <div className="p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">
@@ -157,7 +157,7 @@ const Projects = () => {
                                     : Firebase authentication with jwt set at cookies.
                                 </span>
                             </p>
-                            <p className="flex flex-col lg:flex-row items-center text-center gap-2 sm:gap-8 pt-3">
+                            <p className="flex flex-col md:flex-row items-center text-center gap-2 md:gap-8 pt-3">
                                 <a href="https://newspaper-client.vercel.app" 
                                 className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-green-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-green-500">
                                     Live Demo
@@ -176,7 +176,7 @@ const Projects = () => {
                 </div>
 
                 {/* project-2 */}
-                <div className="p-8 shadow-2xl rounded-md bg-gray-50 text-gray-800">
+                <div className="p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">
@@ -241,7 +241,7 @@ const Projects = () => {
                                     : Firebase authentication.
                                 </span>
                             </p>
-                            <p className="flex flex-col lg:flex-row items-center text-center gap-2 sm:gap-8 pt-3">
+                            <p className="flex flex-col md:flex-row items-center text-center gap-2 md:gap-8 pt-3">
                                 <a href="https://task-management-ruby-psi.vercel.app" 
                                 className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-sky-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-sky-500">
                                     Live Demo
@@ -260,7 +260,7 @@ const Projects = () => {
                 </div>
 
                 {/* project-3 */}
-                <div className=" p-8 shadow-2xl rounded-md bg-gray-50 text-gray-800">
+                <div className="p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">
@@ -325,7 +325,7 @@ const Projects = () => {
                                     : Firebase authentication with jwt set at cookies.
                                 </span>
                             </p>
-                            <p className="flex flex-col lg:flex-row items-center text-center gap-2 sm:gap-8 pt-3">
+                            <p className="flex flex-col md:flex-row items-center text-center gap-2 md:gap-8 pt-3">
                                 <a href="https://local-tour-client.vercel.app" 
                                 className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-cyan-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-cyan-500">
                                     Live Demo
@@ -344,7 +344,7 @@ const Projects = () => {
                 </div>
 
                 {/* project-4 */}
-                <div className=" p-8 shadow-2xl rounded-md bg-gray-50 text-gray-800">
+                <div className="p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">
@@ -406,7 +406,7 @@ const Projects = () => {
                                     : Firebase authentication.
                                 </span>
                             </p>
-                            <p className="flex flex-col lg:flex-row text-center items-center gap-2 sm:gap-8 pt-3">
+                            <p className="flex flex-col md:flex-row text-center items-center gap-2 md:gap-8 pt-3">
                                 <a href="https://brand-shop-assignment.vercel.app"
                                     className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-pink-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-pink-500">
                                     Live Demo
