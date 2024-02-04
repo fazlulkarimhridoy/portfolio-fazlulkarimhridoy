@@ -44,7 +44,7 @@ const Projects = () => {
     // project images slider functions
     const [sliderRef] = useKeenSlider(
         {
-            loop: true,
+            loop: false,
         },
         [
             (slider) => {
@@ -58,7 +58,7 @@ const Projects = () => {
                     if (mouseOver) return
                     timeout = setTimeout(() => {
                         slider.next()
-                    }, 3000)
+                    }, 5000)
                 }
                 slider.on("created", () => {
                     slider.container.addEventListener("mouseover", () => {
@@ -92,7 +92,7 @@ const Projects = () => {
 
                 {/* project-1 */}
                 <div className="p-8 shadow-2xl rounded-md bg-gray-50 text-gray-800">
-                    <div className="space-y-4"> 
+                    <div className="space-y-4">
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">
                             <div className="keen-slider__slide number-slide1">
@@ -123,7 +123,7 @@ const Projects = () => {
 
                         {/* description */}
                         <div className="space-y-2">
-                            <div rel="noopener noreferrer"className="block">
+                            <div className="block">
                                 <h3 className="text-xl font-semibold text-emerald-600">
                                     Daily Pulse - A online newspaper portal
                                 </h3>
@@ -157,14 +157,17 @@ const Projects = () => {
                                     : Firebase authentication with jwt set at cookies.
                                 </span>
                             </p>
-                            <p className="flex flex-col lg:flex-row items-center gap-3 pt-3">
-                                <a href="https://newspaper-client.vercel.app" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-green-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-green-500">
+                            <p className="flex flex-col lg:flex-row items-center text-center gap-2 sm:gap-8 pt-3">
+                                <a href="https://newspaper-client.vercel.app" 
+                                className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-green-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-green-500">
                                     Live Demo
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/daily-pulse-newspaper-client" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-green-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-green-500">
+                                <a href="https://github.com/fazlulkarimhridoy/daily-pulse-newspaper-client" 
+                                className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-green-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-green-500">
                                     Client Code
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/newspaper-project-server" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-green-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-green-500">
+                                <a href="https://github.com/fazlulkarimhridoy/newspaper-project-server" 
+                                className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-green-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-green-500">
                                     Server Code
                                 </a>
                             </p>
@@ -204,12 +207,12 @@ const Projects = () => {
                         </div>
                         {/* description */}
                         <div className="space-y-2">
-                            <a rel="noopener noreferrer" href="#" className="block">
+                            <a className="block">
                                 <h3 className="text-xl font-semibold text-emerald-600">
                                     Task Management - A daily essential tool for everyone.
                                 </h3>
                             </a>
-                            <p className="leadi text-gray-600">
+                            <p className="text-gray-600">
                                 A complete task management solution for those who needs a task assistant in everyday works. Drag and Drop is implemented in dashboard section.
                             </p>
                             <p className="text-gray-600">
@@ -238,14 +241,17 @@ const Projects = () => {
                                     : Firebase authentication.
                                 </span>
                             </p>
-                            <p className="flex flex-col lg:flex-row items-center gap-3 pt-3">
-                                <a href="https://task-management-ruby-psi.vercel.app" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-sky-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-sky-500">
+                            <p className="flex flex-col lg:flex-row items-center text-center gap-2 sm:gap-8 pt-3">
+                                <a href="https://task-management-ruby-psi.vercel.app" 
+                                className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-sky-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-sky-500">
                                     Live Demo
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/task-management" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-sky-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-sky-500">
+                                <a href="https://github.com/fazlulkarimhridoy/task-management" 
+                                className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-sky-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-sky-500">
                                     Client Code
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/task-management" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-sky-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-sky-500">
+                                <a href="https://github.com/fazlulkarimhridoy/task-management" 
+                                className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-sky-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-sky-500">
                                     Server Code
                                 </a>
                             </p>
@@ -257,7 +263,7 @@ const Projects = () => {
                 <div className=" p-8 shadow-2xl rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
                         {/* images */}
-                        <div ref={sliderRef} className="keen-slider space-y-2  border-2">
+                        <div ref={sliderRef} className="keen-slider space-y-2">
                             <div className="keen-slider__slide number-slide1">
                                 <img src={TourImage1} alt="" className="block object-cover object-center w-full rounded-md   bg-gray-500" />
                             </div>
@@ -285,12 +291,12 @@ const Projects = () => {
                         </div>
                         {/* description */}
                         <div className="space-y-2">
-                            <a rel="noopener noreferrer" href="#" className="block">
+                            <a className="block">
                                 <h3 className="text-xl font-semibold text-emerald-600">
                                     Local Tour Guide - Complete tour problem solution.
                                 </h3>
                             </a>
-                            <p className="leadi text-gray-600">
+                            <p className="text-gray-600">
                                 Tour guide is a tour service based website where user can find a suitable guide for them and they can also create guide services for other users also.
                             </p>
                             <p className="text-gray-600">
@@ -319,14 +325,17 @@ const Projects = () => {
                                     : Firebase authentication with jwt set at cookies.
                                 </span>
                             </p>
-                            <p className="flex flex-col lg:flex-row items-center gap-3 pt-3">
-                                <a href="https://local-tour-client.vercel.app" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-cyan-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-cyan-500">
+                            <p className="flex flex-col lg:flex-row items-center text-center gap-2 sm:gap-8 pt-3">
+                                <a href="https://local-tour-client.vercel.app" 
+                                className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-cyan-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-cyan-500">
                                     Live Demo
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/local-tour-guide-client" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-cyan-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-cyan-500">
+                                <a href="https://github.com/fazlulkarimhridoy/local-tour-guide-client" 
+                                className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-cyan-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-cyan-500">
                                     Client Code
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/local-tour-project-server" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-cyan-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-cyan-500">
+                                <a href="https://github.com/fazlulkarimhridoy/local-tour-project-server" 
+                                className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-cyan-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-cyan-500">
                                     Server Code
                                 </a>
                             </p>
@@ -363,12 +372,12 @@ const Projects = () => {
                         </div>
                         {/* description */}
                         <div className="space-y-2">
-                            <a rel="noopener noreferrer" href="#" className="block">
+                            <a className="block">
                                 <h3 className="text-xl font-semibold text-emerald-600">
                                     Menverse - A clothing brand shop.
                                 </h3>
                             </a>
-                            <p className="leadi text-gray-600">
+                            <p className="text-gray-600">
                                 A proper brand solution. User can see category wise products as well as they can add their desired products in the cart section.
                             </p>
                             <p className="text-gray-600">
@@ -397,14 +406,17 @@ const Projects = () => {
                                     : Firebase authentication.
                                 </span>
                             </p>
-                            <p className="flex flex-col lg:flex-row items-center gap-3 pt-3">
-                                <a href="https://brand-shop-assignment.vercel.app" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-pink-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-pink-500">
+                            <p className="flex flex-col lg:flex-row text-center items-center gap-2 sm:gap-8 pt-3">
+                                <a href="https://brand-shop-assignment.vercel.app"
+                                    className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-pink-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-pink-500">
                                     Live Demo
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/menverse-brand-shop-client" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-pink-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-pink-500">
+                                <a href="https://github.com/fazlulkarimhridoy/menverse-brand-shop-client" 
+                                className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-pink-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-pink-500">
                                     Client Code
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/menverse-brandshop-project-server" className="cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-pink-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-pink-500">
+                                <a href="https://github.com/fazlulkarimhridoy/menverse-brandshop-project-server" 
+                                className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-pink-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-pink-500">
                                     Server Code
                                 </a>
                             </p>

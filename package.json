@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "downloadjs": "^1.4.7",
     "keen-slider": "^6.8.6",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
@@ -17,6 +18,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
     "react-router-dom": "^6.21.1",
+    "react-simple-typewriter": "^5.0.1",
     "sort-by": "^1.2.0",
     "vercel": "^33.0.2"
   },

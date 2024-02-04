@@ -5,7 +5,7 @@ import NameLogo from "../assets/Logos/image.png"
 
 const NavBar = () => {
     const links = <>
-        <li className="text-sky-500 text-2xl"><Link >Home</Link></li>
+        <li className="text-gray-400 text-xl"><Link >Home</Link></li>
         <li><Link >About</Link></li>
         <li><Link >Skills</Link></li>
         <li><Link >Projects</Link></li>
@@ -13,7 +13,7 @@ const NavBar = () => {
         <li><Link >Contact</Link></li>
     </>
     return (
-        <div className="fixed scroll-smooth shadow-2xl z-20 bg-black navbar container sm:px-10">
+        <div className="fixed scroll-smooth shadow-2xl z-20 bg-black navbar sm:px-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-white">
