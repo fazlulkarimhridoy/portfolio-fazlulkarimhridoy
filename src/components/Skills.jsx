@@ -17,9 +17,37 @@ import NpmIcon from "../assets/Icons/npm.png"
 import VercelIcon from "../assets/Icons/Vercel-Dark.svg"
 import NetlifyIcon from "../assets/Icons/netlify.svg"
 import 'animate.css';
+import { Element } from 'react-scroll';
+import { useEffect } from "react"
+
 
 
 const Skills = () => {
+
+    // handling scroll
+    useEffect(() => {
+        const handleScroll = () => {
+            const elements = document.querySelectorAll('.animated');
+
+            elements.forEach((element) => {
+                const rect = element.getBoundingClientRect();
+
+                // Check if the element is in the viewport
+                if (rect.top < window.innerHeight) {
+                    element.classList.add('animate__animated', 'animate__fadeInUp');
+                }
+            });
+        };
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+
+        // Clean up the event listener on component unmount
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <section className="overflow-hidden">
             <div className="container p-4 mt-10 mx-auto text-center">
@@ -28,7 +56,7 @@ const Skills = () => {
             </div>
             <div className="flex flex-col md:flex-row p-2 md:p-6 gap-3">
                 {/* frontend skill section */}
-                <div className="animate__animated animate__fadeInUp w-full bg-base-100 p-3 border rounded-md shadow-lg">
+                <Element className="animated w-full bg-base-100 p-3 border rounded-md shadow-lg">
                     <div>
                         <h2 className="text-xl font-medium text-center text-gray-500">Frontend Skills</h2>
                     </div>
@@ -131,10 +159,10 @@ const Skills = () => {
                         </div>
                     </div>
 
-                </div>
+                </Element>
 
                 {/* backend skill section */}
-                <div className="animate__animated animate__fadeInUp w-full bg-base-100 p-3 border rounded-md shadow-lg">
+                <Element className="animated w-full bg-base-100 p-3 border rounded-md shadow-lg">
                     <div>
                         <h2 className="text-xl font-medium text-center text-gray-500">Backend Skills</h2>
                     </div>
@@ -237,10 +265,10 @@ const Skills = () => {
                         </div>
                     </div>
 
-                </div>
+                </Element>
 
                 {/* tools section */}
-                <div className="animate__animated animate__fadeInUp w-full bg-base-100 p-3 border rounded-md shadow-lg">
+                <Element className="animated w-full bg-base-100 p-3 border rounded-md shadow-lg">
                     <div>
                         <h2 className="text-xl font-medium text-center text-gray-500">Tools</h2>
                     </div>
@@ -343,7 +371,7 @@ const Skills = () => {
                         </div>
                     </div>
 
-                </div>
+                </Element>
             </div>
         </section>
     );

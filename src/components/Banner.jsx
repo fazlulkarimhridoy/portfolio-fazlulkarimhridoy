@@ -12,7 +12,7 @@ const Banner = () => {
     };
 
     return (
-        <section className="text-white z-10 bg-gray-900 overflow-hidden">
+        <section className="text-white bg-gray-900 overflow-hidden">
             <div className="mx-auto md:pt-5 lg:pt-10 xl:pt-20 pb-5 md:px-4 lg:px-20 xl:px-60 md:py-5 lg:py-10 xl:py-28 md:flex md:justify-between md:h-dvh md:items-center">
                 <div className="text-center animate__animated animate__bounceInLeft">
                     <h1 className="bg-gradient-to-r from-green-300 via-sky-500 to-purple-600 bg-clip-text text-3xl lg:text-4xl xl:text-5xl font-extrabold text-transparent">

@@ -1,5 +1,9 @@
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
+import 'animate.css';
+import { Element } from 'react-scroll';
+import { useEffect } from "react"
+
 // Daily pulse newspaper images
 import NewsImage1 from "../assets/Projects/Daily Pulse/newspaper1.png"
 import NewsImage2 from "../assets/Projects/Daily Pulse/newspaper2.png"
@@ -39,9 +43,6 @@ import MenverseImage5 from '../assets/Projects/Menverse/menverse5.png'
 import MenverseImage6 from '../assets/Projects/Menverse/menverse6.png'
 import MenverseImage7 from '../assets/Projects/Menverse/menverse7.png'
 
-import 'animate.css';
-
-
 
 const Projects = () => {
     // project images slider functions
@@ -80,6 +81,31 @@ const Projects = () => {
             },
         ]
     )
+
+    // handling scroll
+    useEffect(() => {
+        const handleScroll = () => {
+            const elements = document.querySelectorAll('.animated');
+
+            elements.forEach((element) => {
+                const rect = element.getBoundingClientRect();
+
+                // Check if the element is in the viewport
+                if (rect.top < window.innerHeight) {
+                    element.classList.add('animate__animated', 'animate__fadeInUp');
+                }
+            });
+        };
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+
+        // Clean up the event listener on component unmount
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <section className="py-10 px-2 md:px-6 text-gray-800 overflow-hidden">
             <div className="container p-4 mx-auto text-center">
@@ -94,7 +120,7 @@ const Projects = () => {
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 items-center mx-auto justify-center text-gray-600 mt-5">
 
                 {/* project-1 */}
-                <div className="animate__animated animate__fadeInLeft p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
+                <Element className="animated p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">
@@ -161,25 +187,25 @@ const Projects = () => {
                                 </span>
                             </p>
                             <p className="flex flex-col md:flex-row items-center text-center gap-2 md:gap-8 pt-3">
-                                <a href="https://newspaper-client.vercel.app" 
-                                className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-green-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-green-500">
+                                <a href="https://newspaper-client.vercel.app"
+                                    className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-green-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-green-500">
                                     Live Demo
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/daily-pulse-newspaper-client" 
-                                className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-green-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-green-500">
+                                <a href="https://github.com/fazlulkarimhridoy/daily-pulse-newspaper-client"
+                                    className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-green-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-green-500">
                                     Client Code
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/newspaper-project-server" 
-                                className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-green-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-green-500">
+                                <a href="https://github.com/fazlulkarimhridoy/newspaper-project-server"
+                                    className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-green-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-green-500">
                                     Server Code
                                 </a>
                             </p>
                         </div>
                     </div>
-                </div>
+                </Element>
 
                 {/* project-2 */}
-                <div className="animate__animated animate__fadeInRight p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
+                <Element className="animated p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">
@@ -245,25 +271,25 @@ const Projects = () => {
                                 </span>
                             </p>
                             <p className="flex flex-col md:flex-row items-center text-center gap-2 md:gap-8 pt-3">
-                                <a href="https://task-management-ruby-psi.vercel.app" 
-                                className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-sky-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-sky-500">
+                                <a href="https://task-management-ruby-psi.vercel.app"
+                                    className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-sky-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-sky-500">
                                     Live Demo
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/task-management" 
-                                className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-sky-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-sky-500">
+                                <a href="https://github.com/fazlulkarimhridoy/task-management"
+                                    className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-sky-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-sky-500">
                                     Client Code
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/task-management" 
-                                className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-sky-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-sky-500">
+                                <a href="https://github.com/fazlulkarimhridoy/task-management"
+                                    className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-sky-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-sky-500">
                                     Server Code
                                 </a>
                             </p>
                         </div>
                     </div>
-                </div>
+                </Element>
 
                 {/* project-3 */}
-                <div className="animate__animated animate__fadeInLeft p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
+                <Element className="animated p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">
@@ -329,25 +355,25 @@ const Projects = () => {
                                 </span>
                             </p>
                             <p className="flex flex-col md:flex-row items-center text-center gap-2 md:gap-8 pt-3">
-                                <a href="https://local-tour-client.vercel.app" 
-                                className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-cyan-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-cyan-500">
+                                <a href="https://local-tour-client.vercel.app"
+                                    className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-cyan-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-cyan-500">
                                     Live Demo
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/local-tour-guide-client" 
-                                className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-cyan-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-cyan-500">
+                                <a href="https://github.com/fazlulkarimhridoy/local-tour-guide-client"
+                                    className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-cyan-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-cyan-500">
                                     Client Code
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/local-tour-project-server" 
-                                className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-cyan-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-cyan-500">
+                                <a href="https://github.com/fazlulkarimhridoy/local-tour-project-server"
+                                    className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-cyan-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-cyan-500">
                                     Server Code
                                 </a>
                             </p>
                         </div>
                     </div>
-                </div>
+                </Element>
 
                 {/* project-4 */}
-                <div className="animate__animated animate__fadeInRight p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
+                <Element className="animated p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">
@@ -414,18 +440,18 @@ const Projects = () => {
                                     className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-pink-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-pink-500">
                                     Live Demo
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/menverse-brand-shop-client" 
-                                className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-pink-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-pink-500">
+                                <a href="https://github.com/fazlulkarimhridoy/menverse-brand-shop-client"
+                                    className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-pink-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-pink-500">
                                     Client Code
                                 </a>
-                                <a href="https://github.com/fazlulkarimhridoy/menverse-brandshop-project-server" 
-                                className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-pink-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-pink-500">
+                                <a href="https://github.com/fazlulkarimhridoy/menverse-brandshop-project-server"
+                                    className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-pink-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-pink-500">
                                     Server Code
                                 </a>
                             </p>
                         </div>
                     </div>
-                </div>
+                </Element>
             </div>
         </section>
     );
