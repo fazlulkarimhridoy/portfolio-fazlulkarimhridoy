@@ -39,6 +39,9 @@ import MenverseImage5 from '../assets/Projects/Menverse/menverse5.png'
 import MenverseImage6 from '../assets/Projects/Menverse/menverse6.png'
 import MenverseImage7 from '../assets/Projects/Menverse/menverse7.png'
 
+import 'animate.css';
+
+
 
 const Projects = () => {
     // project images slider functions
@@ -78,7 +81,7 @@ const Projects = () => {
         ]
     )
     return (
-        <section className="py-10 px-2 md:px-6 text-gray-800">
+        <section className="py-10 px-2 md:px-6 text-gray-800 overflow-hidden">
             <div className="container p-4 mx-auto text-center">
                 <h4 className="text-base font-medium text-black">
                     All Projects
@@ -91,7 +94,7 @@ const Projects = () => {
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 items-center mx-auto justify-center text-gray-600 mt-5">
 
                 {/* project-1 */}
-                <div className="p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
+                <div className="animate__animated animate__fadeInLeft p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">
@@ -176,7 +179,7 @@ const Projects = () => {
                 </div>
 
                 {/* project-2 */}
-                <div className="p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
+                <div className="animate__animated animate__fadeInRight p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">
@@ -260,7 +263,7 @@ const Projects = () => {
                 </div>
 
                 {/* project-3 */}
-                <div className="p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
+                <div className="animate__animated animate__fadeInLeft p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">
@@ -344,7 +347,7 @@ const Projects = () => {
                 </div>
 
                 {/* project-4 */}
-                <div className="p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
+                <div className="animate__animated animate__fadeInRight p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">
