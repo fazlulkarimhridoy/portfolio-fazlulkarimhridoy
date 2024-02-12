@@ -3,6 +3,8 @@ import AuthorImage from "../assets/AuthorPictures/hridoy.jpg"
 import download from "downloadjs";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import 'animate.css';
+import { motion } from "framer-motion";
+
 
 const Banner = () => {
 
@@ -31,32 +33,60 @@ const Banner = () => {
                     </h1>
 
                     <p className="text-gray-400 mx-auto px-6 mt-4 max-w-xl text-base lg:text-xl/relaxed">
-                        I have learning web developing consistently for last 8 months!
+                        I have been learning web developing consistently for last 8 months!
                         Also I have made many functional projects using React.js, TailwindCSS, Javascript.
                     </p>
 
-                    <div className="my-4 md:mt-8 flex flex-col lg:flex-row justify-center px-8 gap-4">
-                        <button
+                    <div className="my-4 md:mt-8 flex flex-col lg:flex-row justify-center px-8 gap-4 md:gap-8">
+                        <motion.div
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.8 }}
                             onClick={downloadPdf}
                             className="block w-full lg:w-1/2 rounded border border-sky-600 bg-sky-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 hover:cursor-pointer sm:w-auto">
                             Resume
-                        </button>
-                        <button
+                        </motion.div>
+                        <motion.div
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.8 }}
                             className="block w-full lg:w-1/2 rounded border border-sky-600 px-12 py-3 text-sm font-medium text-white hover:bg-sky-600 focus:outline-none focus:ring active:bg-sky-500 hover:cursor-pointer sm:w-auto"                        >
                             Contact
-                        </button>
+                        </motion.div>
                     </div>
                     <div className="lg:gap-y-10 lg:-mt-[260px] lg:-ml-[550px] xl:-ml-[700px] flex flex-row lg:flex-col items-center justify-center gap-x-10 md:gap-x-16 mt-5 md:mt-10">
-                        <a href="https://github.com/fazlulkarimhridoy"><FaGithub className="hover:text-sky-500" size={50}></FaGithub></a>
-                        <a href="https://www.linkedin.com/in/fazlulkarimhridoy23"><FaLinkedin className="hover:text-sky-500" size={50}></FaLinkedin></a>
-                        <a href="https://www.facebook.com/syed.fazlul.karim.hridoy"><FaFacebook className="hover:text-sky-500" size={50}></FaFacebook></a>
+                        <motion.div
+                            whileHover={{ scale: 1.2 }}
+                            whileTap={{ scale: 0.8 }}>
+                            <a href="https://github.com/fazlulkarimhridoy">
+                                <FaGithub className="hover:text-sky-500" size={50}>
+                                </FaGithub>
+                            </a>
+                        </motion.div>
+                        <motion.div
+                            whileHover={{ scale: 1.2 }}
+                            whileTap={{ scale: 0.8 }}>
+                            <a href="https://www.linkedin.com/in/fazlulkarimhridoy23">
+                                <FaLinkedin className="hover:text-sky-500" size={50}>
+                                </FaLinkedin>
+                            </a>
+                        </motion.div>
+                        <motion.div
+                            whileHover={{ scale: 1.2 }}
+                            whileTap={{ scale: 0.8 }}>
+                            <a href="https://www.facebook.com/syed.fazlul.karim.hridoy">
+                                <FaFacebook className="hover:text-sky-500" size={50}>
+                                </FaFacebook>
+                            </a>
+                        </motion.div>
                     </div>
                 </div>
-                <div className="flex items-center justify-center mt-5 px-4">
+                <motion.div
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.8 }}
+                    className="flex items-center justify-center mt-5 px-4">
                     <img
                         className="animate__animated animate__bounceInRight border-[18px] rounded-badge w-[400px] border-gray-700 hover:border-gray-500 hover:transition-all hover:ease-out hover:duration-1000"
                         src={AuthorImage} />
-                </div>
+                </motion.div>
             </div>
         </section>
     );
