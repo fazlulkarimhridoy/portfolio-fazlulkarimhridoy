@@ -139,14 +139,14 @@ const Projects = () => {
                         {/* description */}
                         <div className="space-y-2">
                             <div className="block">
-                                <h3 className="text-xl font-semibold text-emerald-600">
+                                <h3 className="text-lg font-semibold text-emerald-600">
                                     Daily Pulse - A online newspaper portal
                                 </h3>
                             </div>
-                            <p className="font-medium text-gray-600">
+                            <p className="font-medium text-sm text-gray-600">
                                 Online news portal that shows publishers regular and premium news and admin can manage all the works in admin section.
                             </p>
-                            <p className="text-gray-600">
+                            <p className="text-xs text-gray-600">
                                 <span className="font-bold text-gray-600">
                                     Frontend
                                 </span>
@@ -227,14 +227,14 @@ const Projects = () => {
                         {/* description */}
                         <div className="space-y-2">
                             <a className="block">
-                                <h3 className="text-xl font-semibold text-emerald-600">
+                                <h3 className="text-lg font-semibold text-emerald-600">
                                     Task Management - A daily essential tool for everyone.
                                 </h3>
                             </a>
-                            <p className="text-gray-600">
-                                A complete task management solution for those who needs a task assistant in everyday works. Drag and Drop is implemented in dashboard section.
+                            <p className="text-sm font-medium text-gray-600">
+                                A complete task management solution for those who needs a task assistant in everyday works. DnD is implemented in dashboard.
                             </p>
-                            <p className="text-gray-600">
+                            <p className="text-xs text-gray-600">
                                 <span className="font-bold text-gray-600">
                                     Frontend
                                 </span>
@@ -245,13 +245,13 @@ const Projects = () => {
                                     Backend
                                 </span>
                                 <span className="font-medium">
-                                    : Not applied.
+                                    : Node.js, Express.js.
                                 </span> <br />
                                 <span className="font-bold text-gray-600">
                                     Database
                                 </span>
                                 <span className="font-medium">
-                                    : Not applied
+                                    : MongoDB
                                 </span> <br />
                                 <span className="font-bold text-gray-600">
                                     Authentication :
@@ -315,14 +315,14 @@ const Projects = () => {
                         {/* description */}
                         <div className="space-y-2">
                             <a className="block">
-                                <h3 className="text-xl font-semibold text-emerald-600">
+                                <h3 className="text-lg font-semibold text-emerald-600">
                                     Local Tour Guide - Complete tour problem solution.
                                 </h3>
                             </a>
-                            <p className="text-gray-600">
-                                Tour guide is a tour service based website where user can find a suitable guide for them and they can also create guide services for other users also.
+                            <p className="font-medium text-sm text-gray-600">
+                                Tour guide is a tour service based website where user can find a suitable guide for them and they can also create guide services.
                             </p>
-                            <p className="text-gray-600">
+                            <p className="text-xs text-gray-600">
                                 <span className="font-bold text-gray-600">
                                     Frontend
                                 </span>
@@ -400,14 +400,14 @@ const Projects = () => {
                         {/* description */}
                         <div className="space-y-2">
                             <a className="block">
-                                <h3 className="text-xl font-semibold text-emerald-600">
+                                <h3 className="text-lg font-semibold text-emerald-600">
                                     Menverse - A clothing brand shop.
                                 </h3>
                             </a>
-                            <p className="text-gray-600">
+                            <p className="font-medium text-sm text-gray-600">
                                 A proper brand solution. User can see category wise products as well as they can add their desired products in the cart section.
                             </p>
-                            <p className="text-gray-600">
+                            <p className="text-xs text-gray-600">
                                 <span className="font-bold text-gray-600">
                                     Frontend
                                 </span>

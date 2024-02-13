@@ -14,7 +14,7 @@ const NavBar = () => {
         <li><Link >Contact</Link></li>
     </>
     return (
-        <header className="scroll-smooth shadow-2xl bg-black navbar sm:px-10 overflow-visible lg:overflow-hidden">
+        <header className="scroll-smooth shadow-2xl bg-gray-800 navbar sm:px-10 overflow-visible lg:overflow-hidden">
             <div className="navbar-start">
                 <Link to="/"><img className="w-32" src={NameLogo} /></Link>
             </div>

@@ -4,13 +4,15 @@ import download from "downloadjs";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import 'animate.css';
 import { motion } from "framer-motion";
+// import "../Css/Banner.css"
 
 const Banner = () => {
 
     const downloadPdf = () => {
-        const pdfUrl = 'http://localhost:5173/Fazlul_Karim_React_Developer.pdf';
+        const pdfUrl = '/Fazlul_Karim_React_Developer.pdf';
         download(pdfUrl);
     };
+
 
     return (
         <section className="text-white bg-gray-900 overflow-hidden">
@@ -83,6 +85,7 @@ const Banner = () => {
                     whileTap={{ scale: 0.8 }}
                     className="flex items-center justify-center mt-5 px-4">
                     <img
+                    id="blob"
                         className="animate__animated animate__bounceInRight border-[18px] rounded-badge w-[400px] border-gray-700 hover:border-gray-500 hover:transition-all hover:ease-out hover:duration-1000"
                         src={AuthorImage} />
                 </motion.div>

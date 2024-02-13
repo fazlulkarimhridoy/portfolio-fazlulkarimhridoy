@@ -2,7 +2,7 @@
 import NameLogo from "../assets/Logos/image.png"
 const Footer = () => {
     return (
-        <footer className="bg-black">
+        <footer className="bg-gray-800">
             <div className="mx-auto px- py-2 sm:px-6 lg:px-10">
                 <div className="flex flex-col md:flex-row items-center md:justify-between">
                     <div className="flex justify-center text-teal-600 sm:justify-start">
