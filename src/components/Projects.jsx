@@ -1,8 +1,9 @@
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import 'animate.css';
-import { Element } from 'react-scroll';
 import { useEffect } from "react"
+import Aos from "aos"
+import "aos/dist/aos.css";
 
 // Daily pulse newspaper images
 import NewsImage1 from "../assets/Projects/Daily Pulse/newspaper1.png"
@@ -82,29 +83,10 @@ const Projects = () => {
         ]
     )
 
-    // handling scroll
+    // initializing aos
     useEffect(() => {
-        const handleScroll = () => {
-            const elements = document.querySelectorAll('.animated');
-
-            elements.forEach((element) => {
-                const rect = element.getBoundingClientRect();
-
-                // Check if the element is in the viewport
-                if (rect.top < window.innerHeight) {
-                    element.classList.add('animate__animated', 'animate__fadeInUp');
-                }
-            });
-        };
-
-        // Add scroll event listener
-        window.addEventListener('scroll', handleScroll);
-
-        // Clean up the event listener on component unmount
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+        Aos.init()
+    }, [])
 
     return (
         <section className="py-10 px-2 md:px-6 text-gray-800 overflow-hidden">
@@ -120,7 +102,11 @@ const Projects = () => {
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 items-center mx-auto justify-center text-gray-600 mt-5">
 
                 {/* project-1 */}
-                <Element className="animated p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
+                <div
+                    data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"
+                    className="p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">
@@ -202,10 +188,14 @@ const Projects = () => {
                             </p>
                         </div>
                     </div>
-                </Element>
+                </div>
 
                 {/* project-2 */}
-                <Element className="animated p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
+                <div
+                    data-aos="fade-left"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"
+                    className="animated p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">
@@ -286,10 +276,14 @@ const Projects = () => {
                             </p>
                         </div>
                     </div>
-                </Element>
+                </div>
 
                 {/* project-3 */}
-                <Element className="animated p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
+                <div
+                    data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"
+                    className="animated p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">
@@ -370,10 +364,14 @@ const Projects = () => {
                             </p>
                         </div>
                     </div>
-                </Element>
+                </div>
 
                 {/* project-4 */}
-                <Element className="animated p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
+                <div
+                    data-aos="fade-left"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"
+                    className="animated p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
                         {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">
@@ -451,7 +449,7 @@ const Projects = () => {
                             </p>
                         </div>
                     </div>
-                </Element>
+                </div>
             </div>
         </section>
     );

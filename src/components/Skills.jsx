@@ -17,36 +17,17 @@ import NpmIcon from "../assets/Icons/npm.png"
 import VercelIcon from "../assets/Icons/Vercel-Dark.svg"
 import NetlifyIcon from "../assets/Icons/netlify.svg"
 import 'animate.css';
-import { Element } from 'react-scroll';
 import { useEffect } from "react"
-
+import Aos from "aos"
+import "aos/dist/aos.css";
 
 
 const Skills = () => {
 
-    // handling scroll
-    useEffect(() => {
-        const handleScroll = () => {
-            const elements = document.querySelectorAll('.animated');
-
-            elements.forEach((element) => {
-                const rect = element.getBoundingClientRect();
-
-                // Check if the element is in the viewport
-                if (rect.top < window.innerHeight) {
-                    element.classList.add('animate__animated', 'animate__fadeInUp');
-                }
-            });
-        };
-
-        // Add scroll event listener
-        window.addEventListener('scroll', handleScroll);
-
-        // Clean up the event listener on component unmount
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    // initializing aos
+    useEffect(()=>{
+        Aos.init()
+    },[])
 
     return (
         <section className="overflow-hidden">
@@ -56,7 +37,7 @@ const Skills = () => {
             </div>
             <div className="flex flex-col md:flex-row p-2 md:p-6 gap-3">
                 {/* frontend skill section */}
-                <Element className="animated w-full bg-base-100 p-3 border rounded-md shadow-lg">
+                <div data-aos="zoom-in-up" className="w-full bg-base-100 p-3 border rounded-md shadow-lg">
                     <div>
                         <h2 className="text-xl font-medium text-center text-gray-500">Frontend Skills</h2>
                     </div>
@@ -159,10 +140,10 @@ const Skills = () => {
                         </div>
                     </div>
 
-                </Element>
+                </div>
 
                 {/* backend skill section */}
-                <Element className="animated w-full bg-base-100 p-3 border rounded-md shadow-lg">
+                <div data-aos="zoom-in-up" className="w-full bg-base-100 p-3 border rounded-md shadow-lg">
                     <div>
                         <h2 className="text-xl font-medium text-center text-gray-500">Backend Skills</h2>
                     </div>
@@ -265,10 +246,10 @@ const Skills = () => {
                         </div>
                     </div>
 
-                </Element>
+                </div>
 
                 {/* tools section */}
-                <Element className="animated w-full bg-base-100 p-3 border rounded-md shadow-lg">
+                <div data-aos="zoom-in-up" className="w-full bg-base-100 p-3 border rounded-md shadow-lg">
                     <div>
                         <h2 className="text-xl font-medium text-center text-gray-500">Tools</h2>
                     </div>
@@ -371,7 +352,7 @@ const Skills = () => {
                         </div>
                     </div>
 
-                </Element>
+                </div>
             </div>
         </section>
     );

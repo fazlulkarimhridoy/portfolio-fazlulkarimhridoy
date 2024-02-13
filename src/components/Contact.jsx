@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 
 const Contact = () => {
     return (
@@ -41,9 +42,11 @@ const Contact = () => {
                         <span className="mb-1">Message</span>
                         <textarea rows="3" placeholder="Write your message here..." className="p-2 block w-full rounded-md focus:ring focus:ri focus:ri bg-gray-100"></textarea>
                     </label>
-                    <button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ri bg-sky-600 text-gray-50 focus:ri hover:ri">
+                    <motion.div
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.8 }} type="button" className="cursor-pointer self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ri bg-sky-600 text-gray-50 focus:ri hover:ri">
                         Get Started
-                    </button>
+                    </motion.div>
                 </form>
             </div>
         </section>

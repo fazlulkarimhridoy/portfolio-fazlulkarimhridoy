@@ -1,20 +1,19 @@
 #link1 li a.active{
-    background-color: gray;
+    background-color: skyblue;
     color: white;
     font-weight: 600;
     text-decoration: none;
 }
 #link2 li a.active{
-    color: gray;
+    color: skyblue;
     font-weight: bold;
-    font-size: 18px;
 }
 #link2 li::after{
     content: '';
     width: 0%;
     height: 4px;
     border-radius: 9999px;
-    background: gray;
+    background: skyblue;
     display: block;
     margin: auto;
     transition: 0.5s;

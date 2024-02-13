@@ -5,7 +5,6 @@ import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import 'animate.css';
 import { motion } from "framer-motion";
 
-
 const Banner = () => {
 
     const downloadPdf = () => {
