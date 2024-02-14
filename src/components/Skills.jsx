@@ -18,8 +18,8 @@ import VercelIcon from "../assets/Icons/Vercel-Dark.svg"
 import NetlifyIcon from "../assets/Icons/netlify.svg"
 import 'animate.css';
 import { useEffect } from "react"
-import Aos from "aos"
 import "aos/dist/aos.css";
+import Aos from "aos"
 
 
 const Skills = () => {

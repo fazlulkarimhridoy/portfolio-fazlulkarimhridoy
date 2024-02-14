@@ -1,6 +1,32 @@
-import { motion } from "framer-motion";
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        const name = e.currentTarget.name.value;
+        const email = e.currentTarget.email.value;
+        const message = e.currentTarget.message.value;
+
+        console.log(name, email, message);
+
+        emailjs
+            .sendForm('service_9reh5e8', 'template_o0ghpbr', form.current, {
+                publicKey: '3lYQouj1M7ssavxnw',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
+    };
+
+
     return (
         <section className="py-6 bg-gray-50 text-gray-900">
             <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
@@ -29,24 +55,24 @@ const Contact = () => {
                         </p>
                     </div>
                 </div>
-                <form className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
+                <form ref={form} onSubmit={sendEmail} className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
                     <label className="block">
                         <span className="mb-1">Full name</span>
-                        <input type="text" placeholder="Fazlul Karim" className="p-2 block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri bg-gray-100" />
+                        <input type="text" placeholder="Fazlul Karim" name="name" className="p-2 block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri bg-gray-100" />
                     </label>
                     <label className="block">
                         <span className="mb-1">Email address</span>
-                        <input type="email" placeholder="hridoy.cse98@gmail.com" className="p-2 block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri bg-gray-100" />
+                        <input type="email" placeholder="hridoy.cse98@gmail.com" name="email" className="p-2 block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri bg-gray-100" />
                     </label>
                     <label className="block">
                         <span className="mb-1">Message</span>
-                        <textarea rows="3" placeholder="Write your message here..." className="p-2 block w-full rounded-md focus:ring focus:ri focus:ri bg-gray-100"></textarea>
+                        <textarea rows="3" placeholder="Write your message here..." name="message" className="p-2 block w-full rounded-md focus:ring focus:ri focus:ri bg-gray-100"></textarea>
                     </label>
-                    <motion.div
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.8 }} type="button" className="cursor-pointer self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ri bg-sky-600 text-gray-50 focus:ri hover:ri">
-                        Get Started
-                    </motion.div>
+                    <button
+                        type="submit"
+                        className="cursor-pointer self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ri bg-sky-600 text-gray-50 focus:ri hover:ri">
+                        Send message
+                    </button>
                 </form>
             </div>
         </section>
