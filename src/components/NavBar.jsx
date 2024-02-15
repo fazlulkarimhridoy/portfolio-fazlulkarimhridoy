@@ -21,7 +21,7 @@ const NavBar = () => {
             <div className="navbar-end">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-white">
-                        <FaBars size={30}></FaBars>
+                        <FaBars size={20}></FaBars>
                     </div>
                     <ul tabIndex={0} id="link1" className="overflow-visible menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-28">
                         {links}
