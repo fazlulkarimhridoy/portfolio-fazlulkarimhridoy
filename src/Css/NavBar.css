@@ -21,3 +21,7 @@
 #link2 li:hover::after{
     width: 100%;
 }
+
+#link2 li a{
+    color: white;
+}

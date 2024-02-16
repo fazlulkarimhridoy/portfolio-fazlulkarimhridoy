@@ -13,21 +13,27 @@ const NavBar = () => {
         section?.scrollIntoView({ behavior: "smooth" });
     };
 
-    // scroll to skills
+    // scroll to projects
     const scrollToProjects = () => {
         const section = document.getElementById("projects");
         section?.scrollIntoView({ behavior: "smooth" });
     };
 
-    // scroll to skills
+    // scroll to educations
     const scrollToEducations = () => {
         const section = document.getElementById("educations");
         section?.scrollIntoView({ behavior: "smooth" });
     };
 
-    // scroll to skills
+    // scroll to contact
     const scrollToContact = () => {
         const section = document.getElementById("contact");
+        section?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    // scroll to navbar
+    const scrollToBanner = () => {
+        const section = document.getElementById("banner");
         section?.scrollIntoView({ behavior: "smooth" });
     };
 
@@ -44,7 +50,7 @@ const NavBar = () => {
 
     // shared links
     const links = <>
-        <li className="text-sky-500 font-extrabold"><Link >Home</Link></li>
+        <li onClick={scrollToBanner} className="text-sky-500 font-extrabold"><Link >Home</Link></li>
         <li onClick={scrollToSkills}><Link >Skills</Link></li>
         <li onClick={scrollToProjects}><Link >Projects</Link></li>
         <li onClick={scrollToEducations}><Link >Education</Link></li>
@@ -66,13 +72,14 @@ const NavBar = () => {
                             <FaAlignJustify></FaAlignJustify>
                         </button>
                         <Drawer
-                            className="dark:bg-d1 dark:text-dw"
+                            closeIcon={false}
                             width={200}
                             placement={placement}
-                            closable={false}
+                            closable={true}
                             onClose={onClose}
                             open={open}
                             key={placement}
+                            style={{backgroundColor: "#1F2937"}}
                         >
                             <ul id="link2" className="flex flex-col items-center justify-center gap-4 text-sm">
                                 {links}
