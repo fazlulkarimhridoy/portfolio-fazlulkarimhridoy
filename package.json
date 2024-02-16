@@ -12,6 +12,7 @@
   "dependencies": {
     "@emailjs/browser": "^4.1.0",
     "animate.css": "^4.1.1",
+    "antd": "^5.14.1",
     "aos": "^2.3.4",
     "downloadjs": "^1.4.7",
     "framer-motion": "^11.0.3",

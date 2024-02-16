@@ -4,7 +4,7 @@ import download from "downloadjs";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import 'animate.css';
 import { motion } from "framer-motion";
-// import "../Css/Banner.css"
+import "../Css/Banner.css"
 
 const Banner = () => {
 
@@ -14,7 +14,7 @@ const Banner = () => {
     };
 
     return (
-        <section className="text-white bg-gray-900 overflow-hidden">
+        <section className="text-white bg-gray-900 overflow-hidden pt-14">
             <div className="mx-auto md:pt-5 lg:pt-10 xl:pt-20 pb-5 md:px-4 lg:px-20 xl:px-60 md:py-5 lg:py-10 xl:py-28 md:flex md:justify-between md:h-dvh md:items-center">
                 <div className="text-center animate__animated animate__bounceInLeft">
                     <h1 className="bg-gradient-to-r from-green-300 via-sky-500 to-purple-600 bg-clip-text text-3xl lg:text-4xl xl:text-5xl font-extrabold text-transparent mt-5 md:mt-0">
@@ -80,8 +80,8 @@ const Banner = () => {
                     </div>
                 </div>
                 <motion.div
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{ scale: 0.8 }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
                     className="flex items-center justify-center mt-5 px-4">
                     <img
                     id="blob"

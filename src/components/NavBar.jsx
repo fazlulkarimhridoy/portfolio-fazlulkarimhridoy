@@ -1,31 +1,84 @@
 import { Link } from "react-router-dom";
 import "../Css/NavBar.css"
-import { FaBars } from "react-icons/fa";
+import { FaAlignJustify } from "react-icons/fa";
 import NameLogo from "../assets/Logos/image.png"
+import { Drawer } from "antd";
+import { useState } from "react";
 
 
 const NavBar = () => {
+    // scroll to skills
+    const scrollToSkills = () => {
+        const section = document.getElementById("skills");
+        section?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    // scroll to skills
+    const scrollToProjects = () => {
+        const section = document.getElementById("projects");
+        section?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    // scroll to skills
+    const scrollToEducations = () => {
+        const section = document.getElementById("educations");
+        section?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    // scroll to skills
+    const scrollToContact = () => {
+        const section = document.getElementById("contact");
+        section?.scrollIntoView({ behavior: "smooth" });
+    };
+
+
+    // drawer functions
+    const [open, setOpen] = useState(false);
+    const [placement] = useState('right');
+    const showDrawer = () => {
+        setOpen(true);
+    };
+    const onClose = () => {
+        setOpen(false);
+    };
+
+    // shared links
     const links = <>
         <li className="text-sky-500 font-extrabold"><Link >Home</Link></li>
-        <li><Link >About</Link></li>
-        <li><Link >Skills</Link></li>
-        <li><Link >Projects</Link></li>
-        <li><Link >Education</Link></li>
-        <li><Link >Contact</Link></li>
+        <li onClick={scrollToSkills}><Link >Skills</Link></li>
+        <li onClick={scrollToProjects}><Link >Projects</Link></li>
+        <li onClick={scrollToEducations}><Link >Education</Link></li>
+        <li onClick={scrollToContact}><Link >Contact</Link></li>
     </>
+
     return (
-        <header className="scroll-smooth shadow-2xl bg-gray-800 navbar sm:px-10 overflow-visible lg:overflow-hidden">
+        <header className="fixed z-10 scroll-smooth shadow-2xl bg-gray-800 navbar sm:px-10 overflow-visible lg:overflow-hidden">
             <div className="navbar-start">
                 <Link to="/"><img className="w-32" src={NameLogo} /></Link>
             </div>
             <div className="navbar-end">
-                <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-white">
-                        <FaBars size={20}></FaBars>
+                <div className="flex items-center gap-4">
+                    <div className="flex items-center justify-center md:hidden">
+                        <button
+                            onClick={showDrawer}
+                            className="rounded bg-none p-2 text-gray-200 transition hover:text-gray-600/75"
+                        >
+                            <FaAlignJustify></FaAlignJustify>
+                        </button>
+                        <Drawer
+                            className="dark:bg-d1 dark:text-dw"
+                            width={200}
+                            placement={placement}
+                            closable={false}
+                            onClose={onClose}
+                            open={open}
+                            key={placement}
+                        >
+                            <ul id="link2" className="flex flex-col items-center justify-center gap-4 text-sm">
+                                {links}
+                            </ul>
+                        </Drawer>
                     </div>
-                    <ul tabIndex={0} id="link1" className="overflow-visible menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-28">
-                        {links}
-                    </ul>
                 </div>
                 <div className="hidden lg:flex">
                     <ul id="link2" className="flex flex-row items-center px-2 gap-6 text-white font-semibold">

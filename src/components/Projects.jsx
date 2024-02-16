@@ -89,7 +89,7 @@ const Projects = () => {
     }, [])
 
     return (
-        <section className="py-10 px-2 md:px-6 text-gray-800 overflow-hidden">
+        <section id="projects" className="py-10 px-2 md:px-6 text-gray-800 overflow-hidden">
             <div className="container p-4 mx-auto text-center">
                 <h4 className="text-base font-medium text-black">
                     All Projects

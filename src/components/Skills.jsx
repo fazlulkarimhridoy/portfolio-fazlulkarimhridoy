@@ -30,7 +30,7 @@ const Skills = () => {
     },[])
 
     return (
-        <section className="overflow-hidden">
+        <section id="skills" className="overflow-hidden">
             <div className="container p-4 mt-10 mx-auto text-center">
                 <h4 className="text-base font-medium">All Skills</h4>
                 <h2 className="text-4xl font-bold">Skill Stacks</h2>
