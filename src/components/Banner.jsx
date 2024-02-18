@@ -4,7 +4,7 @@ import download from "downloadjs";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import 'animate.css';
 import { motion } from "framer-motion";
-import "../Css/Banner.css"
+// import "../Css/Banner.css"
 
 
 const Banner = () => {
@@ -94,7 +94,7 @@ const Banner = () => {
                     className="flex items-center justify-center mt-5 px-4">
                     <img
                         id="blob"
-                        className="animate__animated animate__bounceInRight border-[18px] rounded-badge w-[400px] border-gray-700 hover:border-gray-500 hover:transition-all hover:ease-out hover:duration-1000"
+                        className="animate__animated animate__bounceInRight border-[18px] rounded-badge w-[385px] border-gray-700 hover:border-gray-500 hover:transition-all hover:ease-out hover:duration-1000"
                         src={AuthorImage} />
                 </motion.div>
             </div>

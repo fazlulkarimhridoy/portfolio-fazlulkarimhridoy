@@ -86,7 +86,7 @@ const NavBar = () => {
                         </Drawer>
                     </div>
                 </div>
-                <div className="hidden lg:flex">
+                <div className="hidden md:flex">
                     <ul id="link2" className="flex flex-row items-center px-2 gap-6 text-white font-semibold">
                         {links}
                     </ul>
