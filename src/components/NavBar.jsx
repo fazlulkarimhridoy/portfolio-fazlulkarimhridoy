@@ -69,7 +69,7 @@ const NavBar = () => {
                             onClick={showDrawer}
                             className="rounded bg-none p-2 text-gray-200 transition hover:text-gray-600/75"
                         >
-                            <FaAlignJustify></FaAlignJustify>
+                            <FaAlignJustify size={25}></FaAlignJustify>
                         </button>
                         <Drawer
                             closeIcon={false}

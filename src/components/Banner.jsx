@@ -13,6 +13,12 @@ const Banner = () => {
         download(pdfUrl);
     };
 
+    // scroll to contact
+    const scrollToContact = () => {
+        const section = document.getElementById("contact");
+        section?.scrollIntoView({ behavior: "smooth" });
+    };
+
     return (
         <section id="banner" className="text-white bg-gray-900 overflow-hidden pt-14">
             <div className="mx-auto md:pt-5 lg:pt-10 xl:pt-20 pb-5 md:px-4 lg:px-20 xl:px-60 md:py-5 lg:py-10 xl:py-28 md:flex md:justify-between md:h-dvh md:items-center">
@@ -42,13 +48,14 @@ const Banner = () => {
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.8 }}
                             onClick={downloadPdf}
-                            className="block w-full lg:w-1/2 rounded border border-sky-600 bg-sky-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 hover:cursor-pointer sm:w-auto">
+                            className="block w-full lg:w-1/2 focus:hidden rounded border border-sky-600 bg-sky-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 hover:cursor-pointer sm:w-auto">
                             Resume
                         </motion.div>
                         <motion.div
+                            onClick={scrollToContact}
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.8 }}
-                            className="block w-full lg:w-1/2 rounded border border-sky-600 px-12 py-3 text-sm font-medium text-white hover:bg-sky-600 focus:outline-none focus:ring active:bg-sky-500 hover:cursor-pointer sm:w-auto"                        >
+                            className="block w-full lg:w-1/2 focus:hidden rounded border border-sky-600 px-12 py-3 text-sm font-medium text-white hover:bg-sky-600 focus:outline-none focus:ring active:bg-sky-500 hover:cursor-pointer sm:w-auto"                        >
                             Contact
                         </motion.div>
                     </div>
@@ -84,7 +91,7 @@ const Banner = () => {
                     whileTap={{ scale: 0.9 }}
                     className="flex items-center justify-center mt-5 px-4">
                     <img
-                    id="blob"
+                        id="blob"
                         className="animate__animated animate__bounceInRight border-[18px] rounded-badge w-[400px] border-gray-700 hover:border-gray-500 hover:transition-all hover:ease-out hover:duration-1000"
                         src={AuthorImage} />
                 </motion.div>

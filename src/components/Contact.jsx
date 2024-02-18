@@ -58,19 +58,19 @@ const Contact = () => {
                 <form ref={form} onSubmit={sendEmail} className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
                     <label className="block">
                         <span className="mb-1">Full name</span>
-                        <input type="text" placeholder="Fazlul Karim" name="name" className="p-2 block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri bg-gray-100" />
+                        <input type="text" placeholder="Fazlul Karim" name="name" className="p-3 block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri bg-gray-100" />
                     </label>
                     <label className="block">
                         <span className="mb-1">Email address</span>
-                        <input type="email" placeholder="hridoy.cse98@gmail.com" name="email" className="p-2 block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri bg-gray-100" />
+                        <input type="email" placeholder="hridoy.cse98@gmail.com" name="email" className="p-3 block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri bg-gray-100" />
                     </label>
                     <label className="block">
                         <span className="mb-1">Message</span>
-                        <textarea rows="3" placeholder="Write your message here..." name="message" className="p-2 block w-full rounded-md focus:ring focus:ri focus:ri bg-gray-100"></textarea>
+                        <textarea rows="3" placeholder="Write your message here..." name="message" className="p-3 block w-full rounded-md focus:ring focus:ri focus:ri bg-gray-100"></textarea>
                     </label>
                     <button
                         type="submit"
-                        className="cursor-pointer self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ri bg-sky-600 text-gray-50 focus:ri hover:ri">
+                        className="cursor-pointer focus:hidden self-center px-8 py-3 text-lg rounded bg-sky-600 text-gray-50">
                         Send message
                     </button>
                 </form>
