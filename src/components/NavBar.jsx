@@ -5,7 +5,6 @@ import NameLogo from "../assets/Logos/image.png"
 import { Drawer } from "antd";
 import { useState } from "react";
 
-
 const NavBar = () => {
     // scroll to skills
     const scrollToSkills = () => {
@@ -79,7 +78,7 @@ const NavBar = () => {
                             onClose={onClose}
                             open={open}
                             key={placement}
-                            style={{backgroundColor: "#1F2937"}}
+                            style={{ backgroundColor: "#1F2937" }}
                         >
                             <ul id="link2" className="flex flex-col items-center justify-center gap-4 text-sm">
                                 {links}
@@ -93,7 +92,9 @@ const NavBar = () => {
                     </ul>
                 </div>
             </div>
+            
         </header>
+
     );
 };
 
