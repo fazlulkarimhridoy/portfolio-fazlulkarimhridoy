@@ -57,7 +57,7 @@ const NavBar = () => {
     </>
 
     return (
-        <header className="fixed z-10 scroll-smooth shadow-2xl bg-gray-800 navbar sm:px-10 overflow-visible lg:overflow-hidden">
+        <header className="fixed z-10 scroll-smooth shadow-2xl bg-gray-800 navbar sm:px-10 sm:py-4 overflow-visible lg:overflow-hidden">
             <div className="navbar-start">
                 <Link to="/"><img className="w-32" src={NameLogo} /></Link>
             </div>
