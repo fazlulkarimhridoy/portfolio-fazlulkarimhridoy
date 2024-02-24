@@ -31,7 +31,7 @@ const Banner = () => {
                             A Full Stack{' '}
                             <Typewriter
                                 words={['Developer']}
-                                loop={false}
+                                loop={2}
                                 cursor
                                 cursorStyle='...'
                                 cursorColor="white"
