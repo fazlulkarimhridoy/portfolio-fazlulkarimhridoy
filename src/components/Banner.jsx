@@ -46,20 +46,16 @@ const Banner = () => {
                     </p>
 
                     <div className="my-4 md:mt-8 flex flex-col lg:flex-row justify-center px-8 gap-4 md:gap-8">
-                        <motion.div
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.8 }}
+                        <div
                             onClick={downloadPdf}
-                            className="block w-full lg:w-1/2 focus:hidden rounded border border-sky-600 bg-sky-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 hover:cursor-pointer sm:w-auto">
+                            className="block w-full lg:w-1/2 focus:hidden rounded border border-sky-600 bg-sky-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white hover:duration-300 focus:outline-none focus:ring active:text-opacity-75 hover:cursor-pointer sm:w-auto">
                             Resume
-                        </motion.div>
-                        <motion.div
+                        </div>
+                        <div
                             onClick={scrollToContact}
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.8 }}
-                            className="block w-full lg:w-1/2 focus:hidden rounded border border-sky-600 px-12 py-3 text-sm font-medium text-white hover:bg-sky-600 focus:outline-none focus:ring active:bg-sky-500 hover:cursor-pointer sm:w-auto"                        >
+                            className="block w-full lg:w-1/2 focus:hidden rounded border border-sky-600 px-12 py-3 text-sm font-medium text-white hover:bg-sky-600 focus:outline-none focus:ring active:bg-sky-500 hover:duration-300 hover:cursor-pointer sm:w-auto"                        >
                             Contact
-                        </motion.div>
+                        </div>
                     </div>
                     <div className="lg:gap-y-10 lg:-mt-[260px] lg:-ml-[550px] xl:-ml-[700px] flex flex-row lg:flex-col items-center justify-center gap-x-10 md:gap-x-16 mt-5 md:mt-10">
                         <motion.div

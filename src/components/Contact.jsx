@@ -31,8 +31,8 @@ const Contact = () => {
         <section id="contact" className="py-6 bg-gray-50 text-gray-900">
             <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
                 <div className="py-6 md:py-0 md:px-6">
-                    <h1 className="text-4xl font-bold">Get in touch</h1>
-                    <p className="pt-2 pb-4">Fill in the form to start a conversation</p>
+                    <h1 className="text-4xl font-bold text-gray-500">Get in touch</h1>
+                    <p className="pt-2 pb-4 text-gray-400">Fill in the form to start a conversation</p>
                     <div className="space-y-4">
                         <p className="flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2 sm:mr-6">
@@ -70,7 +70,7 @@ const Contact = () => {
                     </label>
                     <button
                         type="submit"
-                        className="cursor-pointer focus:hidden self-center px-8 py-3 text-lg rounded bg-sky-600 text-gray-50">
+                        className="cursor-pointer focus:hidden self-end px-8 py-3 text-lg rounded border border-sky-600 text-black hover:bg-sky-600 hover:text-white hover:transition-all hover:duration-300">
                         Send message
                     </button>
                 </form>
