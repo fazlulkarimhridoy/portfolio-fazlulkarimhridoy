@@ -20,7 +20,7 @@ const Footer = () => {
                     </div>
 
                 </div>
-                <p className="mt-4 text-end items-center text-sm text-white">
+                <p className="mt-4 text-center md:text-end items-center text-sm text-white">
                     Copyright &copy; 2023. All rights reserved to <span className="block sm:inline-block">Fazlul Karim (React-Developer).</span>
                 </p>
             </div>
