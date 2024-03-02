@@ -39,7 +39,7 @@ const NavBar = () => {
 
     // drawer functions
     const [open, setOpen] = useState(false);
-    const [placement] = useState('right');
+    const [placement] = useState('left');
     const showDrawer = () => {
         setOpen(true);
     };
@@ -74,13 +74,12 @@ const NavBar = () => {
                             closeIcon={false}
                             width={200}
                             placement={placement}
-                            closable={true}
                             onClose={onClose}
                             open={open}
                             key={placement}
                             style={{ backgroundColor: "#1F2937" }}
                         >
-                            <ul id="link2" className="flex flex-col items-center justify-center gap-4 text-sm">
+                            <ul id="link2" className="flex flex-col items-center justify-center gap-4 text-xl">
                                 {links}
                             </ul>
                         </Drawer>
@@ -92,7 +91,7 @@ const NavBar = () => {
                     </ul>
                 </div>
             </div>
-            
+
         </header>
 
     );
