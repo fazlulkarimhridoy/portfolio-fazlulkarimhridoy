@@ -36,14 +36,27 @@ import TourImage7 from "../assets/Projects/Local Tour/localtour7.png"
 import TourImage8 from "../assets/Projects/Local Tour/localtour8.png"
 
 // menverse images
-import MenverseImage1 from '../assets/Projects/Menverse/menverse1.png'
-import MenverseImage2 from '../assets/Projects/Menverse/menverse2.png'
-import MenverseImage3 from '../assets/Projects/Menverse/menverse3.png'
-import MenverseImage4 from '../assets/Projects/Menverse/menverse4.png'
-import MenverseImage5 from '../assets/Projects/Menverse/menverse5.png'
-import MenverseImage6 from '../assets/Projects/Menverse/menverse6.png'
-import MenverseImage7 from '../assets/Projects/Menverse/menverse7.png'
+// import MenverseImage1 from '../assets/Projects/Menverse/menverse1.png'
+// import MenverseImage2 from '../assets/Projects/Menverse/menverse2.png'
+// import MenverseImage3 from '../assets/Projects/Menverse/menverse3.png'
+// import MenverseImage4 from '../assets/Projects/Menverse/menverse4.png'
+// import MenverseImage5 from '../assets/Projects/Menverse/menverse5.png'
+// import MenverseImage6 from '../assets/Projects/Menverse/menverse6.png'
+// import MenverseImage7 from '../assets/Projects/Menverse/menverse7.png'
 
+// time forge
+import TimeforgeImage1 from '../assets/Projects/Timeforge/timeforge1.png'
+import TimeforgeImage2 from '../assets/Projects/Timeforge/timeforge2.png'
+import TimeforgeImage3 from '../assets/Projects/Timeforge/timeforge3.png'
+import TimeforgeImage4 from '../assets/Projects/Timeforge/timeforge4.png'
+import TimeforgeImage5 from '../assets/Projects/Timeforge/timeforge5.png'
+import TimeforgeImage6 from '../assets/Projects/Timeforge/timeforge6.png'
+import TimeforgeImage7 from '../assets/Projects/Timeforge/timeforge7.png'
+import TimeforgeImage8 from '../assets/Projects/Timeforge/timeforge8.png'
+import TimeforgeImage9 from '../assets/Projects/Timeforge/timeforge9.png'
+import TimeforgeImage10 from '../assets/Projects/Timeforge/timeforge10.png'
+import TimeforgeImage11 from '../assets/Projects/Timeforge/timeforge11.png'
+import TimeforgeImage12 from '../assets/Projects/Timeforge/timeforge12.png'
 
 const Projects = () => {
     // project images slider functions
@@ -104,6 +117,107 @@ const Projects = () => {
                 {/* project-1 */}
                 <div
                     data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"
+                    className="p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
+                    <div className="space-y-4">
+                        {/* images */}
+                        <div ref={sliderRef} className="keen-slider space-y-2">
+                            <div className="keen-slider__slide number-slide1">
+                                <img src={TimeforgeImage1} alt="" className="block object-cover object-center w-full rounded-md bg-gray-500" />
+                            </div>
+                            <div className="keen-slider__slide number-slide2">
+                                <img src={TimeforgeImage2} alt="" className="block object-cover object-center w-full rounded-md   bg-gray-500" />
+                            </div>
+                            <div className="keen-slider__slide number-slide3">
+                                <img src={TimeforgeImage3} alt="" className="block object-cover object-center w-full rounded-md   bg-gray-500" />
+                            </div>
+                            <div className="keen-slider__slide number-slide4">
+                                <img src={TimeforgeImage4} alt="" className="block object-cover object-center w-full rounded-md   bg-gray-500" />
+                            </div>
+                            <div className="keen-slider__slide number-slide5">
+                                <img src={TimeforgeImage5} alt="" className="block object-cover object-center w-full rounded-md   bg-gray-500" />
+                            </div>
+                            <div className="keen-slider__slide number-slide6">
+                                <img src={TimeforgeImage6} alt="" className="block object-cover object-center w-full rounded-md   bg-gray-500" />
+                            </div>
+                            <div className="keen-slider__slide number-slide6">
+                                <img src={TimeforgeImage7} alt="" className="block object-cover object-center w-full rounded-md   bg-gray-500" />
+                            </div>
+                            <div className="keen-slider__slide number-slide6">
+                                <img src={TimeforgeImage8} alt="" className="block object-cover object-center w-full rounded-md   bg-gray-500" />
+                            </div>
+                            <div className="keen-slider__slide number-slide6">
+                                <img src={TimeforgeImage9} alt="" className="block object-cover object-center w-full rounded-md   bg-gray-500" />
+                            </div>
+                            <div className="keen-slider__slide number-slide6">
+                                <img src={TimeforgeImage10} alt="" className="block object-cover object-center w-full rounded-md   bg-gray-500" />
+                            </div>
+                            <div className="keen-slider__slide number-slide6">
+                                <img src={TimeforgeImage11} alt="" className="block object-cover object-center w-full rounded-md   bg-gray-500" />
+                            </div>
+                            <div className="keen-slider__slide number-slide6">
+                                <img src={TimeforgeImage12} alt="" className="block object-cover object-center w-full rounded-md   bg-gray-500" />
+                            </div>
+                        </div>
+
+                        {/* description */}
+                        <div className="space-y-2">
+                            <div className="block">
+                                <h3 className="text-lg font-semibold text-violet-600">
+                                    TimeForge - An Event Scheduling Platform
+                                </h3>
+                            </div>
+                            <p className="font-medium text-sm text-gray-600">
+                                Online event scheduling platform to create and maintain seamless event solutions.
+                            </p>
+                            <p className="text-xs text-gray-600">
+                                <span className="font-bold text-gray-600">
+                                    Frontend
+                                </span>
+                                <span className="font-medium">
+                                    : React.js, Tailwind CSS, Ant Design, TanStack Query, Material Tailwind, React Email.
+                                </span> <br />
+                                <span className="font-bold text-gray-600">
+                                    Backend
+                                </span>
+                                <span className="font-medium">
+                                    : Node.js, Express.js.
+                                </span> <br />
+                                <span className="font-bold text-gray-600">
+                                    Database
+                                </span>
+                                <span className="font-medium">
+                                    : Mongoose
+                                </span> <br />
+                                <span className="font-bold text-gray-600">
+                                    Authentication :
+                                </span>
+                                <span className="font-medium">
+                                    : Firebase authentication.
+                                </span>
+                            </p>
+                            <p className="flex flex-col md:flex-row items-center text-center gap-2 md:gap-8 pt-3">
+                                <a href="https://timeforge.vercel.app"
+                                    className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-violet-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-violet-500">
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/fazlulkarimhridoy/timeforge-client"
+                                    className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-violet-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-violet-500">
+                                    Client Code
+                                </a>
+                                <a href="https://github.com/fazlulkarimhridoy/timeforge-server"
+                                    className="w-full cursor-pointer inline-block rounded border border-current px-4 py-2 text-sm font-medium text-violet-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-violet-500">
+                                    Server Code
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* project-2 */}
+                <div
+                    data-aos="fade-left"
                     data-aos-offset="300"
                     data-aos-easing="ease-in-sine"
                     className="p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
@@ -190,9 +304,9 @@ const Projects = () => {
                     </div>
                 </div>
 
-                {/* project-2 */}
+                {/* project-3 */}
                 <div
-                    data-aos="fade-left"
+                    data-aos="fade-right"
                     data-aos-offset="300"
                     data-aos-easing="ease-in-sine"
                     className="animated p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
@@ -227,7 +341,7 @@ const Projects = () => {
                         {/* description */}
                         <div className="space-y-2">
                             <a className="block">
-                                <h3 className="text-lg font-semibold text-emerald-600">
+                                <h3 className="text-lg font-semibold text-sky-600">
                                     Task Management - A daily essential tool for everyone.
                                 </h3>
                             </a>
@@ -278,9 +392,9 @@ const Projects = () => {
                     </div>
                 </div>
 
-                {/* project-3 */}
+                {/* project-4 */}
                 <div
-                    data-aos="fade-right"
+                    data-aos="fade-left"
                     data-aos-offset="300"
                     data-aos-easing="ease-in-sine"
                     className="animated p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
@@ -315,7 +429,7 @@ const Projects = () => {
                         {/* description */}
                         <div className="space-y-2">
                             <a className="block">
-                                <h3 className="text-lg font-semibold text-emerald-600">
+                                <h3 className="text-lg font-semibold text-cyan-600">
                                     Local Tour Guide - Complete tour problem solution.
                                 </h3>
                             </a>
@@ -366,14 +480,13 @@ const Projects = () => {
                     </div>
                 </div>
 
-                {/* project-4 */}
-                <div
+                {/* project-5 */}
+                {/* <div
                     data-aos="fade-left"
                     data-aos-offset="300"
                     data-aos-easing="ease-in-sine"
                     className="animated p-4 md:p-8 shadow-lg rounded-md bg-gray-50 text-gray-800">
                     <div className="space-y-4">
-                        {/* images */}
                         <div ref={sliderRef} className="keen-slider space-y-2">
                             <div className="keen-slider__slide number-slide1">
                                 <img src={MenverseImage1} alt="" className="block object-cover object-center w-full rounded-md   bg-gray-500" />
@@ -397,7 +510,6 @@ const Projects = () => {
                                 <img src={MenverseImage7} alt="" className="block object-cover object-center w-full rounded-md   bg-gray-500" />
                             </div>
                         </div>
-                        {/* description */}
                         <div className="space-y-2">
                             <a className="block">
                                 <h3 className="text-lg font-semibold text-emerald-600">
@@ -449,7 +561,7 @@ const Projects = () => {
                             </p>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     );
