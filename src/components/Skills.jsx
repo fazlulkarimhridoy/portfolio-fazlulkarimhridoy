@@ -15,7 +15,8 @@ import GithubIcon from "../assets/Icons/Github-Dark.svg"
 import VsCodeIcon from "../assets/Icons/vscode.svg"
 import NpmIcon from "../assets/Icons/npm.png"
 import VercelIcon from "../assets/Icons/Vercel-Dark.svg"
-import NetlifyIcon from "../assets/Icons/netlify.svg"
+// import NetlifyIcon from "../assets/Icons/netlify.svg"
+import CapacitorIcon from "../assets/Icons/capacitor.png"
 import 'animate.css';
 import { useEffect } from "react"
 import "aos/dist/aos.css";
@@ -336,19 +337,19 @@ const Skills = () => {
                                 </p>
                             </div>
                         </div>
-                        {/* netlify */}
+                        {/* capacitor */}
                         <div className="bg-gray-100 hover:bg-sky-50 flex items-center gap-4 border rounded-md p-3 hover:border-gray-800 hover:shadow-xl hover:transition-all hover:duration-100 hover:ease-out hover:scale-105">
                             <img
-                                src={NetlifyIcon}
-                                alt="netlify-icon"
-                                className="aspect-square w-20 rounded-lg object-cover"
+                                src={CapacitorIcon}
+                                alt="capacitor-icon"
+                                className="aspect-square w-20 bg-black p-2 rounded-2xl object-cover"
                             />
 
                             <div>
-                                <h3 className="text-lg/tight font-medium text-gray-900">Netlify</h3>
+                                <h3 className="text-lg/tight font-medium text-gray-900">CapacitorJS</h3>
 
                                 <p className="mt-0.5 text-gray-700">
-                                    Familiar
+                                    Comfortable <span className="text-xs">(App Plugin)</span>
                                 </p>
                             </div>
                         </div>
