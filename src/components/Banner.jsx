@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 const Banner = () => {
 
     const downloadPdf = () => {
-        const pdfUrl = '/Fazlul_Karim_React_Developer.pdf';
+        const pdfUrl = '/Fazlul_Karim_MernStack_Developer.pdf';
         download(pdfUrl);
     };
 
