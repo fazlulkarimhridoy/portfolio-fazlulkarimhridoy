@@ -13,7 +13,7 @@ import GitIcon from "../assets/Icons/Git.svg";
 import GithubIcon from "../assets/Icons/Github-Dark.svg";
 import VercelIcon from "../assets/Icons/Vercel-Dark.svg";
 import NextIcon from "../assets/Icons/NextJS-Dark.svg";
-import PrismaIcon from "../assets/Icons/Prisma.png";
+import PrismaIcon from "../assets/Icons/Prisma.svg";
 import MysqlIcon from "../assets/Icons/mysql.jpg";
 import TrelloIcon from "../assets/Icons/Trello.png";
 
