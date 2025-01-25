@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 const Banner = () => {
     const downloadPdf = () => {
-        const pdfUrl = "/Fazlul_Karim_MernStack_Developer.pdf";
+        const pdfUrl = "/Dev_Hridoy.pdf";
         download(pdfUrl);
     };
 

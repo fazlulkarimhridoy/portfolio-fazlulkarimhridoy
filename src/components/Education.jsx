@@ -11,8 +11,8 @@ const Education = () => {
                         <div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:bg-gray-300">
                             <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-gray-600">
                                 <h3 className="text-xl font-semibold">Computer Science & Engineering </h3>
-                                <time className="text-xs uppercase text-gray-600">Running</time>
-                                <p className="mt-3">National University (2018-2024)</p>
+                                <time className="text-xs uppercase text-gray-600">Completed</time>
+                                <p className="mt-3">National University (2018-2022)</p>
                             </div>
                             <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-gray-600">
                                 <h3 className="text-xl font-semibold tracki">Higher Secondary School Certificate</h3>

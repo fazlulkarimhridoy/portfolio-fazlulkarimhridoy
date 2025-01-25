@@ -1,0 +1,99 @@
+[
+    {
+        "title": "TimeForge - An Event Scheduling Platform",
+        "description": "TimeForge is a seamless online event scheduling platform designed to create and manage events efficiently. Built with React.js, the interface is styled using Tailwind CSS, Ant Design, and Material Tailwind, while Firebase authentication ensures secure access. TanStack Query powers efficient data fetching, and React Email is used for communication. The backend, developed with Node.js and Express.js, integrates with a MongoDB database using Mongoose, ensuring reliable data management.",
+        "liveDemo": "https://timeforge.vercel.app",
+        "clientCode": "https://github.com/fazlulkarimhridoy/timeforge-client",
+        "serverCode": "https://github.com/fazlulkarimhridoy/timeforge-server",
+        "images": [
+            "../src/assets/Projects/Timeforge/timeforge1.png",
+            "../src/assets/Projects/Timeforge/timeforge4.png",
+            "../src/assets/Projects/Timeforge/timeforge3.png",
+            "../src/assets/Projects/Timeforge/timeforge2.png",
+            "../src/assets/Projects/Timeforge/timeforge5.png",
+            "../src/assets/Projects/Timeforge/timeforge6.png",
+            "../src/assets/Projects/Timeforge/timeforge7.png",
+            "../src/assets/Projects/Timeforge/timeforge8.png",
+            "../src/assets/Projects/Timeforge/timeforge9.png",
+            "../src/assets/Projects/Timeforge/timeforge10.png",
+            "../src/assets/Projects/Timeforge/timeforge11.png",
+            "../src/assets/Projects/Timeforge/timeforge12.png"
+        ]
+    },
+    {
+        "title": "Daily Pulse - An Online Newspaper Portal",
+        "description": "Daily Pulse is a dynamic online newspaper platform where publishers can showcase regular and premium news content, while administrators can manage operations through a robust admin panel. Built with React.js, the design incorporates Tailwind CSS, DaisyUI, MambaUI, and Hyper UI for a modern look and feel. Secure authentication is powered by Firebase with JWT tokens stored in cookies. The backend, developed using Node.js and Express.js, is supported by MongoDB for efficient content management.",
+        "liveDemo": "https://newspaper-client.vercel.app",
+        "clientCode": "https://github.com/fazlulkarimhridoy/daily-pulse-newspaper-client",
+        "serverCode": "https://github.com/fazlulkarimhridoy/newspaper-project-server",
+        "images": [
+            "../src/assets/Projects/Daily Pulse/newspaper1.png",
+            "../src/assets/Projects/Daily Pulse/newspaper2.png",
+            "../src/assets/Projects/Daily Pulse/newspaper3.png",
+            "../src/assets/Projects/Daily Pulse/newspaper4.png",
+            "../src/assets/Projects/Daily Pulse/newspaper5.png",
+            "../src/assets/Projects/Daily Pulse/newspaper6.png",
+            "../src/assets/Projects/Daily Pulse/newspaper7.png",
+            "../src/assets/Projects/Daily Pulse/newspaper8.png"
+        ]
+    },
+    {
+        "title": "Task Management - A Daily Essential Tool",
+        "description": "Task Management is a comprehensive tool for individuals seeking a personal assistant for daily tasks. The application features drag-and-drop functionality on the dashboard, implemented with React DnD, and boasts a visually appealing design using React.js, Tailwind CSS, DaisyUI, MambaUI, and Hyper UI. Firebase authentication provides secure login, while the backend, powered by Node.js and Express.js, integrates seamlessly with MongoDB for task storage and retrieval.",
+        "liveDemo": "https://task-management-ruby-psi.vercel.app",
+        "clientCode": "https://github.com/fazlulkarimhridoy/task-management",
+        "serverCode": "https://github.com/fazlulkarimhridoy/task-management",
+        "images": [
+            "../src/assets/Projects/TaskManagement/taskmanagement1.png",
+            "../src/assets/Projects/TaskManagement/taskmanagement2.png",
+            "../src/assets/Projects/TaskManagement/taskmanagement3.png",
+            "../src/assets/Projects/TaskManagement/taskmanagement4.png",
+            "../src/assets/Projects/TaskManagement/taskmanagement5.png",
+            "../src/assets/Projects/TaskManagement/taskmanagement6.png",
+            "../src/assets/Projects/TaskManagement/taskmanagement7.png",
+            "../src/assets/Projects/TaskManagement/taskmanagement8.png"
+        ]
+    },
+    {
+        "title": "Local Tour Guide - Complete Tour Solution",
+        "description": "Local Tour Guide is a comprehensive platform that connects users with experienced tour guides. Users can find a suitable guide or create their own guide services. Built with React.js and styled using Tailwind CSS, DaisyUI, MambaUI, and Hyper UI, the app features an engaging interface. Secure user authentication is handled via Firebase with JWT tokens stored in cookies. The backend, developed using Node.js and Express.js, operates with MongoDB for data management.",
+        "liveDemo": "https://local-tour-client.vercel.app",
+        "clientCode": "https://github.com/fazlulkarimhridoy/local-tour-guide-client",
+        "serverCode": "https://github.com/fazlulkarimhridoy/local-tour-project-server",
+        "images": [
+            "../src/assets/Projects/Local Tour/localtour1.png",
+            "../src/assets/Projects/Local Tour/localtour2.png",
+            "../src/assets/Projects/Local Tour/localtour3.png",
+            "../src/assets/Projects/Local Tour/localtour4.png",
+            "../src/assets/Projects/Local Tour/localtour5.png",
+            "../src/assets/Projects/Local Tour/localtour6.png",
+            "../src/assets/Projects/Local Tour/localtour7.png",
+            "../src/assets/Projects/Local Tour/localtour8.png"
+        ]
+    },
+    {
+        "title": "Alponay Boishakh - Online Canvas Board",
+        "description": "Alponay Boishakh is an online canvas platform that allows users to create beautiful digital artwork effortlessly. Ideal for both casual drawing and intricate designs, the platform supports freehand drawing with digital pens or touch. Developed with React.js and styled using Tailwind CSS, DaisyUI, MambaUI, and Hyper UI, the app ensures an intuitive user experience. The backend, powered by Node.js and Express.js, integrates with MongoDB for seamless data management, while Firebase authentication secures user access.",
+        "liveDemo": "https://boishakhi-alpona-nu.vercel.app",
+        "clientCode": "https://github.com/fazlulkarimhridoy/Boishakh-Sketch-for-XRi",
+        "serverCode": "",
+        "images": [
+            "../src/assets/Projects/AlponayBoishakh/1.png",
+            "../src/assets/Projects/AlponayBoishakh/2.png",
+            "../src/assets/Projects/AlponayBoishakh/3.png",
+            "../src/assets/Projects/AlponayBoishakh/4.png",
+            "../src/assets/Projects/AlponayBoishakh/5.png",
+            "../src/assets/Projects/AlponayBoishakh/6.png",
+            "../src/assets/Projects/AlponayBoishakh/7.png",
+            "../src/assets/Projects/AlponayBoishakh/8.png"
+        ]
+    },
+    {
+        "title": "GP RMG - Quiz & Puzzle Game",
+        "description": "GP RMG is an engaging quiz and puzzle game web application designed to provide users with a fun and interactive experience. The platform features challenging quizzes and dynamic puzzles, including drag-and-drop image puzzles, making it suitable for players of all ages. Developed with React.js, it leverages modern libraries such as TanStack Query for efficient state and server data management, React Confetti for celebratory effects, React DnD Image Puzzle for drag-and-drop puzzle interactivity, and Swiper for smooth carousel and slider functionality. The application offers a visually appealing and seamless user experience, with intuitive gameplay that keeps users entertained.",
+        "liveDemo": "https://gp-rmg.vercel.app",
+        "clientCode": "https://github.com/fazlulkarimhridoy/Gp-RMG",
+        "serverCode": "",
+        "images": ["../src/assets/Projects/GPRMG/gp1.png", "../src/assets/Projects/GPRMG/gp2.png"]
+    }
+]
