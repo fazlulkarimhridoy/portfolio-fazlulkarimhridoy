@@ -6,18 +6,18 @@
         "clientCode": "https://github.com/fazlulkarimhridoy/timeforge-client",
         "serverCode": "https://github.com/fazlulkarimhridoy/timeforge-server",
         "images": [
-            "../src/assets/Projects/Timeforge/timeforge1.png",
-            "../src/assets/Projects/Timeforge/timeforge4.png",
-            "../src/assets/Projects/Timeforge/timeforge3.png",
-            "../src/assets/Projects/Timeforge/timeforge2.png",
-            "../src/assets/Projects/Timeforge/timeforge5.png",
-            "../src/assets/Projects/Timeforge/timeforge6.png",
-            "../src/assets/Projects/Timeforge/timeforge7.png",
-            "../src/assets/Projects/Timeforge/timeforge8.png",
-            "../src/assets/Projects/Timeforge/timeforge9.png",
-            "../src/assets/Projects/Timeforge/timeforge10.png",
-            "../src/assets/Projects/Timeforge/timeforge11.png",
-            "../src/assets/Projects/Timeforge/timeforge12.png"
+            "/Projects/Timeforge/timeforge1.png",
+            "/Projects/Timeforge/timeforge4.png",
+            "/Projects/Timeforge/timeforge3.png",
+            "/Projects/Timeforge/timeforge2.png",
+            "/Projects/Timeforge/timeforge5.png",
+            "/Projects/Timeforge/timeforge6.png",
+            "/Projects/Timeforge/timeforge7.png",
+            "/Projects/Timeforge/timeforge8.png",
+            "/Projects/Timeforge/timeforge9.png",
+            "/Projects/Timeforge/timeforge10.png",
+            "/Projects/Timeforge/timeforge11.png",
+            "/Projects/Timeforge/timeforge12.png"
         ]
     },
     {
@@ -27,14 +27,14 @@
         "clientCode": "https://github.com/fazlulkarimhridoy/daily-pulse-newspaper-client",
         "serverCode": "https://github.com/fazlulkarimhridoy/newspaper-project-server",
         "images": [
-            "../src/assets/Projects/Daily Pulse/newspaper1.png",
-            "../src/assets/Projects/Daily Pulse/newspaper2.png",
-            "../src/assets/Projects/Daily Pulse/newspaper3.png",
-            "../src/assets/Projects/Daily Pulse/newspaper4.png",
-            "../src/assets/Projects/Daily Pulse/newspaper5.png",
-            "../src/assets/Projects/Daily Pulse/newspaper6.png",
-            "../src/assets/Projects/Daily Pulse/newspaper7.png",
-            "../src/assets/Projects/Daily Pulse/newspaper8.png"
+            "/Projects/DailyPulse/newspaper1.png",
+            "/Projects/DailyPulse/newspaper2.png",
+            "/Projects/DailyPulse/newspaper3.png",
+            "/Projects/DailyPulse/newspaper4.png",
+            "/Projects/DailyPulse/newspaper5.png",
+            "/Projects/DailyPulse/newspaper6.png",
+            "/Projects/DailyPulse/newspaper7.png",
+            "/Projects/DailyPulse/newspaper8.png"
         ]
     },
     {
@@ -44,14 +44,14 @@
         "clientCode": "https://github.com/fazlulkarimhridoy/task-management",
         "serverCode": "https://github.com/fazlulkarimhridoy/task-management",
         "images": [
-            "../src/assets/Projects/TaskManagement/taskmanagement1.png",
-            "../src/assets/Projects/TaskManagement/taskmanagement2.png",
-            "../src/assets/Projects/TaskManagement/taskmanagement3.png",
-            "../src/assets/Projects/TaskManagement/taskmanagement4.png",
-            "../src/assets/Projects/TaskManagement/taskmanagement5.png",
-            "../src/assets/Projects/TaskManagement/taskmanagement6.png",
-            "../src/assets/Projects/TaskManagement/taskmanagement7.png",
-            "../src/assets/Projects/TaskManagement/taskmanagement8.png"
+            "/Projects/TaskManagement/taskmanagement1.png",
+            "/Projects/TaskManagement/taskmanagement2.png",
+            "/Projects/TaskManagement/taskmanagement3.png",
+            "/Projects/TaskManagement/taskmanagement4.png",
+            "/Projects/TaskManagement/taskmanagement5.png",
+            "/Projects/TaskManagement/taskmanagement6.png",
+            "/Projects/TaskManagement/taskmanagement7.png",
+            "/Projects/TaskManagement/taskmanagement8.png"
         ]
     },
     {
@@ -61,14 +61,14 @@
         "clientCode": "https://github.com/fazlulkarimhridoy/local-tour-guide-client",
         "serverCode": "https://github.com/fazlulkarimhridoy/local-tour-project-server",
         "images": [
-            "../src/assets/Projects/Local Tour/localtour1.png",
-            "../src/assets/Projects/Local Tour/localtour2.png",
-            "../src/assets/Projects/Local Tour/localtour3.png",
-            "../src/assets/Projects/Local Tour/localtour4.png",
-            "../src/assets/Projects/Local Tour/localtour5.png",
-            "../src/assets/Projects/Local Tour/localtour6.png",
-            "../src/assets/Projects/Local Tour/localtour7.png",
-            "../src/assets/Projects/Local Tour/localtour8.png"
+            "/Projects/LocalTour/localtour1.png",
+            "/Projects/LocalTour/localtour2.png",
+            "/Projects/LocalTour/localtour3.png",
+            "/Projects/LocalTour/localtour4.png",
+            "/Projects/LocalTour/localtour5.png",
+            "/Projects/LocalTour/localTour6.png",
+            "/Projects/LocalTour/localtour7.png",
+            "/Projects/LocalTour/localtour8.png"
         ]
     },
     {
@@ -78,14 +78,14 @@
         "clientCode": "https://github.com/fazlulkarimhridoy/Boishakh-Sketch-for-XRi",
         "serverCode": "",
         "images": [
-            "../src/assets/Projects/AlponayBoishakh/1.png",
-            "../src/assets/Projects/AlponayBoishakh/2.png",
-            "../src/assets/Projects/AlponayBoishakh/3.png",
-            "../src/assets/Projects/AlponayBoishakh/4.png",
-            "../src/assets/Projects/AlponayBoishakh/5.png",
-            "../src/assets/Projects/AlponayBoishakh/6.png",
-            "../src/assets/Projects/AlponayBoishakh/7.png",
-            "../src/assets/Projects/AlponayBoishakh/8.png"
+            "/Projects/AlponayBoishakh/1.png",
+            "/Projects/AlponayBoishakh/2.png",
+            "/Projects/AlponayBoishakh/3.png",
+            "/Projects/AlponayBoishakh/4.png",
+            "/Projects/AlponayBoishakh/5.png",
+            "/Projects/AlponayBoishakh/6.png",
+            "/Projects/AlponayBoishakh/7.png",
+            "/Projects/AlponayBoishakh/8.png"
         ]
     },
     {
@@ -94,6 +94,6 @@
         "liveDemo": "https://gp-rmg.vercel.app",
         "clientCode": "https://github.com/fazlulkarimhridoy/Gp-RMG",
         "serverCode": "",
-        "images": ["../src/assets/Projects/GPRMG/gp1.png", "../src/assets/Projects/GPRMG/gp2.png"]
+        "images": ["/Projects/GPRMG/gp1.png", "/Projects/GPRMG/gp2.png"]
     }
 ]
