@@ -52,7 +52,7 @@ const ProjectCard = ({ project, index }) => {
     return (
         <div
             key={index}
-            data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+            data-aos={"zoom-in-down"}
             data-aos-offset="300"
             data-aos-easing="ease-in-sine"
             className="shadow-lg rounded-md bg-gray-50 text-gray-800"
