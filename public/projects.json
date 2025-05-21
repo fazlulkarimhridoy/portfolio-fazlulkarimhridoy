@@ -1,8 +1,8 @@
 [
     {
-        "title": "Floral Radiance | E-commerce | Freelance Project",
+        "title": "Floral Radiance | E-commerce",
         "highlights": ["NextJs", "Typescript", "Ant Design", "PrismaORM", "MySQL", "ExpressJs"],
-        "description": "Floral Radiance is a vibrant ecommerce platform that offers a wide variety of elegant flower bouquets for every occasion. Whether you're celebrating love, friendship, or life’s milestones, the platform makes ordering fresh, handcrafted floral arrangements effortless. While intuitive UI design and real-time updates enhance customer satisfaction and make gifting flowers a delightful experience.",
+        "description": "A vibrant ecommerce platform for elegant flower bouquets with real-time updates and smooth ordering.",
         "liveDemo": "https://www.floralradiancebd.com",
         "clientCode": "private",
         "serverCode": "private",
@@ -23,9 +23,9 @@
         }
     },
     {
-        "title": "Alponay Boishakh | Alpona Sketching | Freelance Project",
-        "highlights": ["Javascript", "TailwindCSS", "Canvas", "Vanilla"],
-        "description": "Alponay Boishakh is an online canvas platform that allows users to create beautiful digital artwork effortlessly. Ideal for both casual drawing and intricate designs, the platform supports freehand drawing with digital pens or touch. It offers simple tools for quick sketches. Users can save and share their artwork easily. It's super user friendly.",
+        "title": "Alponay Boishakh | Alpona Sketching",
+        "highlights": ["Javascript", "TailwindCSS", "Canvas", "Vanilla", "HTML5"],
+        "description": "A digital canvas platform for creating and sharing beautiful Alpona artwork.",
         "liveDemo": "https://boishakhi-alpona-nu.vercel.app",
         "clientCode": "private",
         "serverCode": "",
@@ -45,9 +45,9 @@
         }
     },
     {
-        "title": "GP RMG | Quiz & Puzzle Game | Freelance Project",
+        "title": "GP RMG | Quiz & Puzzle Game",
         "highlights": ["ReactJs", "Javascript", "Context API", "TailwindCSS", "DnD", "SwiperJs"],
-        "description": "GP RMG is an engaging quiz and puzzle game web application designed to provide users with a fun and interactive experience. The platform features challenging quizzes and dynamic puzzles, including drag-and-drop image puzzles, making it suitable for players of all ages. The application offers a visually appealing and seamless user experience, with intuitive gameplay that keeps users entertained.",
+        "description": "An interactive web app with quizzes and drag-and-drop image puzzles.",
         "liveDemo": "https://gp-rmg.vercel.app",
         "clientCode": "private",
         "serverCode": "",
@@ -58,9 +58,9 @@
         }
     },
     {
-        "title": "TimeForge | Event Scheduling & Meeting | Team Project",
+        "title": "TimeForge | Event Scheduling & Meeting",
         "highlights": ["ReactJs", "Typescript", "Ant Design", "Firebase", "Mongoose", "ExpressJs"],
-        "description": "TimeForge is a seamless online event scheduling platform designed to create and manage events efficiently. Firebase authentication ensures secure access. TanStack Query powers efficient data fetching, and React Email is used for communication. The backend, developed with Node.js and Express.js, integrates with a MongoDB database using Mongoose, ensuring reliable data management.",
+        "description": "An online scheduling platform with secure auth and efficient data management.",
         "liveDemo": "https://timeforge.vercel.app",
         "clientCode": "https://github.com/fazlulkarimhridoy/timeforge-client",
         "serverCode": "https://github.com/fazlulkarimhridoy/timeforge-server",
@@ -80,9 +80,9 @@
         ]
     },
     {
-        "title": "Daily Pulse | Newspaper Portal | Personal Project",
+        "title": "Daily Pulse | Newspaper Portal",
         "highlights": ["ReactJs", "Javascript", "Daisy UI", "Firebase", "MongoDB", "ExpressJs", "JWT"],
-        "description": "Daily Pulse is a dynamic online newspaper platform where publishers can showcase regular and premium news content, while administrators can manage operations through a robust admin panel. Secure authentication is powered by Firebase with JWT tokens stored in cookies. The backend, developed using Node.js and Express.js, is supported by MongoDB for efficient content management.",
+        "description": "A digital newspaper platform with secure publishing and admin features.",
         "liveDemo": "https://newspaper-client.vercel.app",
         "clientCode": "https://github.com/fazlulkarimhridoy/daily-pulse-newspaper-client",
         "serverCode": "https://github.com/fazlulkarimhridoy/newspaper-project-server",
@@ -98,9 +98,9 @@
         ]
     },
     {
-        "title": "Task Management | Drag & Drop Schedules | Personal Project",
+        "title": "Task Management | Drag & Drop Schedules",
         "highlights": ["ReactJs", "Javascript", "Mamba UI", "DnD", "MongoDB", "ExpressJs"],
-        "description": "Task Management is a comprehensive tool for individuals seeking a personal assistant for daily tasks. The application features drag-and-drop functionality on the dashboard, implemented with React DnD, and boasts a visually appealing design using Hyper UI. Firebase authentication provides secure login, while the backend integrates seamlessly with MongoDB for task storage and retrieval.",
+        "description": "A personal task manager with drag-and-drop scheduling and clean UI.",
         "liveDemo": "https://task-management-ruby-psi.vercel.app",
         "clientCode": "https://github.com/fazlulkarimhridoy/task-management",
         "serverCode": "https://github.com/fazlulkarimhridoy/task-management",
@@ -116,9 +116,9 @@
         ]
     },
     {
-        "title": "Local Tour Guide | Complete Tour Solution | Personal Project",
+        "title": "Local Tour Guide | Complete Tour Solution",
         "highlights": ["ReactJs", "Javascript", "Daisy UI", "MongoDB", "ExpressJs"],
-        "description": "Local Tour Guide is a comprehensive platform that connects users with experienced tour guides. Users can find a suitable guide or create their own guide services. Secure user authentication is handled via Firebase with JWT tokens stored in cookies. The backend, developed using Node.js and Express.js, operates with MongoDB for data management.",
+        "description": "A tour guide platform connecting users with local travel experts.",
         "liveDemo": "https://local-tour-client.vercel.app",
         "clientCode": "https://github.com/fazlulkarimhridoy/local-tour-guide-client",
         "serverCode": "https://github.com/fazlulkarimhridoy/local-tour-project-server",

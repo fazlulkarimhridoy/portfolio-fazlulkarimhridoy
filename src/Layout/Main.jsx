@@ -1,27 +1,41 @@
-import { Outlet, useLocation } from "react-router-dom";
-import { useEffect } from "react";
-import NavBar from "../components/NavBar";
+import { useState, useEffect } from "react";
+import Navbar from "../components/NavBar";
+import Skills from "../components/Skills";
+import Projects from "../components/Projects";
+import Education from "../components/Education";
+import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import Banner from "../components/Banner";
 
-const Main = () => {
-    const location = useLocation();
-    const homePath = location.pathname === "/";
+function App() {
+    const [darkMode, setDarkMode] = useState(() => {
+        const savedTheme = localStorage.getItem("theme");
+        return savedTheme === "dark" || (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    });
 
-    // Scroll to top when route changes
     useEffect(() => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
-    }, [homePath]);
+        if (darkMode) {
+            document.documentElement.classList.add("dark");
+            localStorage.setItem("theme", "dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+            localStorage.setItem("theme", "light");
+        }
+    }, [darkMode]);
 
     return (
-        <div className="transition-all duration-300 ease-in-out">
-            <NavBar></NavBar>
-            <Outlet></Outlet>
-            <Footer></Footer>
+        <div className={`min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300`}>
+            <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+            <main>
+                <Banner />
+                <Skills />
+                <Projects />
+                <Education />
+                <Contact />
+            </main>
+            <Footer />
         </div>
     );
-};
+}
 
-export default Main;
+export default App;

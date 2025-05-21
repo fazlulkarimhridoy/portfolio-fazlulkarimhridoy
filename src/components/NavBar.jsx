@@ -1,100 +1,180 @@
-import { Link } from "react-router-dom";
-import "../Css/NavBar.css"
-import { FaAlignJustify } from "react-icons/fa";
-import NameLogo from "/assets/Logos/image.png"
-import { Drawer } from "antd";
-import { useState } from "react";
+/* eslint-disable react/prop-types */
+import { useState, useEffect } from "react";
+import { Menu, X, Code2, Sparkles, Sun, Moon } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
-const NavBar = () => {
-    // scroll to skills
-    const scrollToSkills = () => {
-        const section = document.getElementById("skills");
-        section?.scrollIntoView({ behavior: "smooth" });
+const Navbar = ({ darkMode, setDarkMode }) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 20);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    // Scroll handlers
+    const scrollToSection = (id) => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+        setIsOpen(false);
     };
 
-    // scroll to projects
-    const scrollToProjects = () => {
-        const section = document.getElementById("projects");
-        section?.scrollIntoView({ behavior: "smooth" });
+    const navLinks = [
+        { name: "About", id: "banner" },
+        { name: "Skills", id: "skills" },
+        { name: "Projects", id: "projects" },
+        { name: "Education", id: "education" },
+        { name: "Contact", id: "contact" },
+    ];
+
+    const spring = {
+        type: "spring",
+        stiffness: 700,
+        damping: 30,
     };
 
-    // scroll to educations
-    const scrollToEducations = () => {
-        const section = document.getElementById("educations");
-        section?.scrollIntoView({ behavior: "smooth" });
+    const iconVariants = {
+        initial: { scale: 0, opacity: 0, rotate: -180 },
+        animate: { scale: 1, opacity: 1, rotate: 0 },
+        exit: { scale: 0, opacity: 0, rotate: 180 },
     };
-
-    // scroll to contact
-    const scrollToContact = () => {
-        const section = document.getElementById("contact");
-        section?.scrollIntoView({ behavior: "smooth" });
-    };
-
-    // scroll to navbar
-    const scrollToBanner = () => {
-        const section = document.getElementById("banner");
-        section?.scrollIntoView({ behavior: "smooth" });
-    };
-
-
-    // drawer functions
-    const [open, setOpen] = useState(false);
-    const [placement] = useState('left');
-    const showDrawer = () => {
-        setOpen(true);
-    };
-    const onClose = () => {
-        setOpen(false);
-    };
-
-    // shared links
-    const links = <>
-        <li onClick={scrollToBanner} className="text-sky-500 font-extrabold"><Link >About</Link></li>
-        <li onClick={scrollToSkills}><Link >Skills</Link></li>
-        <li onClick={scrollToProjects}><Link >Projects</Link></li>
-        <li onClick={scrollToEducations}><Link >Education</Link></li>
-        <li onClick={scrollToContact}><Link >Contact</Link></li>
-    </>
 
     return (
-        <header className="fixed z-10 scroll-smooth shadow-2xl bg-gray-800 navbar sm:px-10 sm:py-4 overflow-visible lg:overflow-hidden">
-            <div className="navbar-start">
-                <Link to="/"><img className="w-32" src={NameLogo} /></Link>
-            </div>
-            <div className="navbar-end">
-                <div className="flex items-center gap-4">
-                    <div className="flex items-center justify-center md:hidden">
-                        <button
-                            onClick={showDrawer}
-                            className="rounded bg-none p-2 text-gray-200 transition hover:text-gray-600/75"
-                        >
-                            <FaAlignJustify size={25}></FaAlignJustify>
-                        </button>
-                        <Drawer
-                            closeIcon={false}
-                            width={200}
-                            placement={placement}
-                            onClose={onClose}
-                            open={open}
-                            key={placement}
-                            style={{ backgroundColor: "#1F2937" }}
-                        >
-                            <ul id="link2" className="flex flex-col items-center justify-center gap-4 text-xl">
-                                {links}
-                            </ul>
-                        </Drawer>
+        <header className="fixed w-full z-50 transition-all duration-300 backdrop-blur-lg bg-white/10 dark:bg-gray-900/20 border-b border-gray-200/20 dark:border-gray-700/20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <nav className="flex items-center justify-between h-16">
+                    {/* Logo */}
+                    <div className="flex-shrink-0 flex items-center">
+                        <div className="flex items-center gap-2">
+                            <Code2 className="w-8 h-8 text-blue-500" />
+                            <div>
+                                <h1 className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+                                    Fazlul Karim
+                                </h1>
+                                <div className="flex items-center gap-1">
+                                    <Sparkles className="w-3 h-3 text-blue-400" />
+                                    <span className="text-xs text-gray-600 dark:text-gray-400">React Developer</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div className="hidden md:flex">
-                    <ul id="link2" className="flex flex-row items-center px-2 gap-6 text-white font-semibold">
-                        {links}
-                    </ul>
-                </div>
+
+                    {/* Desktop Navigation */}
+                    <div className="hidden md:flex md:items-center md:space-x-1">
+                        {navLinks.map((link) => (
+                            <button
+                                key={link.id}
+                                onClick={() => scrollToSection(link.id)}
+                                className="px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-white/20 dark:hover:bg-gray-800/30 transition-all duration-300 font-medium text-sm"
+                            >
+                                {link.name}
+                            </button>
+                        ))}
+
+                        {/* Theme Toggle Button */}
+                        <div className="relative ml-4 scale-90">
+                            <motion.div
+                                className="flex items-center justify-center w-14 h-8 rounded-full bg-white/20 dark:bg-gray-800/40 cursor-pointer backdrop-blur-sm hover:bg-white/30 dark:hover:bg-gray-800/50 transition-colors"
+                                onClick={() => setDarkMode(!darkMode)}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                <motion.div
+                                    className="absolute left-1 w-6 h-6 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center"
+                                    layout
+                                    transition={spring}
+                                    style={{ x: darkMode ? "24px" : "0px" }}
+                                >
+                                    <AnimatePresence mode="wait" initial={false}>
+                                        <motion.div
+                                            key={darkMode ? "moon" : "sun"}
+                                            variants={iconVariants}
+                                            initial="initial"
+                                            animate="animate"
+                                            exit="exit"
+                                            transition={{ duration: 0.2 }}
+                                        >
+                                            {darkMode ? (
+                                                <Moon className="w-4 h-4 text-blue-400" />
+                                            ) : (
+                                                <Sun className="w-4 h-4 text-yellow-500" />
+                                            )}
+                                        </motion.div>
+                                    </AnimatePresence>
+                                </motion.div>
+                            </motion.div>
+                        </div>
+                    </div>
+
+                    {/* Mobile Navigation Button */}
+                    <div className="md:hidden flex items-center gap-2">
+                        {/* Mobile Theme Toggle */}
+                        <div className="relative scale-90">
+                            <motion.div
+                                className="flex items-center justify-center w-14 h-8 rounded-full bg-white/20 dark:bg-gray-800/40 cursor-pointer backdrop-blur-sm hover:bg-white/30 dark:hover:bg-gray-800/50 transition-colors"
+                                onClick={() => setDarkMode(!darkMode)}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                <motion.div
+                                    className="absolute left-1 w-6 h-6 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center"
+                                    layout
+                                    transition={spring}
+                                    style={{ x: darkMode ? "24px" : "0px" }}
+                                >
+                                    <AnimatePresence mode="wait" initial={false}>
+                                        <motion.div
+                                            key={darkMode ? "moon" : "sun"}
+                                            variants={iconVariants}
+                                            initial="initial"
+                                            animate="animate"
+                                            exit="exit"
+                                            transition={{ duration: 0.2 }}
+                                        >
+                                            {darkMode ? (
+                                                <Moon className="w-4 h-4 text-blue-400" />
+                                            ) : (
+                                                <Sun className="w-4 h-4 text-yellow-500" />
+                                            )}
+                                        </motion.div>
+                                    </AnimatePresence>
+                                </motion.div>
+                            </motion.div>
+                        </div>
+
+                        <button
+                            onClick={() => setIsOpen(!isOpen)}
+                            className="p-2 rounded-lg bg-white/10 dark:bg-gray-800/30"
+                        >
+                            {isOpen ? (
+                                <X className="h-6 w-6 text-gray-700 dark:text-gray-300" />
+                            ) : (
+                                <Menu className="h-6 w-6 text-gray-700 dark:text-gray-300" />
+                            )}
+                        </button>
+                    </div>
+                </nav>
+
+                {/* Mobile Navigation Menu */}
+                {isOpen && (
+                    <div className="md:hidden">
+                        <div className="px-2 pt-2 pb-3 space-y-1 backdrop-blur-lg bg-white/30 dark:bg-gray-900/30 rounded-lg border border-gray-200/20 dark:border-gray-700/20 mb-2">
+                            {navLinks.map((link) => (
+                                <button
+                                    key={link.id}
+                                    onClick={() => scrollToSection(link.id)}
+                                    className="block w-full px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-white/20 dark:hover:bg-gray-800/30 transition-all duration-300"
+                                >
+                                    {link.name}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                )}
             </div>
-
         </header>
-
     );
 };
 
-export default NavBar;
+export default Navbar;
