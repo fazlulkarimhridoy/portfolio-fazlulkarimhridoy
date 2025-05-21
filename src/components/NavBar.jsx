@@ -14,7 +14,7 @@ const NavBar = () => {
         document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
     };
     const scrollToEducations = () => {
-        document.getElementById("educations")?.scrollIntoView({ behavior: "smooth" });
+        document.getElementById("education")?.scrollIntoView({ behavior: "smooth" });
     };
     const scrollToContact = () => {
         document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });

@@ -1,77 +1,133 @@
-import { useRef } from 'react';
-import emailjs from '@emailjs/browser';
-import toast from 'react-hot-toast';
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
+import { Mail, MapPin, Phone, Send, MessageSquare, User } from "lucide-react";
 
 const Contact = () => {
     const form = useRef();
 
     const sendEmail = (e) => {
         e.preventDefault();
-        const name = e.currentTarget.name.value;
-        const email = e.currentTarget.email.value;
-        const message = e.currentTarget.message.value;
-
-        console.log(name, email, message);
-
         emailjs
-            .sendForm('service_9reh5e8', 'template_x1apj6n', form.current, {
-                publicKey: '3lYQouj1M7ssavxnw',
+            .sendForm("service_9reh5e8", "template_x1apj6n", form.current, {
+                publicKey: "3lYQouj1M7ssavxnw",
             })
-            .then(
-                toast.success('Successfully email sent!')
-            ).catch((err) => {
-                toast.error(err.text);
+            .then(() => {
+                toast.success("Message sent successfully!");
+                e.target.reset();
             })
+            .catch((err) => {
+                toast.error(err.text || "Failed to send message");
+            });
     };
 
-
     return (
-        <section id="contact" className="py-6 bg-gray-50 text-gray-900">
-            <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
-                <div className="py-6 md:py-0 md:px-6">
-                    <h1 className="text-4xl font-bold text-gray-500">Get in touch</h1>
-                    <p className="pt-2 pb-4 text-gray-400">Fill in the form to start a conversation</p>
-                    <div className="space-y-4">
-                        <p className="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2 sm:mr-6">
-                                <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"></path>
-                            </svg>
-                            <span>Dhaka, Bangladesh</span>
-                        </p>
-                        <p className="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2 sm:mr-6">
-                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
-                            </svg>
-                            <span>+8801634468473</span>
-                        </p>
-                        <p className="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2 sm:mr-6">
-                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-                            </svg>
-                            <span>fkhridoy4321@gmail.com</span>
-                        </p>
+        <section id="contact" className="py-16 px-4 md:px-10 lg:px-20 bg-gray-50 dark:bg-[#121212]">
+            <div className="max-w-7xl mx-auto">
+                <div className="text-center mb-12">
+                    <h2
+                        data-aos="fade-up"
+                        className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4"
+                    >
+                        Get in Touch
+                    </h2>
+                    <p data-aos="fade-up" data-aos-delay="100" className="text-gray-600 dark:text-gray-400">
+                        Let{"'"}s discuss your project or just say hello
+                    </p>
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-8">
+                    <div data-aos="fade-right" className="space-y-6">
+                        <div className="bg-white dark:bg-[#1e1e1e] rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300">
+                            <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-6">
+                                Contact Information
+                            </h3>
+                            <div className="space-y-4">
+                                <div className="flex items-center gap-4">
+                                    <div className="p-3 bg-blue-100 dark:bg-blue-900 rounded-lg">
+                                        <MapPin className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                                    </div>
+                                    <div>
+                                        <p className="font-medium text-gray-900 dark:text-white">Location</p>
+                                        <p className="text-gray-600 dark:text-gray-400">Dhaka, Bangladesh</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-center gap-4">
+                                    <div className="p-3 bg-green-100 dark:bg-green-900 rounded-lg">
+                                        <Phone className="w-5 h-5 text-green-600 dark:text-green-400" />
+                                    </div>
+                                    <div>
+                                        <p className="font-medium text-gray-900 dark:text-white">Phone</p>
+                                        <p className="text-gray-600 dark:text-gray-400">+8801634468473</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-center gap-4">
+                                    <div className="p-3 bg-purple-100 dark:bg-purple-900 rounded-lg">
+                                        <Mail className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+                                    </div>
+                                    <div>
+                                        <p className="font-medium text-gray-900 dark:text-white">Email</p>
+                                        <p className="text-gray-600 dark:text-gray-400">fkhridoy4321@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-left" className="bg-white dark:bg-[#1e1e1e] rounded-xl p-6 shadow-md">
+                        <form ref={form} onSubmit={sendEmail} className="space-y-6">
+                            <div>
+                                <label className="flex gap-2 items-center text-gray-700 dark:text-gray-300 mb-2">
+                                    <User className="w-4 h-4" />
+                                    <span>Full Name</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    required
+                                    placeholder="John Doe"
+                                    className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-800 border-transparent focus:border-blue-500 focus:bg-white dark:focus:bg-gray-900 focus:ring-0 text-gray-900 dark:text-white"
+                                />
+                            </div>
+
+                            <div>
+                                <label className="flex gap-2 items-center text-gray-700 dark:text-gray-300 mb-2">
+                                    <Mail className="w-4 h-4" />
+                                    <span>Email Address</span>
+                                </label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    required
+                                    placeholder="john@example.com"
+                                    className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-800 border-transparent focus:border-blue-500 focus:bg-white dark:focus:bg-gray-900 focus:ring-0 text-gray-900 dark:text-white"
+                                />
+                            </div>
+
+                            <div>
+                                <label className="flex gap-2 items-center text-gray-700 dark:text-gray-300 mb-2">
+                                    <MessageSquare className="w-4 h-4" />
+                                    <span>Message</span>
+                                </label>
+                                <textarea
+                                    name="message"
+                                    required
+                                    rows="4"
+                                    placeholder="Your message here..."
+                                    className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-800 border-transparent focus:border-blue-500 focus:bg-white dark:focus:bg-gray-900 focus:ring-0 text-gray-900 dark:text-white"
+                                ></textarea>
+                            </div>
+
+                            <button
+                                type="submit"
+                                className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gray-600 hover:bg-gray-700 text-white font-medium transition-colors duration-300"
+                            >
+                                <Send className="w-4 h-4" />
+                                Send Message
+                            </button>
+                        </form>
                     </div>
                 </div>
-                <form ref={form} onSubmit={sendEmail} className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
-                    <label className="block">
-                        <span className="mb-1">Full name</span>
-                        <input type="text" placeholder="Fazlul Karim" name="name" className="p-3 block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri bg-gray-100" />
-                    </label>
-                    <label className="block">
-                        <span className="mb-1">Email address</span>
-                        <input type="email" placeholder="hridoy.cse98@gmail.com" name="email" className="p-3 block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri bg-gray-100" />
-                    </label>
-                    <label className="block">
-                        <span className="mb-1">Message</span>
-                        <textarea rows="3" placeholder="Write your message here..." name="message" className="p-3 block w-full rounded-md focus:ring focus:ri focus:ri bg-gray-100"></textarea>
-                    </label>
-                    <button
-                        type="submit"
-                        className="cursor-pointer focus:hidden self-end px-8 py-3 text-lg rounded border border-sky-600 text-black hover:bg-sky-600 hover:text-white hover:transition-all hover:duration-300">
-                        Send message
-                    </button>
-                </form>
             </div>
         </section>
     );
