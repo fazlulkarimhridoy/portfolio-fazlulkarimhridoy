@@ -93,7 +93,7 @@ const Skills = () => {
     );
 
     return (
-        <div className="min-h-screen px-4 py-12 md:px-10 lg:px-20 bg-gray-50 dark:bg-[#121212] text-gray-900 dark:text-white">
+        <div id="skills" className="min-h-screen px-4 py-12 md:px-10 lg:px-20 bg-gray-50 dark:bg-[#121212] text-gray-900 dark:text-white">
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">My Skills</h2>
                 <p className="text-center text-gray-600 dark:text-gray-400 mb-10">
