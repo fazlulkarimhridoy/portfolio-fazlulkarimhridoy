@@ -37,7 +37,7 @@ const Contact = () => {
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-8">
-                    <div data-aos="fade-right" className="space-y-6">
+                    <div data-aos="fade-up" className="space-y-6">
                         <div className="bg-white dark:bg-[#1e1e1e] rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300">
                             <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-6">
                                 Contact Information
@@ -74,7 +74,7 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <div data-aos="fade-left" className="bg-white dark:bg-[#1e1e1e] rounded-xl p-6 shadow-md">
+                    <div data-aos="fade-up" className="bg-white dark:bg-[#1e1e1e] rounded-xl p-6 shadow-md">
                         <form ref={form} onSubmit={sendEmail} className="space-y-6">
                             <div>
                                 <label className="flex gap-2 items-center text-gray-700 dark:text-gray-300 mb-2">
