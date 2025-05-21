@@ -1,0 +1,136 @@
+[
+    {
+        "title": "Floral Radiance | E-commerce",
+        "highlights": ["NextJs", "Typescript", "Ant Design", "PrismaORM", "MySQL", "ExpressJs"],
+        "description": "A vibrant ecommerce platform for elegant flower bouquets with real-time updates and smooth ordering.",
+        "liveDemo": "https://www.floralradiancebd.com",
+        "clientCode": "private",
+        "serverCode": "private",
+        "images": [
+            "/Projects/FloralRadiance/1.png",
+            "/Projects/FloralRadiance/2.png",
+            "/Projects/FloralRadiance/3.png",
+            "/Projects/FloralRadiance/4.png",
+            "/Projects/FloralRadiance/5.png",
+            "/Projects/FloralRadiance/6.png",
+            "/Projects/FloralRadiance/7.png",
+            "/Projects/FloralRadiance/8.png",
+            "/Projects/FloralRadiance/9.png"
+        ],
+        "client": {
+            "name": "Mirajul Islam",
+            "link": "https://www.facebook.com/Floralradiance"
+        }
+    },
+    {
+        "title": "Alponay Boishakh | Alpona Sketching",
+        "highlights": ["Javascript", "TailwindCSS", "Canvas", "Vanilla", "HTML5"],
+        "description": "A digital canvas platform for creating and sharing beautiful Alpona artwork.",
+        "liveDemo": "https://boishakhi-alpona-nu.vercel.app",
+        "clientCode": "private",
+        "serverCode": "",
+        "images": [
+            "/Projects/AlponayBoishakh/1.png",
+            "/Projects/AlponayBoishakh/2.png",
+            "/Projects/AlponayBoishakh/3.png",
+            "/Projects/AlponayBoishakh/4.png",
+            "/Projects/AlponayBoishakh/5.png",
+            "/Projects/AlponayBoishakh/6.png",
+            "/Projects/AlponayBoishakh/7.png",
+            "/Projects/AlponayBoishakh/8.png"
+        ],
+        "client": {
+            "name": "XR Interactive",
+            "link": "https://xri.com.bd"
+        }
+    },
+    {
+        "title": "GP RMG | Quiz & Puzzle Game",
+        "highlights": ["ReactJs", "Javascript", "Context API", "TailwindCSS", "DnD", "SwiperJs"],
+        "description": "An interactive web app with quizzes and drag-and-drop image puzzles.",
+        "liveDemo": "https://gp-rmg.vercel.app",
+        "clientCode": "private",
+        "serverCode": "",
+        "images": ["/Projects/GPRMG/gp1.png", "/Projects/GPRMG/gp2.png"],
+        "client": {
+            "name": "XR Interactive",
+            "link": "https://xri.com.bd"
+        }
+    },
+    {
+        "title": "TimeForge | Event Scheduling & Meeting",
+        "highlights": ["ReactJs", "Typescript", "Ant Design", "Firebase", "Mongoose", "ExpressJs"],
+        "description": "An online scheduling platform with secure auth and efficient data management.",
+        "liveDemo": "https://timeforge.vercel.app",
+        "clientCode": "https://github.com/fazlulkarimhridoy/timeforge-client",
+        "serverCode": "https://github.com/fazlulkarimhridoy/timeforge-server",
+        "images": [
+            "/Projects/Timeforge/timeforge1.png",
+            "/Projects/Timeforge/timeforge4.png",
+            "/Projects/Timeforge/timeforge3.png",
+            "/Projects/Timeforge/timeforge2.png",
+            "/Projects/Timeforge/timeforge5.png",
+            "/Projects/Timeforge/timeforge6.png",
+            "/Projects/Timeforge/timeforge7.png",
+            "/Projects/Timeforge/timeforge8.png",
+            "/Projects/Timeforge/timeforge9.png",
+            "/Projects/Timeforge/timeforge10.png",
+            "/Projects/Timeforge/timeforge11.png",
+            "/Projects/Timeforge/timeforge12.png"
+        ]
+    },
+    {
+        "title": "Daily Pulse | Newspaper Portal",
+        "highlights": ["ReactJs", "Javascript", "Daisy UI", "Firebase", "MongoDB", "ExpressJs", "JWT"],
+        "description": "A digital newspaper platform with secure publishing and admin features.",
+        "liveDemo": "https://newspaper-client.vercel.app",
+        "clientCode": "https://github.com/fazlulkarimhridoy/daily-pulse-newspaper-client",
+        "serverCode": "https://github.com/fazlulkarimhridoy/newspaper-project-server",
+        "images": [
+            "/Projects/DailyPulse/newspaper1.png",
+            "/Projects/DailyPulse/newspaper2.png",
+            "/Projects/DailyPulse/newspaper3.png",
+            "/Projects/DailyPulse/newspaper4.png",
+            "/Projects/DailyPulse/newspaper5.png",
+            "/Projects/DailyPulse/newspaper6.png",
+            "/Projects/DailyPulse/newspaper7.png",
+            "/Projects/DailyPulse/newspaper8.png"
+        ]
+    },
+    {
+        "title": "Task Management | Drag & Drop Schedules",
+        "highlights": ["ReactJs", "Javascript", "Mamba UI", "DnD", "MongoDB", "ExpressJs"],
+        "description": "A personal task manager with drag-and-drop scheduling and clean UI.",
+        "liveDemo": "https://task-management-ruby-psi.vercel.app",
+        "clientCode": "https://github.com/fazlulkarimhridoy/task-management",
+        "serverCode": "https://github.com/fazlulkarimhridoy/task-management",
+        "images": [
+            "/Projects/TaskManagement/taskmanagement1.png",
+            "/Projects/TaskManagement/taskmanagement2.png",
+            "/Projects/TaskManagement/taskmanagement3.png",
+            "/Projects/TaskManagement/taskmanagement4.png",
+            "/Projects/TaskManagement/taskmanagement5.png",
+            "/Projects/TaskManagement/taskmanagement6.png",
+            "/Projects/TaskManagement/taskmanagement7.png",
+            "/Projects/TaskManagement/taskmanagement8.png"
+        ]
+    },
+    {
+        "title": "Local Tour Guide | Complete Tour Solution",
+        "highlights": ["ReactJs", "Javascript", "Daisy UI", "MongoDB", "ExpressJs"],
+        "description": "A tour guide platform connecting users with local travel experts.",
+        "liveDemo": "https://local-tour-client.vercel.app",
+        "clientCode": "https://github.com/fazlulkarimhridoy/local-tour-guide-client",
+        "serverCode": "https://github.com/fazlulkarimhridoy/local-tour-project-server",
+        "images": [
+            "/Projects/LocalTour/localtour1.png",
+            "/Projects/LocalTour/localtour2.png",
+            "/Projects/LocalTour/localtour3.png",
+            "/Projects/LocalTour/localtour4.png",
+            "/Projects/LocalTour/localtour5.png",
+            "/Projects/LocalTour/localtour6.png",
+            "/Projects/LocalTour/localtour7.png",
+            "/Projects/LocalTour/localtour8.png"
+        ]
+    }
+]
