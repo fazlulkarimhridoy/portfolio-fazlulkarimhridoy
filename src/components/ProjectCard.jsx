@@ -1,24 +1,26 @@
 /* eslint-disable react/prop-types */
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import "animate.css";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { ArrowUpRight, Github, Monitor } from "lucide-react";
 
 const ProjectCard = ({ project, index }) => {
-    // project images slider functions
     const [sliderRef] = useKeenSlider(
         {
-            loop: false,
+            loop: true,
+            slides: {
+                perView: 1,
+                spacing: 0,
+            },
         },
         [
             (slider) => {
                 let timeout;
                 let mouseOver = false;
+
                 function clearNextTimeout() {
                     clearTimeout(timeout);
                 }
+
                 function nextTimeout() {
                     clearTimeout(timeout);
                     if (mouseOver) return;
@@ -26,6 +28,7 @@ const ProjectCard = ({ project, index }) => {
                         slider.next();
                     }, 5000);
                 }
+
                 slider.on("created", () => {
                     slider.container.addEventListener("mouseover", () => {
                         mouseOver = true;
@@ -37,6 +40,7 @@ const ProjectCard = ({ project, index }) => {
                     });
                     nextTimeout();
                 });
+
                 slider.on("dragStarted", clearNextTimeout);
                 slider.on("animationEnded", nextTimeout);
                 slider.on("updated", nextTimeout);
@@ -44,114 +48,116 @@ const ProjectCard = ({ project, index }) => {
         ]
     );
 
-    // initializing aos
-    useEffect(() => {
-        Aos.init();
-    }, []);
+    const renderTag = (tag, idx) => {
+        const colors = [
+            "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
+            "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
+            "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
+            "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200",
+            "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200",
+            "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
+            "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200",
+            "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200",
+        ];
+
+        const color = colors[idx % colors.length];
+
+        return (
+            <span key={idx} className={`text-xs px-3 py-1 rounded-full font-medium ${color}`}>
+                {tag}
+            </span>
+        );
+    };
 
     return (
         <div
-            key={index}
-            data-aos={"zoom-in-down"}
-            data-aos-offset="300"
-            data-aos-easing="ease-in-sine"
-            className="shadow-lg rounded-md bg-gray-50 text-gray-800"
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+            className="bg-white dark:bg-[#1e1e1e] rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-5px] overflow-hidden"
         >
-            {/* Images */}
-            <div ref={sliderRef} className="keen-slider">
-                {project?.images.map((image, imgIndex) => (
+            <div ref={sliderRef} className="keen-slider h-48 md:h-56 w-full">
+                {project?.images?.map((image, imgIndex) => (
                     <div key={imgIndex} className="keen-slider__slide">
                         <img
                             src={image}
-                            alt={`Slide ${imgIndex + 1}`}
-                            className="block object-cover object-center w-full rounded-md bg-gray-500"
+                            alt={`${project.title} - Image ${imgIndex + 1}`}
+                            className="h-full w-full object-cover"
                         />
                     </div>
                 ))}
             </div>
-            <div className="space-y-4 p-4 lg:p-8">
-                {/* Description */}
-                <div className="space-y-2">
-                    <h3 className="text-lg font-semibold text-sky-600 whitespace-nowrap overflow-hidden text-ellipsis">
-                        {project.title}
-                    </h3>
-                    {/* highlights */}
-                    {project.highlights && project.highlights.length > 0 && (
-                        <div className="flex flex-wrap gap-2 mt-2">
-                            {project.highlights.map((tag, i) => {
-                                const colors = [
-                                    "bg-sky-100 text-sky-800",
-                                    "bg-green-100 text-green-800",
-                                    "bg-purple-100 text-purple-800",
-                                    "bg-pink-100 text-pink-800",
-                                    "bg-yellow-100 text-yellow-800",
-                                    "bg-red-100 text-red-800",
-                                    "bg-indigo-100 text-indigo-800",
-                                    "bg-teal-100 text-teal-800",
-                                    "bg-orange-100 text-orange-800",
-                                ];
-                                const color = colors[i % colors.length]; // rotate colors
-                                return (
-                                    <span key={i} className={`text-xs px-3 py-1 rounded-full font-medium ${color}`}>
-                                        {tag}
-                                    </span>
-                                );
-                            })}
-                        </div>
-                    )}
-                    <p className="font-medium text-sm text-gray-600">{project.description}</p>
-                    {project.client && (
-                        <p className="font-medium text-orange-700">
-                            <span className="italic"> Freelance project for </span>{" "}
-                            <a
-                                href={project.client.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-violet-700 underline"
-                            >
-                                {project.client.name}
-                            </a>
-                        </p>
-                    )}
-                    <p className="text-xs flex flex-col md:flex-row items-center text-center gap-3 lg:gap-6 pt-3">
+
+            <div className="p-6">
+                <h3 className="text-lg font-semibold text-gray-600 dark:text-gray-300 mb-2">{project.title}</h3>
+
+                {project.highlights && project.highlights.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mb-3">
+                        {project.highlights.map((tag, idx) => renderTag(tag, idx))}
+                    </div>
+                )}
+
+                <p className="text-sm text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
+
+                {project.client && (
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                        <span className="italic">Freelance project for </span>
                         <a
-                            href={project.liveDemo}
+                            href={project.client.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-full md:w-auto cursor-pointer inline-block rounded border border-current px-4 py-2 font-medium text-sky-600 transition hover:bg-sky-600/10 hover:duration-300 focus:outline-none focus:ring active:text-sky-500 whitespace-nowrap"
+                            className="text-purple-600 dark:text-purple-400 hover:underline inline-flex items-center"
                         >
-                            Live Demo
+                            {project.client.name}
+                            <ArrowUpRight className="ml-1 h-3 w-3" />
                         </a>
-                        {project.clientCode === "private" ? (
-                            <span className="w-full md:w-auto cursor-pointer inline-block rounded border border-current px-4 py-2 font-medium text-red-600 transition hover:bg-red-600/10 hover:duration-300 focus:outline-none focus:ring active:text-red-500 whitespace-nowrap">
-                                Private Client
+                    </p>
+                )}
+
+                <div className="flex flex-wrap gap-3 mt-4">
+                    <a
+                        href={project.liveDemo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 px-3 py-2 text-xs rounded-lg bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-100 dark:hover:bg-blue-800 transition-colors"
+                    >
+                        <Monitor className="h-4 w-4" />
+                        <span>Live Demo</span>
+                    </a>
+
+                    {project.clientCode === "private" ? (
+                        <span className="flex items-center gap-1 px-3 py-2 text-xs rounded-lg bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400">
+                            <Github className="h-4 w-4" />
+                            <span>Private Client</span>
+                        </span>
+                    ) : (
+                        <a
+                            href={project.clientCode}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1 px-3 py-2 text-xs rounded-lg bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-900 dark:text-gray-100 dark:hover:bg-gray-800 transition-colors"
+                        >
+                            <Github className="h-4 w-4" />
+                            <span>Client Code</span>
+                        </a>
+                    )}
+
+                    {project.serverCode &&
+                        (project.serverCode === "private" ? (
+                            <span className="flex items-center gap-1 px-3 py-2 text-xs rounded-lg bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400">
+                                <Github className="h-4 w-4" />
+                                <span>Private Server</span>
                             </span>
                         ) : (
-                            <a
-                                href={project.clientCode}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-full md:w-auto cursor-pointer inline-block rounded border border-current px-4 py-2 font-medium text-sky-600 transition hover:bg-sky-600/10 hover:duration-300 focus:outline-none focus:ring active:text-sky-500 whitespace-nowrap"
-                            >
-                                Client Code
-                            </a>
-                        )}
-
-                        {project.serverCode === "private" ? (
-                            <span className="w-full md:w-auto cursor-pointer inline-block rounded border border-current px-4 py-2 font-medium text-red-600 transition hover:bg-red-600/10 hover:duration-300 focus:outline-none focus:ring active:text-red-500 whitespace-nowrap">
-                                Private Server
-                            </span>
-                        ) : project.serverCode ? (
                             <a
                                 href={project.serverCode}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-full md:w-auto cursor-pointer inline-block rounded border border-current px-4 py-2 font-medium text-sky-600 transition hover:bg-sky-600/10 hover:duration-300 focus:outline-none focus:ring active:text-sky-500 whitespace-nowrap"
+                                className="flex items-center gap-1 px-3 py-2 text-xs rounded-lg bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-900 dark:text-gray-100 dark:hover:bg-gray-800 transition-colors"
                             >
-                                Server Code
+                                <Github className="h-4 w-4" />
+                                <span>Server Code</span>
                             </a>
-                        ) : null}
-                    </p>
+                        ))}
                 </div>
             </div>
         </div>
