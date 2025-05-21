@@ -50,14 +50,14 @@ const ProjectCard = ({ project, index }) => {
 
     const renderTag = (tag, idx) => {
         const colors = [
-            "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
-            "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
-            "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
-            "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200",
-            "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200",
-            "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
-            "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200",
-            "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200",
+            "bg-blue-100 text-blue-800 dark:bg-blue-500/10 dark:text-blue-500",
+            "bg-green-100 text-green-800 dark:bg-green-500/10 dark:text-green-500",
+            "bg-purple-100 text-purple-800 dark:bg-purple-500/10 dark:text-purple-500",
+            "bg-pink-100 text-pink-800 dark:bg-pink-500/10 dark:text-pink-500",
+            "bg-yellow-100 text-yellow-800 dark:bg-yellow-500/10 dark:text-yellow-500",
+            "bg-red-100 text-red-800 dark:bg-red-500/10 dark:text-red-500",
+            "bg-indigo-100 text-indigo-800 dark:bg-indigo-500/10 dark:text-indigo-500",
+            "bg-teal-100 text-teal-800 dark:bg-teal-500/10 dark:text-teal-500",
         ];
 
         const color = colors[idx % colors.length];
