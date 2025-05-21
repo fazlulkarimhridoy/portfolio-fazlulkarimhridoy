@@ -1,5 +1,5 @@
 import { Typewriter } from "react-simple-typewriter";
-import AuthorImage from "/assets/AuthorPictures/hridoy.png";
+import AuthorImage from "/hridoy.png";
 import download from "downloadjs";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import "animate.css";
@@ -37,7 +37,7 @@ const Banner = () => {
                             loop={2}
                             cursor
                             cursorStyle="_"
-                            cursorColor="white"
+                            cursorColor="gray"
                             typeSpeed={100}
                         />
                     </h1>
@@ -98,7 +98,7 @@ const Banner = () => {
                     <img
                         src={AuthorImage}
                         alt="Author"
-                        className="bg-gray-300 w-[280px] sm:w-[300px] md:w-[350px] rounded-badge border-[10px] border-gray-600 shadow-xl hover:shadow-zinc-500 transition-all duration-700"
+                        className="bg-gray-300 w-[280px] sm:w-[300px] md:w-[350px] rounded-badge border-[10px] border-gray-500 shadow-xl hover:shadow-zinc-500 transition-all duration-700"
                     />
                 </motion.div>
             </div>

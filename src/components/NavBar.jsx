@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 import { Menu, X, Code2, Sparkles, Sun, Moon } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = ({ darkMode, setDarkMode }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -34,6 +34,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         type: "spring",
         stiffness: 700,
         damping: 30,
+    };
+
+    const iconVariants = {
+        initial: { scale: 0, opacity: 0, rotate: -180 },
+        animate: { scale: 1, opacity: 1, rotate: 0 },
+        exit: { scale: 0, opacity: 0, rotate: 180 },
     };
 
     return (
@@ -71,8 +77,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                         {/* Theme Toggle Button */}
                         <div className="relative ml-4 scale-90">
                             <motion.div
-                                className="flex items-center justify-center w-14 h-8 rounded-full bg-white/20 dark:bg-gray-800/40 cursor-pointer backdrop-blur-sm"
+                                className="flex items-center justify-center w-14 h-8 rounded-full bg-white/20 dark:bg-gray-800/40 cursor-pointer backdrop-blur-sm hover:bg-white/30 dark:hover:bg-gray-800/50 transition-colors"
                                 onClick={() => setDarkMode(!darkMode)}
+                                whileTap={{ scale: 0.95 }}
                             >
                                 <motion.div
                                     className="absolute left-1 w-6 h-6 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center"
@@ -80,11 +87,22 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                                     transition={spring}
                                     style={{ x: darkMode ? "24px" : "0px" }}
                                 >
-                                    {darkMode ? (
-                                        <Moon className="w-4 h-4 text-blue-400" />
-                                    ) : (
-                                        <Sun className="w-4 h-4 text-yellow-500" />
-                                    )}
+                                    <AnimatePresence mode="wait" initial={false}>
+                                        <motion.div
+                                            key={darkMode ? "moon" : "sun"}
+                                            variants={iconVariants}
+                                            initial="initial"
+                                            animate="animate"
+                                            exit="exit"
+                                            transition={{ duration: 0.2 }}
+                                        >
+                                            {darkMode ? (
+                                                <Moon className="w-4 h-4 text-blue-400" />
+                                            ) : (
+                                                <Sun className="w-4 h-4 text-yellow-500" />
+                                            )}
+                                        </motion.div>
+                                    </AnimatePresence>
                                 </motion.div>
                             </motion.div>
                         </div>
@@ -95,8 +113,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                         {/* Mobile Theme Toggle */}
                         <div className="relative scale-90">
                             <motion.div
-                                className="flex items-center justify-center w-14 h-8 rounded-full bg-white/20 dark:bg-gray-800/40 cursor-pointer backdrop-blur-sm"
+                                className="flex items-center justify-center w-14 h-8 rounded-full bg-white/20 dark:bg-gray-800/40 cursor-pointer backdrop-blur-sm hover:bg-white/30 dark:hover:bg-gray-800/50 transition-colors"
                                 onClick={() => setDarkMode(!darkMode)}
+                                whileTap={{ scale: 0.95 }}
                             >
                                 <motion.div
                                     className="absolute left-1 w-6 h-6 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center"
@@ -104,11 +123,22 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                                     transition={spring}
                                     style={{ x: darkMode ? "24px" : "0px" }}
                                 >
-                                    {darkMode ? (
-                                        <Moon className="w-4 h-4 text-blue-400" />
-                                    ) : (
-                                        <Sun className="w-4 h-4 text-yellow-500" />
-                                    )}
+                                    <AnimatePresence mode="wait" initial={false}>
+                                        <motion.div
+                                            key={darkMode ? "moon" : "sun"}
+                                            variants={iconVariants}
+                                            initial="initial"
+                                            animate="animate"
+                                            exit="exit"
+                                            transition={{ duration: 0.2 }}
+                                        >
+                                            {darkMode ? (
+                                                <Moon className="w-4 h-4 text-blue-400" />
+                                            ) : (
+                                                <Sun className="w-4 h-4 text-yellow-500" />
+                                            )}
+                                        </motion.div>
+                                    </AnimatePresence>
                                 </motion.div>
                             </motion.div>
                         </div>
