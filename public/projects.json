@@ -4,8 +4,8 @@
         "highlights": ["NextJs", "Typescript", "Ant Design", "PrismaORM", "MySQL", "ExpressJs"],
         "description": "Floral Radiance is a vibrant ecommerce platform that offers a wide variety of elegant flower bouquets for every occasion. Whether you're celebrating love, friendship, or life’s milestones, the platform makes ordering fresh, handcrafted floral arrangements effortless. While intuitive UI design and real-time updates enhance customer satisfaction and make gifting flowers a delightful experience.",
         "liveDemo": "https://www.floralradiancebd.com",
-        "clientCode": "https://github.com/fazlulkarimhridoy/floral-radiance-client",
-        "serverCode": "https://github.com/fazlulkarimhridoy/floral-radiance-server",
+        "clientCode": "private",
+        "serverCode": "private",
         "images": [
             "/Projects/FloralRadiance/1.png",
             "/Projects/FloralRadiance/2.png",

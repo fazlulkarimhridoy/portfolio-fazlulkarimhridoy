@@ -118,35 +118,39 @@ const ProjectCard = ({ project, index }) => {
                             href={project.liveDemo}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-full md:w-auto cursor-pointer inline-block rounded border border-current px-4 py-2 font-medium text-sky-600 transition hover:text-white hover:bg-sky-600 hover:duration-300 hover:shadow-xl focus:outline-none focus:ring active:text-sky-500 whitespace-nowrap"
+                            className="w-full md:w-auto cursor-pointer inline-block rounded border border-current px-4 py-2 font-medium text-sky-600 transition hover:bg-sky-600/10 hover:duration-300 focus:outline-none focus:ring active:text-sky-500 whitespace-nowrap"
                         >
                             Live Demo
                         </a>
                         {project.clientCode === "private" ? (
-                            <span className="w-full md:w-auto cursor-pointer inline-block rounded border border-current px-4 py-2 font-medium text-sky-600 transition hover:text-white hover:bg-sky-600 hover:duration-300 hover:shadow-xl focus:outline-none focus:ring active:text-sky-500 whitespace-nowrap">
-                                Private Code
+                            <span className="w-full md:w-auto cursor-pointer inline-block rounded border border-current px-4 py-2 font-medium text-red-600 transition hover:bg-red-600/10 hover:duration-300 focus:outline-none focus:ring active:text-red-500 whitespace-nowrap">
+                                Private Client
                             </span>
                         ) : (
                             <a
                                 href={project.clientCode}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-full md:w-auto cursor-pointer inline-block rounded border border-current px-4 py-2 font-medium text-sky-600 transition hover:text-white hover:bg-sky-600 hover:duration-300 hover:shadow-xl focus:outline-none focus:ring active:text-sky-500 whitespace-nowrap"
+                                className="w-full md:w-auto cursor-pointer inline-block rounded border border-current px-4 py-2 font-medium text-sky-600 transition hover:bg-sky-600/10 hover:duration-300 focus:outline-none focus:ring active:text-sky-500 whitespace-nowrap"
                             >
                                 Client Code
                             </a>
                         )}
 
-                        {project.serverCode && (
+                        {project.serverCode === "private" ? (
+                            <span className="w-full md:w-auto cursor-pointer inline-block rounded border border-current px-4 py-2 font-medium text-red-600 transition hover:bg-red-600/10 hover:duration-300 focus:outline-none focus:ring active:text-red-500 whitespace-nowrap">
+                                Private Server
+                            </span>
+                        ) : project.serverCode ? (
                             <a
                                 href={project.serverCode}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-full md:w-auto cursor-pointer inline-block rounded border border-current px-4 py-2 font-medium text-sky-600 transition hover:text-white hover:bg-sky-600 hover:duration-300 hover:shadow-xl focus:outline-none focus:ring active:text-sky-500 whitespace-nowrap"
+                                className="w-full md:w-auto cursor-pointer inline-block rounded border border-current px-4 py-2 font-medium text-sky-600 transition hover:bg-sky-600/10 hover:duration-300 focus:outline-none focus:ring active:text-sky-500 whitespace-nowrap"
                             >
                                 Server Code
                             </a>
-                        )}
+                        ) : null}
                     </p>
                 </div>
             </div>
