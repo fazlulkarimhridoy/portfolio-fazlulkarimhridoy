@@ -1,165 +1,104 @@
-import { Link } from "react-router-dom";
-import "../Css/NavBar.css";
-import { FaAlignJustify } from "react-icons/fa";
-import NameLogo from "/assets/Logos/image.png";
-import { Drawer } from "antd";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Menu, X, Code2, Sparkles } from "lucide-react";
 
-const NavBar = () => {
+const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 20);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     // Scroll handlers
-    const scrollToSkills = () => {
-        document.getElementById("skills")?.scrollIntoView({ behavior: "smooth" });
-    };
-    const scrollToProjects = () => {
-        document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
-    };
-    const scrollToEducations = () => {
-        document.getElementById("education")?.scrollIntoView({ behavior: "smooth" });
-    };
-    const scrollToContact = () => {
-        document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-    };
-    const scrollToBanner = () => {
-        document.getElementById("banner")?.scrollIntoView({ behavior: "smooth" });
+    const scrollToSection = (id) => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+        setIsOpen(false);
     };
 
-    // Drawer state
-    const [open, setOpen] = useState(false);
-    const [placement] = useState("left");
-    const showDrawer = () => setOpen(true);
-    const onClose = () => setOpen(false);
-
-    // Shared nav links styled as "tabs"
-    const links = (
-        <>
-            <li
-                onClick={() => {
-                    scrollToBanner();
-                    onClose();
-                }}
-                className="cursor-pointer tab-item"
-            >
-                About
-            </li>
-            <li
-                onClick={() => {
-                    scrollToSkills();
-                    onClose();
-                }}
-                className="cursor-pointer tab-item"
-            >
-                Skills
-            </li>
-            <li
-                onClick={() => {
-                    scrollToProjects();
-                    onClose();
-                }}
-                className="cursor-pointer tab-item"
-            >
-                Projects
-            </li>
-            <li
-                onClick={() => {
-                    scrollToEducations();
-                    onClose();
-                }}
-                className="cursor-pointer tab-item"
-            >
-                Education
-            </li>
-            <li
-                onClick={() => {
-                    scrollToContact();
-                    onClose();
-                }}
-                className="cursor-pointer tab-item"
-            >
-                Contact
-            </li>
-        </>
-    );
+    const navLinks = [
+        { name: "About", id: "banner" },
+        { name: "Skills", id: "skills" },
+        { name: "Projects", id: "projects" },
+        { name: "Education", id: "education" },
+        { name: "Contact", id: "contact" },
+    ];
 
     return (
-        <header className="fixed z-30 w-full backdrop-blur-md bg-white/10 dark:bg-gray-800/30 shadow-sm">
-            <nav className="max-w-screen-xl mx-auto flex items-center justify-between px-6 sm:px-10 py-3">
-                {/* Logo */}
-                <div className="navbar-start">
-                    <Link to="/">
-                        <img src={NameLogo} alt="Logo" className="w-32" />
-                    </Link>
-                </div>
+        <header
+            className={`fixed w-full z-50 transition-all duration-300 ${
+                scrolled ? "backdrop-blur-lg bg-gray-500/10 dark:bg-gray-900/20" : "bg-transparent"
+            }`}
+        >
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <nav className="flex items-center justify-between h-16">
+                    {/* Logo */}
+                    <div className="flex-shrink-0 flex items-center">
+                        <div className="flex items-center gap-2">
+                            <Code2 className="w-8 h-8 text-blue-500" />
+                            <div>
+                                <h1 className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+                                    Fazlul Karim
+                                </h1>
+                                <div className="flex items-center gap-1">
+                                    <Sparkles className="w-3 h-3 text-blue-400" />
+                                    <span className="text-xs text-gray-600 dark:text-gray-400">React Developer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                {/* Hamburger & Drawer for mobile */}
-                <div className="md:hidden flex items-center">
-                    <button
-                        onClick={showDrawer}
-                        className="rounded p-2 text-gray-200 hover:text-white transition-colors duration-300"
-                        aria-label="Open menu"
-                    >
-                        <FaAlignJustify size={25} />
-                    </button>
-                    <Drawer
-                        closeIcon={false}
-                        width={220}
-                        placement={placement}
-                        onClose={onClose}
-                        open={open}
-                        style={{
-                            backdropFilter: "blur(12px)",
-                            backgroundColor: "rgb(22,25,30)",
-                        }}
-                        bodyStyle={{
-                            backdropFilter: "blur(12px)",
-                            backgroundColor: "rgb(22,25,30)",
-                            paddingTop: "40px",
-                        }}
-                        maskStyle={{
-                            backdropFilter: "blur(6px)",
-                            backgroundColor: "rgba(0, 0, 0, 0.3)",
-                        }}
-                    >
-                        <ul id="link2" className="flex flex-col items-center gap-6 text-white font-semibold text-xl">
-                            {links}
-                        </ul>
-                    </Drawer>
-                </div>
+                    {/* Desktop Navigation */}
+                    <div className="hidden md:flex md:items-center md:space-x-1">
+                        {navLinks.map((link) => (
+                            <button
+                                key={link.id}
+                                onClick={() => scrollToSection(link.id)}
+                                className="px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-white/20 dark:hover:bg-gray-800/30 transition-all duration-300 font-medium text-sm backdrop-blur-sm"
+                            >
+                                {link.name}
+                            </button>
+                        ))}
+                    </div>
 
-                {/* Desktop nav links */}
-                <div className="hidden md:flex">
-                    <ul className="flex items-center gap-4">{links}</ul>
-                </div>
-            </nav>
+                    {/* Mobile Navigation Button */}
+                    <div className="md:hidden">
+                        <button
+                            onClick={() => setIsOpen(!isOpen)}
+                            className="p-2 rounded-lg bg-white/10 dark:bg-gray-800/30 backdrop-blur-sm"
+                        >
+                            {isOpen ? (
+                                <X className="h-6 w-6 text-gray-700 dark:text-gray-300" />
+                            ) : (
+                                <Menu className="h-6 w-6 text-gray-700 dark:text-gray-300" />
+                            )}
+                        </button>
+                    </div>
+                </nav>
 
-            <style>{`
-                .tab-item {
-                    padding: 0.5rem 1rem;
-                    border-radius: 12px;
-                    font-weight: 600;
-                    color: #ffff; /* light indigo */
-                    background: rgba(255 255 255 / 0.1);
-                    box-shadow: 0 0 8px rgba(255 255 255 / 0.1);
-                    transition:
-                        background-color 0.3s ease,
-                        color 0.3s ease,
-                        box-shadow 0.3s ease,
-                        transform 0.2s ease;
-                    user-select: none;
-                }
-                .tab-item:hover {
-                    background: rgba(255 255 255 / 0.2);
-                    color: #ffff; /* brighter indigo */
-                    box-shadow: 0 0 10px rgba(165 180 252 / 0.5);
-                    transform: translateY(-2px);
-                    cursor: pointer;
-                }
-                .tab-item:active {
-                    transform: translateY(0);
-                    box-shadow: 0 0 6px rgba(165 180 252 / 0.3);
-                }
-            `}</style>
+                {/* Mobile Navigation Menu */}
+                {isOpen && (
+                    <div className="md:hidden">
+                        <div className="px-2 pt-2 pb-3 space-y-1 backdrop-blur-lg bg-white/30 dark:bg-gray-900/30 rounded-lg border border-gray-200/20 dark:border-gray-700/20">
+                            {navLinks.map((link) => (
+                                <button
+                                    key={link.id}
+                                    onClick={() => scrollToSection(link.id)}
+                                    className="block w-full px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-white/20 dark:hover:bg-gray-800/30 transition-all duration-300"
+                                >
+                                    {link.name}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                )}
+            </div>
         </header>
     );
 };
 
-export default NavBar;
+export default Navbar;
