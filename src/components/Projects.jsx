@@ -24,7 +24,7 @@ const Projects = () => {
     return (
         <section
             id="projects"
-            className="py-16 px-4 md:px-10 lg:px-20 bg-white dark:bg-[#121212] text-gray-900 dark:text-white"
+            className="py-16 px-4 md:px-10 lg:px-20 bg-gray-50 dark:bg-[#121212] text-gray-900 dark:text-white"
         >
             <div className="max-w-7xl mx-auto">
                 <h2 data-aos="fade-up" className="text-3xl md:text-4xl font-bold mb-4 text-center">
