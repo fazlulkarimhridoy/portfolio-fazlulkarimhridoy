@@ -1,5 +1,5 @@
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
-import NameLogo from "../assets/Logos/image.png"
+import NameLogo from "/assets/Logos/image.png"
 const Footer = () => {
     return (
         <footer className="bg-gray-800">

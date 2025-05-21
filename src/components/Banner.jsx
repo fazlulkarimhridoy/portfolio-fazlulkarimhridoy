@@ -1,5 +1,5 @@
 import { Typewriter } from "react-simple-typewriter";
-import AuthorImage from "../assets/AuthorPictures/hridoy.png";
+import AuthorImage from "/assets/AuthorPictures/hridoy.png";
 import download from "downloadjs";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import "animate.css";

@@ -1,7 +1,66 @@
 [
     {
-        "title": "TimeForge - An Event Scheduling Platform",
-        "description": "TimeForge is a seamless online event scheduling platform designed to create and manage events efficiently. Built with React.js, the interface is styled using Tailwind CSS, Ant Design, and Material Tailwind, while Firebase authentication ensures secure access. TanStack Query powers efficient data fetching, and React Email is used for communication. The backend, developed with Node.js and Express.js, integrates with a MongoDB database using Mongoose, ensuring reliable data management.",
+        "title": "Floral Radiance | E-commerce | Freelance Project",
+        "highlights": ["NextJs", "Typescript", "Ant Design", "PrismaORM", "MySQL", "ExpressJs"],
+        "description": "Floral Radiance is a vibrant ecommerce platform that offers a wide variety of elegant flower bouquets for every occasion. Whether you're celebrating love, friendship, or life’s milestones, the platform makes ordering fresh, handcrafted floral arrangements effortless. While intuitive UI design and real-time updates enhance customer satisfaction and make gifting flowers a delightful experience.",
+        "liveDemo": "https://www.floralradiancebd.com",
+        "clientCode": "https://github.com/fazlulkarimhridoy/floral-radiance-client",
+        "serverCode": "https://github.com/fazlulkarimhridoy/floral-radiance-server",
+        "images": [
+            "/Projects/FloralRadiance/1.png",
+            "/Projects/FloralRadiance/2.png",
+            "/Projects/FloralRadiance/3.png",
+            "/Projects/FloralRadiance/4.png",
+            "/Projects/FloralRadiance/5.png",
+            "/Projects/FloralRadiance/6.png",
+            "/Projects/FloralRadiance/7.png",
+            "/Projects/FloralRadiance/8.png",
+            "/Projects/FloralRadiance/9.png"
+        ],
+        "client": {
+            "name": "Mirajul Islam",
+            "link": "https://www.facebook.com/Floralradiance"
+        }
+    },
+    {
+        "title": "Alponay Boishakh | Alpona Sketching | Freelance Project",
+        "highlights": ["Javascript", "TailwindCSS", "Canvas", "Vanilla"],
+        "description": "Alponay Boishakh is an online canvas platform that allows users to create beautiful digital artwork effortlessly. Ideal for both casual drawing and intricate designs, the platform supports freehand drawing with digital pens or touch. It offers simple tools for quick sketches. Users can save and share their artwork easily. It's super user friendly.",
+        "liveDemo": "https://boishakhi-alpona-nu.vercel.app",
+        "clientCode": "private",
+        "serverCode": "",
+        "images": [
+            "/Projects/AlponayBoishakh/1.png",
+            "/Projects/AlponayBoishakh/2.png",
+            "/Projects/AlponayBoishakh/3.png",
+            "/Projects/AlponayBoishakh/4.png",
+            "/Projects/AlponayBoishakh/5.png",
+            "/Projects/AlponayBoishakh/6.png",
+            "/Projects/AlponayBoishakh/7.png",
+            "/Projects/AlponayBoishakh/8.png"
+        ],
+        "client": {
+            "name": "XR Interactive",
+            "link": "https://xri.com.bd"
+        }
+    },
+    {
+        "title": "GP RMG | Quiz & Puzzle Game | Freelance Project",
+        "highlights": ["ReactJs", "Javascript", "Context API", "TailwindCSS", "DnD", "SwiperJs"],
+        "description": "GP RMG is an engaging quiz and puzzle game web application designed to provide users with a fun and interactive experience. The platform features challenging quizzes and dynamic puzzles, including drag-and-drop image puzzles, making it suitable for players of all ages. The application offers a visually appealing and seamless user experience, with intuitive gameplay that keeps users entertained.",
+        "liveDemo": "https://gp-rmg.vercel.app",
+        "clientCode": "private",
+        "serverCode": "",
+        "images": ["/Projects/GPRMG/gp1.png", "/Projects/GPRMG/gp2.png"],
+        "client": {
+            "name": "XR Interactive",
+            "link": "https://xri.com.bd"
+        }
+    },
+    {
+        "title": "TimeForge | Event Scheduling & Meeting | Team Project",
+        "highlights": ["ReactJs", "Typescript", "Ant Design", "Firebase", "Mongoose", "ExpressJs"],
+        "description": "TimeForge is a seamless online event scheduling platform designed to create and manage events efficiently. Firebase authentication ensures secure access. TanStack Query powers efficient data fetching, and React Email is used for communication. The backend, developed with Node.js and Express.js, integrates with a MongoDB database using Mongoose, ensuring reliable data management.",
         "liveDemo": "https://timeforge.vercel.app",
         "clientCode": "https://github.com/fazlulkarimhridoy/timeforge-client",
         "serverCode": "https://github.com/fazlulkarimhridoy/timeforge-server",
@@ -21,8 +80,9 @@
         ]
     },
     {
-        "title": "Daily Pulse - An Online Newspaper Portal",
-        "description": "Daily Pulse is a dynamic online newspaper platform where publishers can showcase regular and premium news content, while administrators can manage operations through a robust admin panel. Built with React.js, the design incorporates Tailwind CSS, DaisyUI, MambaUI, and Hyper UI for a modern look and feel. Secure authentication is powered by Firebase with JWT tokens stored in cookies. The backend, developed using Node.js and Express.js, is supported by MongoDB for efficient content management.",
+        "title": "Daily Pulse | Newspaper Portal | Personal Project",
+        "highlights": ["ReactJs", "Javascript", "Daisy UI", "Firebase", "MongoDB", "ExpressJs", "JWT"],
+        "description": "Daily Pulse is a dynamic online newspaper platform where publishers can showcase regular and premium news content, while administrators can manage operations through a robust admin panel. Secure authentication is powered by Firebase with JWT tokens stored in cookies. The backend, developed using Node.js and Express.js, is supported by MongoDB for efficient content management.",
         "liveDemo": "https://newspaper-client.vercel.app",
         "clientCode": "https://github.com/fazlulkarimhridoy/daily-pulse-newspaper-client",
         "serverCode": "https://github.com/fazlulkarimhridoy/newspaper-project-server",
@@ -38,8 +98,9 @@
         ]
     },
     {
-        "title": "Task Management - A Daily Essential Tool",
-        "description": "Task Management is a comprehensive tool for individuals seeking a personal assistant for daily tasks. The application features drag-and-drop functionality on the dashboard, implemented with React DnD, and boasts a visually appealing design using React.js, Tailwind CSS, DaisyUI, MambaUI, and Hyper UI. Firebase authentication provides secure login, while the backend, powered by Node.js and Express.js, integrates seamlessly with MongoDB for task storage and retrieval.",
+        "title": "Task Management | Drag & Drop Schedules | Personal Project",
+        "highlights": ["ReactJs", "Javascript", "Mamba UI", "DnD", "MongoDB", "ExpressJs"],
+        "description": "Task Management is a comprehensive tool for individuals seeking a personal assistant for daily tasks. The application features drag-and-drop functionality on the dashboard, implemented with React DnD, and boasts a visually appealing design using Hyper UI. Firebase authentication provides secure login, while the backend integrates seamlessly with MongoDB for task storage and retrieval.",
         "liveDemo": "https://task-management-ruby-psi.vercel.app",
         "clientCode": "https://github.com/fazlulkarimhridoy/task-management",
         "serverCode": "https://github.com/fazlulkarimhridoy/task-management",
@@ -55,8 +116,9 @@
         ]
     },
     {
-        "title": "Local Tour Guide - Complete Tour Solution",
-        "description": "Local Tour Guide is a comprehensive platform that connects users with experienced tour guides. Users can find a suitable guide or create their own guide services. Built with React.js and styled using Tailwind CSS, DaisyUI, MambaUI, and Hyper UI, the app features an engaging interface. Secure user authentication is handled via Firebase with JWT tokens stored in cookies. The backend, developed using Node.js and Express.js, operates with MongoDB for data management.",
+        "title": "Local Tour Guide | Complete Tour Solution | Personal Project",
+        "highlights": ["ReactJs", "Javascript", "Daisy UI", "MongoDB", "ExpressJs"],
+        "description": "Local Tour Guide is a comprehensive platform that connects users with experienced tour guides. Users can find a suitable guide or create their own guide services. Secure user authentication is handled via Firebase with JWT tokens stored in cookies. The backend, developed using Node.js and Express.js, operates with MongoDB for data management.",
         "liveDemo": "https://local-tour-client.vercel.app",
         "clientCode": "https://github.com/fazlulkarimhridoy/local-tour-guide-client",
         "serverCode": "https://github.com/fazlulkarimhridoy/local-tour-project-server",
@@ -70,30 +132,5 @@
             "/Projects/LocalTour/localtour7.png",
             "/Projects/LocalTour/localtour8.png"
         ]
-    },
-    {
-        "title": "Alponay Boishakh - Online Canvas Board",
-        "description": "Alponay Boishakh is an online canvas platform that allows users to create beautiful digital artwork effortlessly. Ideal for both casual drawing and intricate designs, the platform supports freehand drawing with digital pens or touch. Developed with React.js and styled using Tailwind CSS, DaisyUI, MambaUI, and Hyper UI, the app ensures an intuitive user experience. The backend, powered by Node.js and Express.js, integrates with MongoDB for seamless data management, while Firebase authentication secures user access.",
-        "liveDemo": "https://boishakhi-alpona-nu.vercel.app",
-        "clientCode": "https://github.com/fazlulkarimhridoy/Boishakh-Sketch-for-XRi",
-        "serverCode": "",
-        "images": [
-            "/Projects/AlponayBoishakh/1.png",
-            "/Projects/AlponayBoishakh/2.png",
-            "/Projects/AlponayBoishakh/3.png",
-            "/Projects/AlponayBoishakh/4.png",
-            "/Projects/AlponayBoishakh/5.png",
-            "/Projects/AlponayBoishakh/6.png",
-            "/Projects/AlponayBoishakh/7.png",
-            "/Projects/AlponayBoishakh/8.png"
-        ]
-    },
-    {
-        "title": "GP RMG - Quiz & Puzzle Game",
-        "description": "GP RMG is an engaging quiz and puzzle game web application designed to provide users with a fun and interactive experience. The platform features challenging quizzes and dynamic puzzles, including drag-and-drop image puzzles, making it suitable for players of all ages. Developed with React.js, it leverages modern libraries such as TanStack Query for efficient state and server data management, React Confetti for celebratory effects, React DnD Image Puzzle for drag-and-drop puzzle interactivity, and Swiper for smooth carousel and slider functionality. The application offers a visually appealing and seamless user experience, with intuitive gameplay that keeps users entertained.",
-        "liveDemo": "https://gp-rmg.vercel.app",
-        "clientCode": "https://github.com/fazlulkarimhridoy/Gp-RMG",
-        "serverCode": "",
-        "images": ["/Projects/GPRMG/gp1.png", "/Projects/GPRMG/gp2.png"]
     }
 ]

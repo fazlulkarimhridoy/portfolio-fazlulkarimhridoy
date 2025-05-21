@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../Css/NavBar.css"
 import { FaAlignJustify } from "react-icons/fa";
-import NameLogo from "../assets/Logos/image.png"
+import NameLogo from "/assets/Logos/image.png"
 import { Drawer } from "antd";
 import { useState } from "react";
 
@@ -49,7 +49,7 @@ const NavBar = () => {
 
     // shared links
     const links = <>
-        <li onClick={scrollToBanner} className="text-sky-500 font-extrabold"><Link >Home</Link></li>
+        <li onClick={scrollToBanner} className="text-sky-500 font-extrabold"><Link >About</Link></li>
         <li onClick={scrollToSkills}><Link >Skills</Link></li>
         <li onClick={scrollToProjects}><Link >Projects</Link></li>
         <li onClick={scrollToEducations}><Link >Education</Link></li>
