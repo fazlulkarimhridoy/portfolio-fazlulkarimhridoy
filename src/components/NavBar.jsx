@@ -1,9 +1,11 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
-import { Menu, X, Code2, Sparkles } from "lucide-react";
+import { Menu, X, Code2, Sparkles, Sun, Moon } from "lucide-react";
+import { motion } from "framer-motion";
 
-const Navbar = () => {
+const Navbar = ({ darkMode, setDarkMode }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
+    const [setScrolled] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -28,12 +30,14 @@ const Navbar = () => {
         { name: "Contact", id: "contact" },
     ];
 
+    const spring = {
+        type: "spring",
+        stiffness: 700,
+        damping: 30,
+    };
+
     return (
-        <header
-            className={`fixed w-full z-50 transition-all duration-300 ${
-                scrolled ? "backdrop-blur-lg bg-gray-500/10 dark:bg-gray-900/20" : "bg-transparent"
-            }`}
-        >
+        <header className="fixed w-full z-50 transition-all duration-300 backdrop-blur-lg bg-white/10 dark:bg-gray-900/20 border-b border-gray-200/20 dark:border-gray-700/20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <nav className="flex items-center justify-between h-16">
                     {/* Logo */}
@@ -58,18 +62,60 @@ const Navbar = () => {
                             <button
                                 key={link.id}
                                 onClick={() => scrollToSection(link.id)}
-                                className="px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-white/20 dark:hover:bg-gray-800/30 transition-all duration-300 font-medium text-sm backdrop-blur-sm"
+                                className="px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-white/20 dark:hover:bg-gray-800/30 transition-all duration-300 font-medium text-sm"
                             >
                                 {link.name}
                             </button>
                         ))}
+
+                        {/* Theme Toggle Button */}
+                        <div className="relative ml-4 scale-90">
+                            <motion.div
+                                className="flex items-center justify-center w-14 h-8 rounded-full bg-white/20 dark:bg-gray-800/40 cursor-pointer backdrop-blur-sm"
+                                onClick={() => setDarkMode(!darkMode)}
+                            >
+                                <motion.div
+                                    className="absolute left-1 w-6 h-6 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center"
+                                    layout
+                                    transition={spring}
+                                    style={{ x: darkMode ? "24px" : "0px" }}
+                                >
+                                    {darkMode ? (
+                                        <Moon className="w-4 h-4 text-blue-400" />
+                                    ) : (
+                                        <Sun className="w-4 h-4 text-yellow-500" />
+                                    )}
+                                </motion.div>
+                            </motion.div>
+                        </div>
                     </div>
 
                     {/* Mobile Navigation Button */}
-                    <div className="md:hidden">
+                    <div className="md:hidden flex items-center gap-2">
+                        {/* Mobile Theme Toggle */}
+                        <div className="relative scale-90">
+                            <motion.div
+                                className="flex items-center justify-center w-14 h-8 rounded-full bg-white/20 dark:bg-gray-800/40 cursor-pointer backdrop-blur-sm"
+                                onClick={() => setDarkMode(!darkMode)}
+                            >
+                                <motion.div
+                                    className="absolute left-1 w-6 h-6 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center"
+                                    layout
+                                    transition={spring}
+                                    style={{ x: darkMode ? "24px" : "0px" }}
+                                >
+                                    {darkMode ? (
+                                        <Moon className="w-4 h-4 text-blue-400" />
+                                    ) : (
+                                        <Sun className="w-4 h-4 text-yellow-500" />
+                                    )}
+                                </motion.div>
+                            </motion.div>
+                        </div>
+
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="p-2 rounded-lg bg-white/10 dark:bg-gray-800/30 backdrop-blur-sm"
+                            className="p-2 rounded-lg bg-white/10 dark:bg-gray-800/30"
                         >
                             {isOpen ? (
                                 <X className="h-6 w-6 text-gray-700 dark:text-gray-300" />
@@ -83,7 +129,7 @@ const Navbar = () => {
                 {/* Mobile Navigation Menu */}
                 {isOpen && (
                     <div className="md:hidden">
-                        <div className="px-2 pt-2 pb-3 space-y-1 backdrop-blur-lg bg-white/30 dark:bg-gray-900/30 rounded-lg border border-gray-200/20 dark:border-gray-700/20">
+                        <div className="px-2 pt-2 pb-3 space-y-1 backdrop-blur-lg bg-white/30 dark:bg-gray-900/30 rounded-lg border border-gray-200/20 dark:border-gray-700/20 mb-2">
                             {navLinks.map((link) => (
                                 <button
                                     key={link.id}
