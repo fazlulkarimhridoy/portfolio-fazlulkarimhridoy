@@ -11,7 +11,6 @@ import {
     SiPostman,
     SiHtml5,
     SiCss3,
-    SiAntdesign,
     SiTrello,
 } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
@@ -24,6 +23,7 @@ import PythonIcon from "/python.svg";
 import CIcon from "/C.svg";
 import FirebaseIcon from "/Firebase.png";
 import PrismaIcon from "/Prisma.svg";
+import AntDIcon from "/AntDesign.svg";
 
 const Skills = () => {
     useEffect(() => {
@@ -40,7 +40,7 @@ const Skills = () => {
     const frontendSkills = [
         { name: "Next.js", icon: <SiNextdotjs className="text-black dark:text-white" />, level: "Comfortable" },
         { name: "React.js", icon: <FaReact className="text-cyan-300" />, level: "Comfortable" },
-        { name: "Ant Design", icon: <SiAntdesign className="text-sky-500" />, level: "Comfortable" },
+        { name: "Ant Design", icon: <img src={AntDIcon} alt="AntD Icon" className="w-8 h-8" />, level: "Comfortable" },
         { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400" />, level: "Comfortable" },
         { name: "HTML5", icon: <SiHtml5 className="text-orange-600" />, level: "Comfortable" },
         { name: "CSS3", icon: <SiCss3 className="text-blue-600" />, level: "Comfortable" },
