@@ -68,7 +68,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                             <button
                                 key={link.id}
                                 onClick={() => scrollToSection(link.id)}
-                                className="px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-white/20 dark:hover:bg-gray-800/30 transition-all duration-300 font-medium text-sm"
+                                className="px-4 py-2 rounded-lg text-gray-700 bg-gray-500/10 dark:text-gray-300 hover:bg-white/20 dark:hover:bg-gray-800/30 transition-all duration-300 font-medium text-sm"
                             >
                                 {link.name}
                             </button>
