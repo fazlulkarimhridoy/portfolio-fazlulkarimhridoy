@@ -54,16 +54,15 @@ const ProjectCard = ({ project, index }) => {
             "bg-green-100 text-green-800 dark:bg-green-500/10 dark:text-green-500",
             "bg-purple-100 text-purple-800 dark:bg-purple-500/10 dark:text-purple-500",
             "bg-pink-100 text-pink-800 dark:bg-pink-500/10 dark:text-pink-500",
-            "bg-yellow-100 text-yellow-800 dark:bg-yellow-500/10 dark:text-yellow-500",
-            "bg-red-100 text-red-800 dark:bg-red-500/10 dark:text-red-500",
-            "bg-indigo-100 text-indigo-800 dark:bg-indigo-500/10 dark:text-indigo-500",
+            "bg-cyan-100 text-cyan-800 dark:bg-cyan-500/10 dark:text-cyan-500",
             "bg-teal-100 text-teal-800 dark:bg-teal-500/10 dark:text-teal-500",
+            "bg-indigo-100 text-indigo-800 dark:bg-indigo-500/10 dark:text-indigo-500",
         ];
 
         const color = colors[idx % colors.length];
 
         return (
-            <span key={idx} className={`text-xs px-3 py-1 rounded-full font-medium ${color}`}>
+            <span key={idx} className={`text-[10px] sm:text-xs px-3 py-1 rounded-full font-medium ${color}`}>
                 {tag}
             </span>
         );
@@ -87,7 +86,7 @@ const ProjectCard = ({ project, index }) => {
                 ))}
             </div>
 
-            <div className="p-6">
+            <div className="p-4 sm:p-6">
                 <h3 className="text-lg font-semibold text-gray-600 dark:text-gray-300 mb-2">{project.title}</h3>
 
                 {project.highlights && project.highlights.length > 0 && (
@@ -113,20 +112,20 @@ const ProjectCard = ({ project, index }) => {
                     </p>
                 )}
 
-                <div className="flex flex-wrap gap-3 mt-4">
+                <div className="flex flex-wrap gap-2 sm:gap-3 mt-4">
                     <a
                         href={project.liveDemo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-1 px-3 py-2 text-xs rounded-lg bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-100 dark:hover:bg-blue-800 transition-colors"
+                        className="flex items-center gap-1 px-3 py-2 text-[10px] sm:text-xs rounded-lg bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-100 dark:hover:bg-blue-800 transition-colors"
                     >
-                        <Monitor className="h-4 w-4" />
+                        <Monitor className="h-3 w-3 sm:h-4 sm:w-4" />
                         <span>Live Demo</span>
                     </a>
 
                     {project.clientCode === "private" ? (
-                        <span className="flex items-center gap-1 px-3 py-2 text-xs rounded-lg bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400">
-                            <Github className="h-4 w-4" />
+                        <span className="flex items-center gap-1 px-3 py-2 text-[10px] sm:text-xs rounded-lg bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400">
+                            <Github className="h-3 w-3 sm:h-4 sm:w-4" />
                             <span>Private Client</span>
                         </span>
                     ) : (
@@ -134,17 +133,17 @@ const ProjectCard = ({ project, index }) => {
                             href={project.clientCode}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-1 px-3 py-2 text-xs rounded-lg bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-900 dark:text-gray-100 dark:hover:bg-gray-800 transition-colors"
+                            className="flex items-center gap-1 px-3 py-2 text-[10px] sm:text-xs rounded-lg bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-900 dark:text-gray-100 dark:hover:bg-gray-800 transition-colors"
                         >
-                            <Github className="h-4 w-4" />
+                            <Github className="h-3 w-3 sm:h-4 sm:w-4" />
                             <span>Client Code</span>
                         </a>
                     )}
 
                     {project.serverCode &&
                         (project.serverCode === "private" ? (
-                            <span className="flex items-center gap-1 px-3 py-2 text-xs rounded-lg bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400">
-                                <Github className="h-4 w-4" />
+                            <span className="flex items-center gap-1 px-3 py-2 text-[10px] sm:text-xs rounded-lg bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400">
+                                <Github className="h-3 w-3 sm:h-4 sm:w-4" />
                                 <span>Private Server</span>
                             </span>
                         ) : (
@@ -152,9 +151,9 @@ const ProjectCard = ({ project, index }) => {
                                 href={project.serverCode}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-1 px-3 py-2 text-xs rounded-lg bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-900 dark:text-gray-100 dark:hover:bg-gray-800 transition-colors"
+                                className="flex items-center gap-1 px-3 py-2 text-[10px] sm:text-xs rounded-lg bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-900 dark:text-gray-100 dark:hover:bg-gray-800 transition-colors"
                             >
-                                <Github className="h-4 w-4" />
+                                <Github className="h-3 w-3 sm:h-4 sm:w-4" />
                                 <span>Server Code</span>
                             </a>
                         ))}

@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Code2, Sparkles, Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ darkMode, setDarkMode }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -48,7 +49,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 <nav className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center">
-                        <div className="flex items-center gap-2">
+                        <Link to="/" onClick={() => scrollToSection("banner")} className="flex items-center gap-2">
                             <Code2 className="w-8 h-8 text-blue-500" />
                             <div>
                                 <h1 className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -59,7 +60,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                                     <span className="text-xs text-gray-600 dark:text-gray-400">React Developer</span>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     </div>
 
                     {/* Desktop Navigation */}

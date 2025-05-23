@@ -1,4 +1,6 @@
-import { Github, Linkedin, Facebook, Copyright } from "lucide-react";
+import { Copyright } from "lucide-react";
+import { motion } from "framer-motion";
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -19,30 +21,42 @@ const Footer = () => {
 
                     {/* Social Links */}
                     <div className="flex items-center gap-4">
-                        <a
+                        <motion.a // Added motion component
+                            whileHover={{ scale: 1.2 }} // Added hover animation
                             href="https://github.com/fazlulkarimhridoy"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
+                            className="dark:bg-gray-800 text-gray-600 dark:text-gray-300 transition-colors duration-300"
                         >
-                            <Github className="w-5 h-5" />
-                        </a>
-                        <a
+                            <FaGithub // Changed to FaGithub
+                                size={30} // Adjusted size for consistency, adjust as needed
+                                className="text-black dark:text-white hover:text-gray-500 dark:hover:text-gray-300 transition-colors" // Added class from Banner.jsx
+                            />
+                        </motion.a>
+                        <motion.a // Added motion component
+                            whileHover={{ scale: 1.2 }} // Added hover animation
                             href="https://www.linkedin.com/in/fazlulkarimhridoy23"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
+                            className="dark:bg-gray-800 text-gray-600 dark:text-gray-300 transition-colors duration-300"
                         >
-                            <Linkedin className="w-5 h-5" />
-                        </a>
-                        <a
+                            <FaLinkedin // Changed to FaLinkedin
+                                size={30} // Adjusted size for consistency, adjust as needed
+                                className="text-black dark:text-white hover:text-gray-500 dark:hover:text-gray-300 transition-colors" // Added class from Banner.jsx
+                            />
+                        </motion.a>
+                        <motion.a // Added motion component
+                            whileHover={{ scale: 1.2 }} // Added hover animation
                             href="https://www.facebook.com/hriiiiiidoy"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
+                            className="dark:bg-gray-800 text-gray-600 dark:text-gray-300 transition-colors duration-300"
                         >
-                            <Facebook className="w-5 h-5" />
-                        </a>
+                            <FaFacebook // Changed to FaFacebook
+                                size={30} // Adjusted size for consistency, adjust as needed
+                                className="text-black dark:text-white hover:text-gray-500 dark:hover:text-gray-300 transition-colors" // Added class from Banner.jsx
+                            />
+                        </motion.a>
                     </div>
                 </div>
 

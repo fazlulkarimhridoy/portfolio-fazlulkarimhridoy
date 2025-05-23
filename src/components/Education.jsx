@@ -1,4 +1,4 @@
-import { GraduationCap, Calendar, Award, School } from "lucide-react";
+import { GraduationCap, Calendar, Award, School, MapPin } from "lucide-react";
 
 const Education = () => {
     const educationData = [
@@ -6,14 +6,16 @@ const Education = () => {
             degree: "Computer Science & Engineering",
             institution: "National University",
             period: "2018-2022",
+            location: "Gazipur, Bangladesh",
             grade: "CGPA - 2.80 out of 4.00",
             year: "2024",
             icon: <GraduationCap className="w-6 h-6 text-blue-500" />,
         },
         {
-            degree: "Higher Secondary School Certificate",
+            degree: "Higher Secondary Certificate",
             institution: "Firoza Bashar Ideal College",
             period: "2016-2017",
+            location: "Mohammadpur, Dhaka",
             grade: "GPA - 4.17 out of 5.00",
             year: "2018",
             icon: <Award className="w-6 h-6 text-green-500" />,
@@ -22,6 +24,7 @@ const Education = () => {
             degree: "Secondary School Certificate",
             institution: "Badshah Faisal Institute",
             period: "2014-2015",
+            location: "Ring Road, Dhaka",
             grade: "GPA - 4.67 out of 5.00",
             year: "2016",
             icon: <School className="w-6 h-6 text-purple-500" />,
@@ -61,6 +64,10 @@ const Education = () => {
                                         <p className="text-gray-700 dark:text-gray-300 font-medium">
                                             {edu.institution}
                                         </p>
+                                        <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                            <MapPin className="w-4 h-4" />
+                                            <span>{edu.location}</span>
+                                        </div>
                                         <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
                                             <Calendar className="w-4 h-4" />
                                             <span>{edu.period}</span>

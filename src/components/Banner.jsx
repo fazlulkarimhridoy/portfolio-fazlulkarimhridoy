@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const Banner = () => {
     const downloadPdf = () => {
-        const pdfUrl = "/Dev_Hridoy.pdf";
+        const pdfUrl = "/Dev_Fazlul_Karim.pdf";
         download(pdfUrl);
     };
 
@@ -30,7 +30,7 @@ const Banner = () => {
                     className="text-center lg:text-left"
                 >
                     <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-800 via-gray-600 to-gray-300 dark:from-gray-200 dark:via-gray-400 dark:to-white">
-                        Hello, I{"'"}m Hridoy.
+                        Hello, I{"'"}m Fazlul Karim.
                         <br />A Full Stack{" "}
                         <Typewriter
                             words={["Developer"]}
@@ -42,24 +42,24 @@ const Banner = () => {
                         />
                     </h1>
 
-                    <p className="text-gray-600 dark:text-gray-400 mt-6 max-w-xl text-lg sm:text-xl leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-400 mt-6 max-w-xl text-sm sm:text-xl leading-relaxed">
                         With 1.5 years of professional web development experience, I’ve crafted a range of innovative
                         and functional projects. My expertise spans React.js, TailwindCSS, Express.js, allowing me to
                         build sleek, responsive web applications that deliver exceptional user experiences.
                     </p>
 
-                    <div className="mt-8 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-4">
+                    <div className="mt-8 flex flex-row justify-center lg:justify-start gap-4">
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             onClick={downloadPdf}
-                            className="bg-gradient-to-r from-gray-800 to-gray-900 dark:from-gray-100 dark:to-gray-400 hover:from-gray-900 hover:to-gray-800 dark:hover:from-white dark:hover:to-gray-300 transition-all duration-300 text-white dark:text-black text-sm font-semibold px-8 py-3 rounded-md shadow-md"
+                            className="bg-gradient-to-r from-gray-800 to-gray-900 dark:from-gray-100 dark:to-gray-400 hover:from-gray-900 hover:to-gray-800 dark:hover:from-white dark:hover:to-gray-300 transition-all duration-300 text-white dark:text-black text-sm font-semibold px-10 py-3 rounded-md shadow-md"
                         >
                             Resume
                         </motion.button>
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             onClick={scrollToContact}
-                            className="bg-gradient-to-r from-gray-800 to-gray-900 dark:from-gray-100 dark:to-gray-400 hover:from-gray-900 hover:to-gray-800 dark:hover:from-white dark:hover:to-gray-300 transition-all duration-300 text-white dark:text-black text-sm font-semibold px-8 py-3 rounded-md shadow-md"
+                            className="bg-gradient-to-r from-gray-800 to-gray-900 dark:from-gray-100 dark:to-gray-400 hover:from-gray-900 hover:to-gray-800 dark:hover:from-white dark:hover:to-gray-300 transition-all duration-300 text-white dark:text-black text-sm font-semibold px-10 py-3 rounded-md shadow-md"
                         >
                             Contact
                         </motion.button>
@@ -98,7 +98,7 @@ const Banner = () => {
                     <img
                         src={AuthorImage}
                         alt="Author"
-                        className="bg-gray-300 w-[280px] sm:w-[300px] md:w-[350px] rounded-badge border-[10px] border-gray-500 shadow-xl hover:shadow-zinc-500 transition-all duration-700"
+                        className="bg-gray-300 w-[300px] sm:w-[350px] rounded-badge border-[10px] border-gray-500 shadow-xl hover:shadow-zinc-500 transition-all duration-700"
                     />
                 </motion.div>
             </div>

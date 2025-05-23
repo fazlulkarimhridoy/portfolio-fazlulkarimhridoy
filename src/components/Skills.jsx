@@ -75,12 +75,12 @@ const Skills = () => {
     ];
 
     const renderSkills = (skills) => (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 mt-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-6 mt-6">
             {skills.map((skill, idx) => (
                 <div
                     key={idx}
                     data-aos="fade-up"
-                    className="flex items-center gap-4 bg-white dark:bg-[#1e1e1e] shadow-md p-4 rounded-xl hover:shadow-lg transition-shadow duration-300"
+                    className="flex items-center gap-4 bg-white dark:bg-[#1e1e1e] shadow-md p-3 sm:p-4 rounded-xl hover:shadow-lg transition-shadow duration-300"
                 >
                     <div className="text-3xl">{skill.icon}</div>
                     <div>
