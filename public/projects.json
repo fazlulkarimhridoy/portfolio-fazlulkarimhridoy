@@ -1,7 +1,7 @@
 [
     {
         "title": "Floral Radiance | E-commerce",
-        "highlights": ["NextJs", "Typescript", "Ant Design", "PrismaORM", "MySQL", "ExpressJs"],
+        "highlights": ["NextJs", "Typescript", "Ant Design", "MySQL", "PrismaORM", "ExpressJs"],
         "description": "A vibrant ecommerce platform for elegant flower bouquets with real-time updates and smooth ordering.",
         "liveDemo": "https://www.floralradiancebd.com",
         "clientCode": "private",
@@ -46,7 +46,7 @@
     },
     {
         "title": "GP RMG | Quiz & Puzzle Game",
-        "highlights": ["ReactJs", "Javascript", "Context API", "TailwindCSS", "DnD", "SwiperJs"],
+        "highlights": ["ReactJs", "Javascript", "Context API", "DnD", "TailwindCSS", "SwiperJs"],
         "description": "An interactive web app with quizzes and drag-and-drop image puzzles.",
         "liveDemo": "https://gp-rmg.vercel.app",
         "clientCode": "private",

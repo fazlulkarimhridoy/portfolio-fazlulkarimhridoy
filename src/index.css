@@ -9,8 +9,10 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
+    /* Disable native smooth scrolling */
 }
+
 
 * {
     font-family: 'Roboto', sans-serif;

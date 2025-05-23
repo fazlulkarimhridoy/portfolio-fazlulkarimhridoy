@@ -6,12 +6,15 @@ import Education from "../components/Education";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Banner from "../components/Banner";
+import useLenisScroll from "../utils/useLenisScroll";
 
 function App() {
     const [darkMode, setDarkMode] = useState(() => {
         const savedTheme = localStorage.getItem("theme");
         return savedTheme === "dark" || (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches);
     });
+
+    useLenisScroll(); // ← Add Lenis scroll behavior
 
     useEffect(() => {
         if (darkMode) {
