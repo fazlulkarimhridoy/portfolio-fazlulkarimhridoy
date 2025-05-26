@@ -1,4 +1,4 @@
-import { GraduationCap, Calendar, Award, School, MapPin } from "lucide-react";
+import { GraduationCap, Calendar, Award, School, MapPin, BookOpen } from "lucide-react";
 
 const Education = () => {
     const educationData = [
@@ -6,6 +6,7 @@ const Education = () => {
             degree: "Computer Science & Engineering",
             institution: "National University",
             period: "2018-2022",
+            group: "Bachelor of Science (B'Sc)",
             location: "Gazipur, Bangladesh",
             grade: "CGPA - 2.80 out of 4.00",
             year: "2024",
@@ -15,6 +16,7 @@ const Education = () => {
             degree: "Higher Secondary Certificate",
             institution: "Firoza Bashar Ideal College",
             period: "2016-2017",
+            group: "Science",
             location: "Mohammadpur, Dhaka",
             grade: "GPA - 4.17 out of 5.00",
             year: "2018",
@@ -24,6 +26,7 @@ const Education = () => {
             degree: "Secondary School Certificate",
             institution: "Badshah Faisal Institute",
             period: "2014-2015",
+            group: "Science",
             location: "Ring Road, Dhaka",
             grade: "GPA - 4.67 out of 5.00",
             year: "2016",
@@ -64,6 +67,10 @@ const Education = () => {
                                         <p className="text-gray-700 dark:text-gray-300 font-medium">
                                             {edu.institution}
                                         </p>
+                                        <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                            <BookOpen className="w-4 h-4" />
+                                            <span>{edu.group}</span>
+                                        </div>
                                         <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
                                             <MapPin className="w-4 h-4" />
                                             <span>{edu.location}</span>
