@@ -50,18 +50,26 @@ const Banner = () => {
 
                     <div className="mt-8 flex flex-row justify-center lg:justify-start gap-4">
                         <motion.button
-                            whileHover={{ scale: 1.05 }}
+                            initial={{ opacity: 0, x: 100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 1 }}
+                            whileHover={{ scale: 1.02 }}
                             onClick={downloadPdf}
-                            className="bg-gradient-to-r from-gray-800 to-gray-900 dark:from-gray-100 dark:to-gray-400 hover:from-gray-900 hover:to-gray-800 dark:hover:from-white dark:hover:to-gray-300 transition-all duration-300 text-white dark:text-black text-sm font-semibold px-10 py-3 rounded-md shadow-md"
                         >
-                            Resume
+                            <h1 className="bg-gradient-to-r from-gray-800 via-gray-600 to-gray-300 dark:from-gray-200 dark:via-gray-400 dark:to-white hover:from-gray-600 hover:to-gray-600 dark:hover:from-white dark:hover:to-gray-300 transition-all duration-700 text-white dark:text-black text-sm font-semibold px-10 py-3 rounded-md">
+                                Resume
+                            </h1>
                         </motion.button>
                         <motion.button
-                            whileHover={{ scale: 1.05 }}
+                            initial={{ opacity: 0, x: 100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 1 }}
+                            whileHover={{ scale: 1.02 }}
                             onClick={scrollToContact}
-                            className="bg-gradient-to-r from-gray-800 to-gray-900 dark:from-gray-100 dark:to-gray-400 hover:from-gray-900 hover:to-gray-800 dark:hover:from-white dark:hover:to-gray-300 transition-all duration-300 text-white dark:text-black text-sm font-semibold px-10 py-3 rounded-md shadow-md"
                         >
-                            Contact
+                            <h1 className="bg-gradient-to-r from-gray-800 via-gray-600 to-gray-300 dark:from-gray-200 dark:via-gray-400 dark:to-white hover:from-gray-500 hover:to-gray-500 dark:hover:from-white dark:hover:to-gray-300 transition-all duration-700 text-white dark:text-black text-sm font-semibold px-10 py-3 rounded-md">
+                                Contact
+                            </h1>
                         </motion.button>
                     </div>
 

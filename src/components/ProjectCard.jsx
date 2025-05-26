@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { ArrowUpRight, Github, Monitor } from "lucide-react";
+import { ArrowUpRight, Monitor } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
+import { Image } from "antd";
 
 const ProjectCard = ({ project, index }) => {
     const [sliderRef] = useKeenSlider(
@@ -75,15 +77,18 @@ const ProjectCard = ({ project, index }) => {
             className="bg-white dark:bg-[#1e1e1e] rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-5px] overflow-hidden"
         >
             <div ref={sliderRef} className="keen-slider h-48 md:h-56 w-full">
-                {project?.images?.map((image, imgIndex) => (
-                    <div key={imgIndex} className="keen-slider__slide">
-                        <img
-                            src={image}
-                            alt={`${project.title} - Image ${imgIndex + 1}`}
-                            className="h-full w-full object-cover"
-                        />
-                    </div>
-                ))}
+                <Image.PreviewGroup items={project?.images}>
+                    {project?.images?.map((image, imgIndex) => (
+                        <div key={imgIndex} className="keen-slider__slide">
+                            <Image
+                                src={image}
+                                alt={`${project.title} - Image ${imgIndex + 1}`}
+                                className="h-full w-full object-cover"
+                                preview={{ src: image }} // ensures full-size preview
+                            />
+                        </div>
+                    ))}
+                </Image.PreviewGroup>
             </div>
 
             <div className="p-4 sm:p-6">
@@ -125,7 +130,7 @@ const ProjectCard = ({ project, index }) => {
 
                     {project.clientCode === "private" ? (
                         <span className="flex items-center gap-1 px-3 py-2 text-[10px] sm:text-xs rounded-lg bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400">
-                            <Github className="h-3 w-3 sm:h-4 sm:w-4" />
+                            <FaGithub className="h-3 w-3 sm:h-4 sm:w-4" />
                             <span>Private Client</span>
                         </span>
                     ) : (
@@ -135,7 +140,7 @@ const ProjectCard = ({ project, index }) => {
                             rel="noopener noreferrer"
                             className="flex items-center gap-1 px-3 py-2 text-[10px] sm:text-xs rounded-lg bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-900 dark:text-gray-100 dark:hover:bg-gray-800 transition-colors"
                         >
-                            <Github className="h-3 w-3 sm:h-4 sm:w-4" />
+                            <FaGithub className="h-3 w-3 sm:h-4 sm:w-4" />
                             <span>Client Code</span>
                         </a>
                     )}
@@ -143,7 +148,7 @@ const ProjectCard = ({ project, index }) => {
                     {project.serverCode &&
                         (project.serverCode === "private" ? (
                             <span className="flex items-center gap-1 px-3 py-2 text-[10px] sm:text-xs rounded-lg bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400">
-                                <Github className="h-3 w-3 sm:h-4 sm:w-4" />
+                                <FaGithub className="h-3 w-3 sm:h-4 sm:w-4" />
                                 <span>Private Server</span>
                             </span>
                         ) : (
@@ -153,7 +158,7 @@ const ProjectCard = ({ project, index }) => {
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-1 px-3 py-2 text-[10px] sm:text-xs rounded-lg bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-900 dark:text-gray-100 dark:hover:bg-gray-800 transition-colors"
                             >
-                                <Github className="h-3 w-3 sm:h-4 sm:w-4" />
+                                <FaGithub className="h-3 w-3 sm:h-4 sm:w-4" />
                                 <span>Server Code</span>
                             </a>
                         ))}

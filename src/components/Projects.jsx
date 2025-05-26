@@ -4,21 +4,22 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 
 const Projects = () => {
-    const [projectsData, setProjectsData] = useState([]);
+    const [clientProjectsData, setClientProjectsData] = useState([]);
+    const [personalProjectsData, setPersonalProjectsData] = useState([]);
 
     // Initialize AOS
     useEffect(() => {
         AOS.init({ duration: 800, once: true });
     }, []);
 
-    // useEffect to fetch data and set to state
     useEffect(() => {
         fetch("/projects.json")
-            .then((response) => response.json())
+            .then((response) => response?.json())
             .then((data) => {
-                setProjectsData(data);
+                setClientProjectsData(data?.clientProjects || []);
+                setPersonalProjectsData(data?.personalProjects || []);
             })
-            .catch((error) => console.error("Error:", error));
+            .catch((error) => console?.error("Error loading project data:", error));
     }, []);
 
     return (
@@ -38,11 +39,23 @@ const Projects = () => {
                     Recent work that showcases my skills and experience
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
-                    {projectsData.map((project, index) => (
-                        <ProjectCard key={project.id} project={project} index={index} />
-                    ))}
-                </div>
+                <section>
+                    <h3 className="text-2xl font-semibold mb-2">Service-based projects</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 mt-6">
+                        {clientProjectsData?.map((project, index) => (
+                            <ProjectCard key={project?.id} project={project} index={index} />
+                        ))}
+                    </div>
+                </section>
+
+                <section className="mt-12">
+                    <h3 className="text-2xl font-semibold mb-2">Self-initiated projects</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 mt-6">
+                        {personalProjectsData.map((project, index) => (
+                            <ProjectCard key={project?.id} project={project} index={index} />
+                        ))}
+                    </div>
+                </section>
             </div>
         </section>
     );
