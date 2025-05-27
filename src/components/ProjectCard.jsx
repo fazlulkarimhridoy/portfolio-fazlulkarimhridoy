@@ -118,15 +118,22 @@ const ProjectCard = ({ project, index }) => {
                 )}
 
                 <div className="flex flex-wrap gap-2 sm:gap-3 mt-4">
-                    <a
-                        href={project.liveDemo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-1 px-3 py-2 text-[10px] sm:text-xs rounded-lg bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-100 dark:hover:bg-blue-800 transition-colors"
-                    >
-                        <Monitor className="h-3 w-3 sm:h-4 sm:w-4" />
-                        <span>Live Demo</span>
-                    </a>
+                    {project.liveDemo === "private" ? (
+                        <span className="flex items-center gap-1 px-3 py-2 text-[10px] sm:text-xs rounded-lg bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400">
+                            <Monitor className="h-3 w-3 sm:h-4 sm:w-4" />
+                            <span>Private Live</span>
+                        </span>
+                    ) : (
+                        <a
+                            href={project.liveDemo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1 px-3 py-2 text-[10px] sm:text-xs rounded-lg bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-100 dark:hover:bg-blue-800 transition-colors"
+                        >
+                            <Monitor className="h-3 w-3 sm:h-4 sm:w-4" />
+                            <span>Live Demo</span>
+                        </a>
+                    )}
 
                     {project.clientCode === "private" ? (
                         <span className="flex items-center gap-1 px-3 py-2 text-[10px] sm:text-xs rounded-lg bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400">

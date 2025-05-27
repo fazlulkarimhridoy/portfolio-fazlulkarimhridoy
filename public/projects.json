@@ -1,7 +1,7 @@
 {
     "clientProjects": [
         {
-            "id": 8,
+            "id": 9,
             "title": "RCCG Jesus House | Church Service",
             "highlights": ["NextJs", "Typescript", "Ant Design", "AOS", "Swiper", "Debounce"],
             "description": "A dynamic church website offering a seamless experience with service details, media content.",
@@ -16,6 +16,36 @@
                 "/Projects/RCC/5.png",
                 "/Projects/RCC/6.png",
                 "/Projects/RCC/7.png"
+            ],
+            "client": {
+                "name": "RCCG JHS Scarborough",
+                "link": "https://www.facebook.com/rccgjhs"
+            }
+        },
+        {
+            "id": 8,
+            "title": "RCCG Jesus House | Dashboard",
+            "highlights": ["ReactJs", "Typescript", "Ant Design", "Tanstack Query", "Axios", "Debounce"],
+            "description": "Dashboard of a church website with role based feature assign and client website content management.",
+            "liveDemo": "private",
+            "clientCode": "private",
+            "serverCode": "",
+            "images": [
+                "/Projects/RCC-Dashboard/1.png",
+                "/Projects/RCC-Dashboard/2.png",
+                "/Projects/RCC-Dashboard/3.png",
+                "/Projects/RCC-Dashboard/4.png",
+                "/Projects/RCC-Dashboard/5.png",
+                "/Projects/RCC-Dashboard/6.png",
+                "/Projects/RCC-Dashboard/7.png",
+                "/Projects/RCC-Dashboard/8.png",
+                "/Projects/RCC-Dashboard/9.png",
+                "/Projects/RCC-Dashboard/10.png",
+                "/Projects/RCC-Dashboard/11.png",
+                "/Projects/RCC-Dashboard/12.png",
+                "/Projects/RCC-Dashboard/13.png",
+                "/Projects/RCC-Dashboard/14.png",
+                "/Projects/RCC-Dashboard/15.png"
             ],
             "client": {
                 "name": "RCCG JHS Scarborough",
@@ -71,7 +101,7 @@
         },
         {
             "id": 5,
-            "title": "GP RMG | Quiz & Puzzle Game",
+            "title": "GP | Quiz & Puzzle | Mobile Responsive",
             "highlights": ["ReactJs", "Javascript", "Context API", "DnD", "TailwindCSS", "SwiperJs"],
             "description": "An interactive web app with quizzes and drag-and-drop image puzzles.",
             "liveDemo": "https://gp-rmg.vercel.app",

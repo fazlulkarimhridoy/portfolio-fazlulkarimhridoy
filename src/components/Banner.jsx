@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const Banner = () => {
     const downloadPdf = () => {
-        const pdfUrl = "/Dev_Fazlul_Karim.pdf";
+        const pdfUrl = "/Resume_Dev_Fazlul_Karim.pdf";
         download(pdfUrl);
     };
 
@@ -26,7 +26,7 @@ const Banner = () => {
                 <motion.div
                     initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1 }}
+                    transition={{ duration: 2.5 }}
                     className="text-center lg:text-left"
                 >
                     <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-800 via-gray-600 to-gray-300 dark:from-gray-200 dark:via-gray-400 dark:to-white">
@@ -48,22 +48,15 @@ const Banner = () => {
                         build sleek, responsive web applications that deliver exceptional user experiences.
                     </p>
 
-                    <div className="mt-8 flex flex-row justify-center lg:justify-start gap-4">
-                        <motion.button
-                            initial={{ opacity: 0, x: 100 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 1 }}
-                            whileHover={{ scale: 1.02 }}
-                            onClick={downloadPdf}
-                        >
+                    <div
+                        className="mt-8 flex flex-row justify-center lg:justify-start gap-4"
+                    >
+                        <motion.button whileHover={{ scale: 1.02 }} onClick={downloadPdf}>
                             <h1 className="bg-gradient-to-r from-gray-800 via-gray-600 to-gray-300 dark:from-gray-200 dark:via-gray-400 dark:to-white hover:from-gray-600 hover:to-gray-600 dark:hover:from-white dark:hover:to-gray-300 transition-all duration-700 text-white dark:text-black text-sm font-semibold px-10 py-3 rounded-md">
                                 Resume
                             </h1>
                         </motion.button>
                         <motion.button
-                            initial={{ opacity: 0, x: 100 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 1 }}
                             whileHover={{ scale: 1.02 }}
                             onClick={scrollToContact}
                         >
@@ -99,7 +92,7 @@ const Banner = () => {
                 <motion.div
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1 }}
+                    transition={{ duration: 2.5 }}
                     whileHover={{ scale: 1.05 }}
                     className="mb-10 lg:mb-0"
                 >
