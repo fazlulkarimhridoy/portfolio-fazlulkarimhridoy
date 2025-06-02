@@ -1,5 +1,4 @@
 import { Typewriter } from "react-simple-typewriter";
-import AuthorImage from "/hridoy.png";
 import download from "downloadjs";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import "animate.css";
@@ -48,18 +47,13 @@ const Banner = () => {
                         build sleek, responsive web applications that deliver exceptional user experiences.
                     </p>
 
-                    <div
-                        className="mt-8 flex flex-row justify-center lg:justify-start gap-4"
-                    >
+                    <div className="mt-8 flex flex-row justify-center lg:justify-start gap-4">
                         <motion.button whileHover={{ scale: 1.02 }} onClick={downloadPdf}>
                             <h1 className="bg-gradient-to-r from-gray-800 via-gray-600 to-gray-300 dark:from-gray-200 dark:via-gray-400 dark:to-white hover:from-gray-600 hover:to-gray-600 dark:hover:from-white dark:hover:to-gray-300 transition-all duration-700 text-white dark:text-black text-sm font-semibold px-10 py-3 rounded-md">
                                 Resume
                             </h1>
                         </motion.button>
-                        <motion.button
-                            whileHover={{ scale: 1.02 }}
-                            onClick={scrollToContact}
-                        >
+                        <motion.button whileHover={{ scale: 1.02 }} onClick={scrollToContact}>
                             <h1 className="bg-gradient-to-r from-gray-800 via-gray-600 to-gray-300 dark:from-gray-200 dark:via-gray-400 dark:to-white hover:from-gray-500 hover:to-gray-500 dark:hover:from-white dark:hover:to-gray-300 transition-all duration-700 text-white dark:text-black text-sm font-semibold px-10 py-3 rounded-md">
                                 Contact
                             </h1>
@@ -97,7 +91,7 @@ const Banner = () => {
                     className="mb-10 lg:mb-0"
                 >
                     <img
-                        src={AuthorImage}
+                        src="https://res.cloudinary.com/dmit5qbfo/image/upload/v1747909311/Hridoy-NoBg_cikw8q.png"
                         alt="Author"
                         className="bg-gray-300 w-[300px] sm:w-[350px] rounded-badge border-[10px] border-gray-500 shadow-xl hover:shadow-zinc-500 transition-all duration-700"
                     />
