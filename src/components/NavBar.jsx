@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Code2, Sparkles, Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import { FaStar } from "react-icons/fa";
 
 const Navbar = ({ darkMode, setDarkMode }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -43,16 +44,60 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         exit: { scale: 0, opacity: 0, rotate: 180 },
     };
 
+    const twinkleVariants = {
+        animate: {
+            opacity: [0.2, 1, 0.2],
+            scale: [0.8, 1.2, 0.8],
+            transition: {
+                duration: 3,
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "easeInOut",
+            },
+        },
+    };
+
     return (
         <header className="fixed w-full z-50 transition-all duration-300 backdrop-blur-lg bg-white/10 dark:bg-gray-900/20 border-b border-gray-200/20 dark:border-gray-700/20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <nav className="flex items-center justify-between h-16">
                     {/* Logo */}
-                    <div className="flex-shrink-0 flex items-center">
-                        <Link to="/" onClick={() => scrollToSection("banner")} className="flex items-center gap-2">
+                    <div className="relative flex items-center gap-2">
+                        {/* Twinkling Stars */}
+                        <motion.div
+                            className="absolute -top-2 -left-2 text-yellow-400"
+                            variants={twinkleVariants}
+                            animate="animate"
+                            style={{ fontSize: "12px" }}
+                        >
+                            <FaStar />
+                        </motion.div>
+
+                        <motion.div
+                            className="absolute -bottom-3 -right-3 text-yellow-300"
+                            variants={twinkleVariants}
+                            animate="animate"
+                            transition={{ duration: 4, repeatDelay: 1 }}
+                            style={{ fontSize: "10px" }}
+                        >
+                            <FaStar />
+                        </motion.div>
+
+                        <motion.div
+                            className="absolute top-1 left-8 text-yellow-300"
+                            variants={twinkleVariants}
+                            animate="animate"
+                            transition={{ duration: 3.5, repeatDelay: 0.5 }}
+                            style={{ fontSize: "8px" }}
+                        >
+                            <FaStar />
+                        </motion.div>
+
+                        {/* Logo and Text */}
+                        <Link to="/" onClick={() => scrollToSection("banner")} className="flex items-center gap-2 z-10">
                             <Code2 className="w-8 h-8 text-blue-500" />
                             <div>
-                                <h1 className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+                                <h1 className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent animate-shimmer bg-[length:400%_100%]">
                                     Fazlul Karim
                                 </h1>
                                 <div className="flex items-center gap-1">

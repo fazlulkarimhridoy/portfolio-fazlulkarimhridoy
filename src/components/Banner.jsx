@@ -23,12 +23,12 @@ const Banner = () => {
             <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center justify-between py-10 lg:py-28">
                 {/* Left Content */}
                 <motion.div
-                    initial={{ opacity: 0, x: -100 }}
+                    initial={{ opacity: 0, x: -80 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 2.5 }}
+                    transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
                     className="text-center lg:text-left"
                 >
-                    <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-800 via-gray-600 to-gray-300 dark:from-gray-200 dark:via-gray-400 dark:to-white">
+                    <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 dark:from-yellow-300 dark:via-pink-400 dark:to-purple-500">
                         Hello, I{"'"}m Fazlul Karim.
                         <br />A Full Stack{" "}
                         <Typewriter
@@ -48,15 +48,20 @@ const Banner = () => {
                     </p>
 
                     <div className="mt-8 flex flex-row justify-center lg:justify-start gap-4">
-                        <motion.button whileHover={{ scale: 1.02 }} onClick={downloadPdf}>
-                            <h1 className="bg-gradient-to-r from-gray-800 via-gray-600 to-gray-300 dark:from-gray-200 dark:via-gray-400 dark:to-white hover:from-gray-600 hover:to-gray-600 dark:hover:from-white dark:hover:to-gray-300 transition-all duration-700 text-white dark:text-black text-sm font-semibold px-10 py-3 rounded-md">
-                                Resume
-                            </h1>
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            onClick={downloadPdf}
+                            className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 dark:from-yellow-300 dark:to-pink-400 dark:hover:from-yellow-400 dark:hover:to-pink-500 transition-all duration-700 text-white text-sm font-semibold px-10 py-3 rounded-md shadow-lg"
+                        >
+                            Resume
                         </motion.button>
-                        <motion.button whileHover={{ scale: 1.02 }} onClick={scrollToContact}>
-                            <h1 className="bg-gradient-to-r from-gray-800 via-gray-600 to-gray-300 dark:from-gray-200 dark:via-gray-400 dark:to-white hover:from-gray-500 hover:to-gray-500 dark:hover:from-white dark:hover:to-gray-300 transition-all duration-700 text-white dark:text-black text-sm font-semibold px-10 py-3 rounded-md">
-                                Contact
-                            </h1>
+
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            onClick={scrollToContact}
+                            className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 dark:from-purple-400 dark:to-indigo-500 dark:hover:from-purple-500 dark:hover:to-indigo-600 transition-all duration-700 text-white text-sm font-semibold px-10 py-3 rounded-md shadow-lg"
+                        >
+                            Contact
                         </motion.button>
                     </div>
 
@@ -84,16 +89,16 @@ const Banner = () => {
 
                 {/* Right Content */}
                 <motion.div
-                    initial={{ opacity: 0, x: 100 }}
+                    initial={{ opacity: 0, x: 80 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 2.5 }}
+                    transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
                     whileHover={{ scale: 1.05 }}
                     className="mb-10 lg:mb-0"
                 >
                     <img
                         src="https://res.cloudinary.com/dmit5qbfo/image/upload/v1747909311/Hridoy-NoBg_cikw8q.png"
                         alt="Author"
-                        className="bg-gray-300 w-[300px] sm:w-[350px] rounded-badge border-[10px] border-gray-500 shadow-xl hover:shadow-zinc-500 transition-all duration-700"
+                        className="w-[300px] sm:w-[350px] rounded-badge border-[8px] border-transparent bg-clip-padding bg-gradient-to-br from-purple-400 via-pink-500 to-yellow-500 shadow transition-all duration-700 hover:drop-shadow-[0_0_30px_rgba(192,132,252,0.6)]"
                     />
                 </motion.div>
             </div>
