@@ -28,7 +28,7 @@ const Banner = () => {
                     transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
                     className="text-center lg:text-left"
                 >
-                    <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 dark:from-yellow-300 dark:via-pink-400 dark:to-purple-500">
+                    <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-blue-400 to-sky-300 dark:from-sky-300 dark:via-blue-400 dark:to-blue-500">
                         Hello, I{"'"}m Fazlul Karim.
                         <br />A Full Stack{" "}
                         <Typewriter
@@ -47,41 +47,41 @@ const Banner = () => {
                         build sleek, responsive web applications that deliver exceptional user experiences.
                     </p>
 
-                    <div className="mt-8 flex flex-row justify-center lg:justify-start gap-4">
+                    <div className="mt-8 flex flex-row justify-center lg:justify-start gap-4 text-white">
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             onClick={downloadPdf}
-                            className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 dark:from-yellow-300 dark:to-pink-400 dark:hover:from-yellow-400 dark:hover:to-pink-500 transition-all duration-700 text-white text-sm font-semibold px-10 py-3 rounded-md shadow-lg"
+                            className="bg-blue-500 hover:bg-blue-700 transition-all duration-700 px-5 sm:px-10 py-3 rounded-full"
                         >
-                            Resume
+                            Download Resume
                         </motion.button>
 
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             onClick={scrollToContact}
-                            className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 dark:from-purple-400 dark:to-indigo-500 dark:hover:from-purple-500 dark:hover:to-indigo-600 transition-all duration-700 text-white text-sm font-semibold px-10 py-3 rounded-md shadow-lg"
+                            className="bg-gray-500 hover:bg-gray-400 transition-all duration-700 px-5 sm:px-10 py-3 rounded-full"
                         >
-                            Contact
+                            Get in Touch
                         </motion.button>
                     </div>
 
                     <div className="mt-10 flex justify-center lg:justify-start space-x-6">
                         <motion.a whileHover={{ scale: 1.2 }} href="https://github.com/fazlulkarimhridoy">
                             <FaGithub
-                                size={30}
+                                size={45}
                                 className="text-black dark:text-white hover:text-gray-500 dark:hover:text-gray-300 transition-colors"
                             />
                         </motion.a>
                         <motion.a whileHover={{ scale: 1.2 }} href="https://www.linkedin.com/in/fazlulkarimhridoy23">
                             <FaLinkedin
-                                size={30}
-                                className="text-black dark:text-white hover:text-gray-500 dark:hover:text-gray-300  transition-colors"
+                                size={45}
+                                className="text-sky-700 hover:text-gray-500 dark:hover:text-gray-300  transition-colors"
                             />
                         </motion.a>
                         <motion.a whileHover={{ scale: 1.2 }} href="https://www.facebook.com/hriiiiiidoy">
                             <FaFacebook
-                                size={30}
-                                className="text-black dark:text-white hover:text-gray-500 dark:hover:text-gray-300  transition-colors"
+                                size={45}
+                                className="text-blue-600 hover:text-gray-500 dark:hover:text-gray-300  transition-colors"
                             />
                         </motion.a>
                     </div>
@@ -98,7 +98,7 @@ const Banner = () => {
                     <img
                         src="https://res.cloudinary.com/dmit5qbfo/image/upload/v1747909311/Hridoy-NoBg_cikw8q.png"
                         alt="Author"
-                        className="w-[300px] sm:w-[350px] rounded-badge border-[8px] border-transparent bg-clip-padding bg-gradient-to-br from-purple-400 via-pink-500 to-yellow-500 shadow transition-all duration-700 hover:drop-shadow-[0_0_30px_rgba(192,132,252,0.6)]"
+                        className="w-[350px] rounded-badge border-[8px] border-transparent bg-clip-padding bg-gradient-to-br from-blue-300 via-blue-200 to-sky-300 shadow transition-all duration-700 hover:drop-shadow-[0_0_30px_rgba(147,197,253,0.6)]"
                     />
                 </motion.div>
             </div>

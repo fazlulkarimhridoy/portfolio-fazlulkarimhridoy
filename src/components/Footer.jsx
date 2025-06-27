@@ -11,11 +11,11 @@ const Footer = () => {
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                     {/* Brand */}
                     <div className="flex items-center gap-2">
-                        <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-sky-300 bg-clip-text text-transparent">
                             Fazlul Karim
                         </h2>
                         <span className="px-2 py-1 text-xs font-medium bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">
-                            React Developer
+                            Software Developer
                         </span>
                     </div>
 
@@ -42,7 +42,7 @@ const Footer = () => {
                         >
                             <FaLinkedin // Changed to FaLinkedin
                                 size={30} // Adjusted size for consistency, adjust as needed
-                                className="text-black dark:text-white hover:text-gray-500 dark:hover:text-gray-300 transition-colors" // Added class from Banner.jsx
+                                className="text-sky-700 hover:text-gray-500 dark:hover:text-gray-300 transition-colors" // Added class from Banner.jsx
                             />
                         </motion.a>
                         <motion.a // Added motion component
@@ -54,7 +54,7 @@ const Footer = () => {
                         >
                             <FaFacebook // Changed to FaFacebook
                                 size={30} // Adjusted size for consistency, adjust as needed
-                                className="text-black dark:text-white hover:text-gray-500 dark:hover:text-gray-300 transition-colors" // Added class from Banner.jsx
+                                className="text-blue-600 dark:text-white hover:text-gray-500 dark:hover:text-gray-300 transition-colors" // Added class from Banner.jsx
                             />
                         </motion.a>
                     </div>

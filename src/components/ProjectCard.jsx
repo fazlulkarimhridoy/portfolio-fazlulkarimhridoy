@@ -53,18 +53,12 @@ const ProjectCard = ({ project, index }) => {
     const renderTag = (tag, idx) => {
         const colors = [
             "bg-blue-100 text-blue-800 dark:bg-blue-500/10 dark:text-blue-500",
-            "bg-green-100 text-green-800 dark:bg-green-500/10 dark:text-green-500",
-            "bg-purple-100 text-purple-800 dark:bg-purple-500/10 dark:text-purple-500",
-            "bg-pink-100 text-pink-800 dark:bg-pink-500/10 dark:text-pink-500",
-            "bg-cyan-100 text-cyan-800 dark:bg-cyan-500/10 dark:text-cyan-500",
-            "bg-teal-100 text-teal-800 dark:bg-teal-500/10 dark:text-teal-500",
-            "bg-indigo-100 text-indigo-800 dark:bg-indigo-500/10 dark:text-indigo-500",
         ];
 
         const color = colors[idx % colors.length];
 
         return (
-            <span key={idx} className={`text-[10px] sm:text-xs px-3 py-1 rounded-full font-medium ${color}`}>
+            <span key={idx} className={`text-[10px] sm:text-xs px-3 py-1 rounded-full ${color}`}>
                 {tag}
             </span>
         );
@@ -94,13 +88,13 @@ const ProjectCard = ({ project, index }) => {
             <div className="p-4 sm:p-6">
                 <h3 className="text-lg font-semibold text-gray-600 dark:text-gray-300 mb-2">{project.title}</h3>
 
+                <p className="text-sm text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
+
                 {project.highlights && project.highlights.length > 0 && (
                     <div className="flex flex-wrap gap-2 mb-3">
                         {project.highlights.map((tag, idx) => renderTag(tag, idx))}
                     </div>
                 )}
-
-                <p className="text-sm text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
 
                 {project.client && (
                     <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
