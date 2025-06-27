@@ -7,14 +7,29 @@ import { FaStar } from "react-icons/fa";
 
 const Navbar = ({ darkMode, setDarkMode }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const [setScrolled] = useState(false);
+    const [activeSection, setActiveSection] = useState("");
+
 
     useEffect(() => {
+        const sectionOffsets = navLinks
+            .map((link) => {
+                const el = document.getElementById(link.id);
+                return el ? { id: link.id, offsetTop: el.offsetTop } : null;
+            })
+            .filter(Boolean);
+
         const handleScroll = () => {
-            setScrolled(window.scrollY > 20);
+            const scrollY = window.scrollY + 100; // Add some offset for better accuracy
+            for (let i = sectionOffsets.length - 1; i >= 0; i--) {
+                if (scrollY >= sectionOffsets[i].offsetTop) {
+                    setActiveSection(sectionOffsets[i].id);
+                    break;
+                }
+            }
         };
 
         window.addEventListener("scroll", handleScroll);
+        handleScroll(); // Run on mount
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
@@ -114,7 +129,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                             <button
                                 key={link.id}
                                 onClick={() => scrollToSection(link.id)}
-                                className="px-4 py-2 rounded-lg text-gray-700 bg-gray-500/10 dark:text-gray-300 hover:bg-gradient-to-r from-blue-600 to-sky-300 hover:text-white dark:hover:bg-gray-800/30 transition-all duration-300 font-medium text-sm"
+                                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300
+            ${
+                activeSection === link.id
+                    ? "bg-gradient-to-r from-blue-600 to-sky-300 text-white"
+                    : "text-gray-700 bg-gray-500/10 dark:text-gray-300 dark:hover:bg-gray-800/30 hover:bg-gradient-to-r from-blue-600 to-sky-300 hover:text-white"
+            }`}
                             >
                                 {link.name}
                             </button>
@@ -123,7 +143,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                         {/* Theme Toggle Button */}
                         <div className="relative ml-4 scale-90">
                             <motion.div
-                                className="flex items-center justify-center w-14 h-8 rounded-full hover:bg-gradient-to-r from-blue-600 to-sky-300 dark:bg-gray-800/40 cursor-pointer backdrop-blur-sm hover:bg-white/30 dark:hover:bg-gray-800/50 transition-colors"
+                                className="flex items-center justify-center w-14 h-8 rounded-full bg-gradient-to-r from-blue-600 to-sky-300 dark:bg-gray-800/40 cursor-pointer backdrop-blur-sm hover:bg-white/30 dark:hover:bg-gray-800/50 transition-colors"
                                 onClick={() => setDarkMode(!darkMode)}
                                 whileTap={{ scale: 0.95 }}
                             >
@@ -210,7 +230,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                                 <button
                                     key={link.id}
                                     onClick={() => scrollToSection(link.id)}
-                                    className="block w-full px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-white/20 dark:hover:bg-gray-800/30 transition-all duration-300"
+                                    className={`block w-full px-3 py-2 rounded-md text-base font-medium transition-all duration-300
+            ${
+                activeSection === link.id
+                    ? "bg-gradient-to-r from-blue-600 to-sky-300 text-white"
+                    : "text-gray-700 dark:text-gray-300 hover:bg-white/20 dark:hover:bg-gray-800/30"
+            }`}
                                 >
                                     {link.name}
                                 </button>
