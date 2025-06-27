@@ -40,7 +40,7 @@ const Projects = () => {
                 </p>
 
                 <section>
-                    <h3 className="text-2xl font-semibold mb-2">Service-based projects</h3>
+                    <h3 className="text-2xl font-semibold mb-2">Client-based projects {"("}Paid{")"}</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 mt-6">
                         {clientProjectsData?.map((project, index) => (
                             <ProjectCard key={project?.id} project={project} index={index} />
@@ -49,7 +49,7 @@ const Projects = () => {
                 </section>
 
                 <section className="mt-12">
-                    <h3 className="text-2xl font-semibold mb-2">Self-initiated projects</h3>
+                    <h3 className="text-2xl font-semibold mb-2">Self-initiated projects {"("}Unpaid{")"}</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 mt-6">
                         {personalProjectsData.map((project, index) => (
                             <ProjectCard key={project?.id} project={project} index={index} />
