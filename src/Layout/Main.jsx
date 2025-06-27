@@ -7,6 +7,7 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Banner from "../components/Banner";
 import useLenisScroll from "../utils/useLenisScroll";
+import { AnimatePresence, motion } from "framer-motion";
 
 function App() {
     const [darkMode, setDarkMode] = useState(() => {
@@ -29,13 +30,22 @@ function App() {
     return (
         <div className={`min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300`}>
             <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-            <main>
-                <Banner />
-                <Skills />
-                <Projects />
-                <Education />
-                <Contact />
-            </main>
+            <AnimatePresence mode="wait">
+                <motion.main
+                    key={darkMode ? "dark" : "light"}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className={`bg-gray-50 dark:bg-gray-900`}
+                >
+                    <Banner />
+                    <Skills />
+                    <Projects />
+                    <Education />
+                    <Contact />
+                </motion.main>
+            </AnimatePresence>
             <Footer />
         </div>
     );
